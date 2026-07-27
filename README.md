@@ -1,15 +1,16 @@
 # Minimum Subspace Trades and Relation Lattices in Three Binary Designs
 
-Public companion repository for the paper
+Companion package for the paper
 
 > **Minimum Subspace Trades and Relation Lattices in Three Binary Designs**
 > Oleksiy Babanskyy, 2026.
 
-Repository:
-[`aconsciousfractal/FCIG-Minimum-Subspace-Trades-Relation-Lattices`](https://github.com/aconsciousfractal/FCIG-Minimum-Subspace-Trades-Relation-Lattices).
-This is a reproducibility release, not a novelty or priority claim.
+PDF:
+[`paper/Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs.pdf`](paper/Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs.pdf)
+(title-named, built from `paper/main.tex` + `paper/sections/`; see
+[`REPRODUCE.md`](REPRODUCE.md)).
 
-## Main result
+## What the paper proves
 
 For three fixed group-invariant collections of four-dimensional subspaces of
 `F_2^8`, the paper determines the minimum six-block opposite-regulus trades,
@@ -38,7 +39,7 @@ coker(A) tensor Z[zeta_17, 1/(2*3*17)] = 0.
 This is a global theorem for the complete `rho/B1` map, not merely another
 finite-prime screen.
 
-## Scope boundary
+## What is and is not claimed
 
 The package does **not** assert the analogous global theorem for
 
@@ -83,11 +84,13 @@ See `REPRODUCE.md` for the paper build and the exact expected hashes.
 ## Layout
 
 ```text
-paper/         LaTeX source and compiled paper PDF
+paper/         main.tex, macros.tex, sections/, <title>.pdf
 scripts/       independent exact verifiers and package gate
 results/       exact minor inputs, CRT records, and regenerated receipts
 certificates/  frozen receipts for the earlier theorem blocks
 docs/          claim, source, red-team, artifact, and release boundaries
+LICENSE (MIT), LICENSE_SCOPE.md, THIRD_PARTY_NOTICES.md, CITATION.cff,
+MANIFEST_SHA256.txt, requirements.txt
 ```
 
 All original content in this directory is covered by the MIT `LICENSE`; see

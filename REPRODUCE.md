@@ -70,13 +70,15 @@ itself, the compiled PDF and LaTeX auxiliary files, and the regenerated
 
 ## Build the paper
 
-From `paper/`:
+As in the two companion P39 repositories, rebuild from `paper/` with the
+title-named job target:
 
 ```bash
-mkdir -p output
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory=output -jobname=P39_EXT04 main.tex
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory=output -jobname=P39_EXT04 main.tex
-pdflatex -interaction=nonstopmode -halt-on-error -output-directory=output -jobname=P39_EXT04 main.tex
+cd paper
+job="Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs"
+pdflatex -interaction=nonstopmode -halt-on-error -jobname="$job" main.tex
+pdflatex -interaction=nonstopmode -halt-on-error -jobname="$job" main.tex
+pdflatex -interaction=nonstopmode -halt-on-error -jobname="$job" main.tex
 ```
 
 The bibliography is inline, so no BibTeX/Biber pass is required. The source

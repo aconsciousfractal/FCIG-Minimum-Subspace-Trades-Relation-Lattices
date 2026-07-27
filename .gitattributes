@@ -1,7 +1,18 @@
-* text=auto eol=lf
+# Normalize shipped prose and source exactly as in the companion P39 repos.
+*.py    text eol=lf
+*.md    text eol=lf
+*.tex   text eol=lf
+*.cff   text eol=lf
+*.txt   text eol=lf
+LICENSE text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+requirements.txt text eol=lf
+
+# These certificates are byte-locked and include deliberate CRLF receipts.
+*.json binary
+
+# Binary artifacts.
 *.bin binary
 *.pdf binary
 *.png binary
-*.json binary
-*.tex text eol=lf
-*.py text eol=lf

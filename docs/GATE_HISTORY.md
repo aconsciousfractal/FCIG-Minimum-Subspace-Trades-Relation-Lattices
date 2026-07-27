@@ -9,7 +9,10 @@
 | S4.49C | exact G1-replacement maximal minor |
 | S4.49F | exact reverse-row minor and two-minor ideal-sum global gate |
 | S4.49G | manuscript integration, red team, PDF QA, and public-package assembly |
+| S4.49H | local public-package candidate |
+| S4.49I | initial GitHub publication and remote-clone replay |
+| S4.49J | locally red-teamed standalone-root and title-named-PDF correction |
 
-The S4.49G editorial decision is final for this release: the one-component
+The S4.49G editorial decision remains final for this release: the one-component
 global theorem belongs in the existing manuscript. The five analogous global
 problems are deferred and do not keep the paper open.

@@ -7,14 +7,8 @@ paper/*.aux
 paper/*.log
 paper/*.out
 paper/*.toc
+paper/*.bbl
+paper/*.blg
 paper/*.fls
 paper/*.fdb_latexmk
 paper/*.synctex.gz
-
-paper/output/*.aux
-paper/output/*.log
-paper/output/*.out
-paper/output/*.toc
-paper/output/*.fls
-paper/output/*.fdb_latexmk
-paper/output/*.synctex.gz

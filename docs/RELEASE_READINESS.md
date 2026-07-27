@@ -13,6 +13,8 @@ Visibility: public.
 - normal and optimized mathematical replays are byte-identical;
 - the cross-platform manifest gate passes;
 - the LaTeX source builds in three passes;
+- the PDF is title-named directly under `paper/`, following the established
+  P39 companion-repository convention;
 - the compiled PDF has been rendered and visually inspected;
 - source, claim, prior-art, P39/P42, license, and evidence-tier boundaries are
   explicit;

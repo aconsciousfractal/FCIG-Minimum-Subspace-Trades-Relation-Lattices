@@ -1,7 +1,7 @@
 # Red-team report
 
 Date: 2026-07-27
-Gate: S4.49G manuscript integration and local public-package audit.
+Gate: S4.49J standalone-repository and title-named-PDF remediation audit.
 
 ## Result
 
@@ -25,7 +25,15 @@ No unresolved claim-critical defect remains in the integrated manuscript.
 - P39/P42 tomography is cross-referenced but not merged logically;
 - the manuscript has no novelty/priority assertion;
 - normal and `python -O` replays are byte-identical;
-- the complete PDF was compiled and visually inspected page by page.
+- the complete PDF was compiled and visually inspected page by page;
+- the repository is a standalone clone directly under the local repository
+  root, with `origin` bound to the public GitHub repository;
+- the compiled PDF is title-named directly under `paper/`, matching both
+  earlier P39 companion repositories;
+- every PDF/build/path reference names that canonical title-named artifact;
+- JSON certificates remain byte-preserved because some receipts intentionally
+  use CRLF serialization, the sole documented exception to the two models'
+  text-normalized JSON convention.
 
 ## Release evidence boundary
 

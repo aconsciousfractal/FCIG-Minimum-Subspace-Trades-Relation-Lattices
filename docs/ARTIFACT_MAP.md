@@ -3,7 +3,7 @@
 | Purpose | Artifact |
 |---|---|
 | Manuscript source | `paper/main.tex`, `paper/macros.tex`, `paper/sections/*.tex` |
-| Compiled paper | `paper/output/P39_EXT04.pdf` |
+| Compiled paper | `paper/Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs.pdf` |
 | G1 replacement exact minor | `results/s449c_g1r_replacement_minor.bin` and `.json` |
 | G1 determinant CRT reconstruction | `results/s449c_g1r_crt_input.json`, `s449c_g1r_crt_raw.json` |
 | Reverse-row exact minor | `results/s449f_rho_d1_reverse_row_flint.bin` and minor manifest |
