@@ -1,0 +1,52 @@
+{
+  "schema": "P39-EXT04-RELEASE-ATTESTATION-v1",
+  "status": "VERIFIED_LOCAL_CANDIDATE",
+  "audit_date": "2026-07-28",
+  "source_base_commit": "e3757870551898aa137928773a5a9146b6405c1a",
+  "artifacts": {
+    "source_manifest": {
+      "path": "MANIFEST_SHA256.txt",
+      "sha256": "B4D3919EB85FC112B6D4B6DC79FC2D085B8A0C2E9869CB74A8ACE1D708D8F053",
+      "entries": 70
+    },
+    "paper_pdf": {
+      "path": "paper/Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs.pdf",
+      "sha256": "1EDF1C140598008C2130B2062B69879D47E5B615099ADB2A7048BAB42BA36E00",
+      "pages": 25,
+      "bytes": 183376
+    },
+    "aggregate_receipt": {
+      "path": "results/public_package_verification.json",
+      "sha256": "91642364E7D14CCD77B04F896E3159C03A08DFD47A62FCC3618A638595940959"
+    }
+  },
+  "toolchain": {
+    "python": "3.14.6",
+    "sympy": "1.14.0",
+    "tectonic": "0.16.9",
+    "pdf_renderer": "Poppler pdftoppm bundled runtime"
+  },
+  "gates": {
+    "arithmetic_normal": true,
+    "arithmetic_optimized": true,
+    "receipts_byte_identical": true,
+    "manifest_closed_tree": true,
+    "manifest_only_replay": true,
+    "latex_build_no_layout_or_reference_warnings": true,
+    "pdf_rendered_25_pages": true,
+    "visual_qa_25_pages": true,
+    "academic_error_repair_narrative_absent": true,
+    "superseded_claim_scan_clean": true
+  },
+  "publication_actions_at_audit_time": {
+    "committed": false,
+    "pushed": false,
+    "tagged": false,
+    "released": false
+  },
+  "notes": [
+    "The source manifest excludes this attestation, the title-named PDF, and the regenerated aggregate receipt to avoid circular hashes.",
+    "The PDF was rendered to 25 PNG pages; all pages and full-resolution key pages were inspected locally.",
+    "The independent final red team found two correctable wording/contract defects; both were remediated before this attestation. Its visual pass was incomplete, so the final 25-page visual QA was repeated by the integrating agent."
+  ]
+}

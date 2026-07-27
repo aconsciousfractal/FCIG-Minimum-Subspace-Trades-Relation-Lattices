@@ -2,61 +2,66 @@
 \label{app:reproducibility}
 
 The companion package is organized relative to its repository root.  The
-principal fail-closed replay of the characteristic-zero gate is
+principal fail-closed commands are
 \begin{verbatim}
+python scripts/check_manifest.py --closed-tree
 python scripts/verify_all.py
 python -O scripts/verify_all.py
-python scripts/check_manifest.py
+python scripts/verify_manifest_only.py
 \end{verbatim}
-It runs four independent verifiers:
+The aggregate replay invokes four independent verifiers:
 \begin{verbatim}
 scripts/s449c_verify_g1r_replacement_minor.py
 scripts/s449c_verify_g1r_principal_determinant.py
 scripts/s449f_verify_reverse_row_determinant.py
 scripts/s449f_verify_rho_d1_global_gate.py
 \end{verbatim}
-The expected SHA--256 receipts, in the same order, are
-\begin{verbatim}
-95D0D02E6D233DD25CEA69C07C33A3BCF2D850DE3708E2A1115AB6FEDFE56A15
-0077E7FCB73D61EF584E3E503CDA539743A118AA631261A0C2DD75BFC8F1DD84
-B7F420235A9947C12E28CD5A887EF883BD7F8D0F37836864B18C6365416BDE88
-511CD53641E7426650FAA3799BA7D7F3B514F51CA98B69766ADB5E00AE33EBDD
-\end{verbatim}
-The final verifier independently reconstructs the cyclotomic products and
-norms, both multiplication lattices, the \(16\times32\) Smith form, and the
-G0/reverse-row nonunit negative control.  Its conclusion is restricted to the
-complete \(\rh/\cB_1\) component over
-\(\ZZ[\zeta_{17},1/(2\cdot3\cdot17)]\).  Generated JSON is canonical, and the
-normal and optimized runs are required to be byte-identical.
+The first and third parsers reconstruct their sparse binary matrices and
+directly check the displayed diagnostic determinants.  The determinant
+reconstruction verifiers audit the frozen CRT prime lists and coefficient
+residues, prove signed uniqueness from row-energy bounds, recompute exact
+cyclotomic norms, construct both multiplication lattices, and reproduce
+the \(16\times32\) Smith form.  Generated JSON is canonical, and normal
+and optimized runs are required to be byte-identical.
 
 \paragraph{Evidence tiers.}
-The package includes the exact binary minors, CRT inputs and raw outputs needed
-for a clean replay of the new global gate.  It also includes frozen compact
-receipts and the complete minimum-circuit manifest for the earlier census,
-rational-generation, local-saturation, and selected-prime theorem blocks.
-The much larger historical raw matrix workspace remains in the source-locked
-P39 research archive and is not duplicated in the reviewer-sized package.
-Thus the new global theorem has a self-contained deep replay, while the earlier
-computer-assisted blocks are distributed with a hash-bound audit trail.  This
-distinction is recorded in the companion reviewer guide and claim ledger.
+The package contains the two exact sparse binary submatrices, their row
+and column selection manifests, the CRT inputs and outputs, and independent
+arithmetic verifiers for the global determinantal-ideal gate.  The public
+scripts directly recompute the two diagnostic modular determinants.  They
+do not regenerate all \(189\) CRT determinants from the binaries; those
+residues are source-admitted, hash-bound construction transcripts whose
+congruence, bound, uniqueness, norm, and mutation consequences are audited.
+The earlier census, rational-generation, local-saturation, and selected-
+prime theorem blocks are distributed as compact receipts.  Their much
+larger raw matrix workspace remains in the source-locked P39 archive and is
+not duplicated in this reviewer-sized package.  These boundaries are
+stated in the reviewer guide and claim ledger.
 
 \paragraph{Evidence levels.}
 Krotov's classification and the indispensable-fiber criterion are imported
 theorems.  The local circuit proof, semisimple criteria, Bockstein
 identification, Nakayama reductions, good-prime lemma, CRT uniqueness,
-multiplication-lattice interpretation, and Fitting implication are
-mathematical arguments in this paper.  The character tables, exhaustive
+multiplication-lattice interpretation, and determinantal-ideal implication
+are mathematical arguments in this paper.  Character tables, exhaustive
 censuses, component ranks, exact minors, determinant coefficients, Smith
 diagonal, and covectors are exact finite inputs with independent replays or
 frozen hash-bound receipts.  Resource stops from earlier wide Smith
 eliminations are not used as evidence.
 
+\paragraph{Locked finite objects.}
+The three block collections are identified by full canonical-key and
+point-mask SHA--256 hashes in \texttt{docs/SOURCE\_LOCK.md}.  Their
+construction route is pinned to the companion repository
+\emph{FCIG--Common--Marked--Lattice--Designs} at commit
+\texttt{40b3e716...d7f3227}.
+
 \paragraph{Source boundary.}
-The prior-art search is dated and bounded.  It found no source giving the same
-rational-spanning, cubic-fiber, or complete primary statements at \(137\),
-\(219\,097\), and \(3\,288\,036\,131\) for this locked triple, but that negative
-result is not a novelty or priority certificate.  The paper therefore makes no
-``first'' claim and does not generalize from the three selected configurations
-without a separate family argument.  General Fitting, Smith, CRT, and
-cyclotomic tools are standard; no method-priority claim is made for their use
-in \cref{thm:global-rho}.
+The prior-art search is dated and bounded.  It found no source giving the
+same rational-spanning, cubic-fiber, or complete primary statements at
+\(137\), \(219\,097\), and \(3\,288\,036\,131\) for this locked triple,
+but that negative result is not a novelty or priority certificate.  The
+paper makes no priority claim and does not generalize from the three
+selected configurations without a separate family argument.  General
+determinantal-ideal, Smith, CRT, and cyclotomic tools are standard; no
+method-priority claim is made for their use in \cref{thm:global-rho}.

@@ -2,62 +2,69 @@
 
 ## Fast audit route
 
-1. **Read the paper**:
-   `paper/Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs.pdf`.
-   The global `rho/B1` result is in Section 9; its finite-prime preparation is
-   in Sections 7--8.
-2. **Read the boundary**: `docs/CLAIM_LEDGER.md` and
-   `docs/PUBLIC_CLAIM_BOUNDARY.md`.
-3. **Run the exact replay**:
+1. Read the title-named PDF under <code>paper/</code>. The global
+   <code>rho/B1</code> result is in Section 9.
+2. Read <code>docs/CLAIM_LEDGER.md</code> and
+   <code>docs/PUBLIC_CLAIM_BOUNDARY.md</code>.
+3. Run:
 
-   ```bash
+   ~~~bash
+   python scripts/check_manifest.py --closed-tree
    python scripts/verify_all.py
    python -O scripts/verify_all.py
-   ```
+   python scripts/verify_manifest_only.py
+   ~~~
 
-4. Confirm that both runs end in `PASS_P39_EXT04_PUBLIC_PACKAGE` and that
-   `results/public_package_verification.json` is byte-identical.
-5. **Check the package manifest**: run `python scripts/check_manifest.py`.
+4. Confirm that both aggregate runs end in
+   <code>PASS_P39_EXT04_PUBLIC_PACKAGE</code> and produce the same final
+   receipt bytes.
 
-## What the deep replay establishes
+## What the included replay establishes
 
-The included exact artifacts independently establish:
+- each sparse binary has the declared dimensions and hash;
+- the two diagnostic determinants are recomputed directly from the binaries;
+- the frozen CRT prime and coefficient transcript satisfies every recorded
+  congruence and the rigorous signed-uniqueness bounds;
+- exact cyclotomic norms are independently recomputed;
+- the multiplication-lattice Smith diagonal is 17 repeated 11 times and 289
+  repeated 5 times, with index <code>17^21</code>;
+- both determinants are linked to distinct row and column selections inside
+  the same complete equation matrix;
+- the order-1312 determinantal ideal of that complete matrix becomes the unit
+  ideal after 17 is inverted.
 
-- the structural validity of the G1-replacement maximal minor;
-- the exact CRT reconstruction and cyclotomic norm of that determinant;
-- the exact CRT reconstruction and cyclotomic norm of the reverse-row minor;
-- the Smith diagonal of the sum of their multiplication lattices:
-  `17` repeated 11 times and `289` repeated 5 times;
-- index `17^21`;
-- the localized surjectivity of the complete `rho/B1` component map away from
-  `2`, `3`, and `17`;
-- the failure of the older G0/reverse-row pair as a negative control, with
-  residual factor `47821880003927349029`.
+The suite does not recompute every CRT determinant from the two binary matrices.
+Those modular determinant residues are source-admitted construction transcripts;
+the public verifier audits their arithmetic consequences fail-closed.
 
 ## Evidence tiers
 
 | Tier | Included evidence | Reviewer conclusion |
 |---|---|---|
-| A | binaries, CRT inputs/raw outputs, four independent verifiers | clean replay of the new global `rho/B1` theorem |
-| B | compact frozen receipts and the complete circuit manifest | hash-bound audit of earlier paper claims |
+| A | sparse binaries, selection manifests, CRT transcripts, exact arithmetic verifiers | direct diagnostic determinant checks plus independent transcript, norm, ideal-sum, and Smith audit |
+| B | compact frozen receipts and circuit manifest | hash-bound audit of earlier paper claims |
 | C | cited mathematical literature | imported theorems, not re-proved here |
 
-Tier B is intentionally not represented as a clean-room replay of the full
-historical 500+ MB research workspace. This public release keeps the
-reviewer-sized boundary; a later archival data deposit would not change the
-theorem proved by the Tier A replay.
+Tier B is not a clean-room replay of the full archived research workspace. An
+archival data deposit could strengthen reproducibility without changing the
+stated theorem.
 
 ## Claims deliberately absent
 
 - no analogous global theorem for the other five large maps;
 - no complete global Smith group;
-- no statement that all support is contained in `{2,3,17}`;
-- no novelty, priority, or “first” claim;
+- no global support statement for all components;
+- no novelty, priority, or firstness claim;
 - no theorem imported from the separate P42 tomography project.
+
+## Finite-object lock
+
+The exact three designs are identified by full canonical-key and point-mask
+hashes in <code>docs/SOURCE_LOCK.md</code>, and their construction repository
+is pinned at commit
+<code>40b3e716834e5c02e907cdadc067b3081d7f3227</code>.
 
 ## Repository status
 
-This is the public companion repository. The initial release is the
-reviewer-sized evidence package described above; the full historical raw
-workspace is not silently imported into its claim boundary. No DOI or journal
-acceptance is asserted.
+This is a reviewer-sized companion package. GitHub availability does not assert
+a DOI, journal submission, acceptance, or deposit of the full raw archive.

@@ -2,31 +2,35 @@
 
 ## Safe headline
 
-The complete `rho/B1` full-circuit component map has zero cokernel after
-localizing `Z[zeta_17]` away from `2`, `3`, and `17`. Two exact maximal minors
-are enough: their determinant ideal has lattice index `17^21`.
+Let <code>E_full</code> be the complete rho/B1 minimum-circuit equation matrix
+over <code>Z[zeta_17]</code>. Its order-1312 determinantal ideal becomes the
+unit ideal after 17 is inverted. Therefore the complete equation module has
+structural rank 1312 away from 2, 3, and 17.
 
 ## Safe supporting statements
 
-- the two determinant reconstructions are exact and satisfy preregistered CRT
-  uniqueness bounds;
-- the final multiplication-lattice calculation has Smith diagonal
-  `17` eleven times and `289` five times;
-- the result concerns the complete full-circuit map, not a pivot-prefix proxy;
-- the older G0/reverse-row pair is retained as a genuine negative control;
-- selected-prime closure of all six maps is distinct from global closure.
+- two exact order-1312 minors of the same complete equation matrix, using
+  different row and column selections, generate an ideal of index
+  <code>17^21</code>;
+- their two displayed diagnostic modular determinants are recomputed directly
+  from the sparse binaries;
+- the frozen CRT transcript satisfies every audited congruence, rigorous
+  uniqueness bound, exact norm, Smith, and mutation check;
+- the selected-prime closure of all six maps is distinct from the single-map
+  global theorem.
 
 ## Statements that must not appear
 
-- “all six maps are globally closed”;
-- “the global Smith group is known”;
-- “the only possible primes are 2, 3, and 17” for any component not proved by
-  an actual global gate;
-- “P42 tomography proves the P39 theorem”;
-- “first”, “new”, or another priority claim based only on a bounded search.
+- that the two determinants are maximal minors of one fixed 1312-by-1317 map;
+- that a fixed complete rho/B1 map has zero cokernel unless that presentation
+  is separately constructed and verified;
+- that all CRT determinants are regenerated from the binaries;
+- that all six maps are globally closed;
+- that the global Smith groups or full support are known;
+- that P42 tomography proves a P39 theorem;
+- any novelty, priority, or firstness claim based on the bounded search.
 
 ## Deferred work
 
-The other five global gates may be investigated later, but they are not a
-prerequisite for publishing the present manuscript. Opening them would be a
-new extension, not completion of an obligation left inside this package.
+The other five global gates are separate future extensions and are not needed
+for the present manuscript.

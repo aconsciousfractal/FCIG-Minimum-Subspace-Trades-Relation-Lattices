@@ -3,78 +3,69 @@
 
 \subsection{The rational--integral contrast}
 
-The main result has a deliberately asymmetric scope.  The minimum regulus
-trades generate every rational relation in all three configurations.  At the
-integral level we prove saturation at
-\(2,3,17,137,219\,097,3\,288\,036\,131\).  Globally, the exact
-two-minor certificate closes one of the six large maps, namely the complete
-\(\rh/\cB_1\) component, away from \(2,3,17\).  Equality of the full
+The minimum regulus trades generate every rational relation in all three
+configurations.  Integrally, we prove saturation at
+\(2,3,17,137,219\,097,3\,288\,036\,131\).  The global
+determinantal-ideal certificate closes one of the six large component
+gates, namely \(\rh/\cB_1\), away from \(2,3,17\).  Equality of the full
 trade and relation lattices remains open because the other five large
 component gates have not been computed.  Thus
 \[
 \text{minimum local geometry}
 \quad\Longrightarrow\quad
 \text{full rational generation}
-\ \centernot\Longrightarrow\
+\ \nRightarrow\
 \text{global integral saturation}.
 \]
 The character table also shows that common incidence parameters and a
 common group do not make the relation modules isomorphic.
 
-The general theories used here have distinct ownership.  Cho's
-characteristic-zero null-design decomposition and minimum subspace
+Cho's characteristic-zero null-design decomposition and minimum subspace
 null-design work provide the complete-Grassmann background
 \cite{Cho1997,Cho1998}.  Krotov supplies the minimum-support theorem and
 the \(t=1\) classification \cite{Krotov2017}.  The ordinary-subset
 orbit-spanning result of Ghorbani--Kamali--Khosrovshahi is the closest
 structural analogue of \cref{thm:full-kernel}
-\cite{GhorbaniKamaliKhosrovshahi}.  It uses the full symmetric action on
-subsets, whereas the present theorem concerns selected binary subspace
-constituents and the order-\(204\) group.
+\cite{GhorbaniKamaliKhosrovshahi}.  Maliakas--Stergiopoulou develop total
+trades through intersection matrices and Specht modules
+\cite{MaliakasStergiopoulou}.  Both ordinary-subset settings use the
+symmetric-group module structure; the present theorem concerns selected
+binary subspace constituents and the order-\(204\) group.
 
 For toric ideals, Aoki--Takemura--Yoshida own the indispensable-fiber
 criterion \cite{AokiTakemuraYoshida}.  Betti--Grate--Holleben--Salizzoni
-develop the current incidence-toric/null-design language for ordinary
-subset incidence matrices \cite{BettiEtAl2026}.  The present finite
-calculation is the proof that the cubic fibers of these selected
-Grassmann configurations have exactly the two regulus monomials.
-Classical integral-design modules and circuit lattices are represented by
-\cite{GraverJurkat,GrahamLiLi}; the component computation in
-\cref{sec:137} is specific to the locked triple.  These comparisons are
-scope boundaries, not priority claims.
-
-Fitting ideals, cyclotomic arithmetic, CRT reconstruction, and Smith normal
-form are standard tools \cite{StacksProjectFitting,Cohen1993,Washington1997,Newman1972}.
-The contribution here is their exact application to the frozen complete
-component map and the independently replayed two-minor certificate.  No
-method-firstness or priority claim is made.
+develop incidence-toric/null-design language for ordinary subset
+incidence matrices \cite{BettiEtAl2026}.  The present finite calculation
+shows that the cubic fibers of these selected Grassmann configurations
+have exactly the two regulus monomials.  Classical integral-design
+modules and circuit lattices are represented by
+\cite{GraverJurkat,GrahamLiLi}.  Determinantal ideals, cyclotomic
+arithmetic, CRT reconstruction, and Smith normal form are standard tools
+\cite{StacksProjectFitting,Cohen1993,Washington1997,Newman1972}.  These
+comparisons delimit scope; no method-firstness or priority claim is made.
 
 \subsection{Tomography and the P42 interface}
 
-There is a useful but logically separate sensing result.  The
-\(97\,155\) three-dimensional subspaces of \(\FF_2^8\) split into
+The \(97\,155\) three-dimensional subspaces of \(\FF_2^8\) split into
 \(515\) \(\GammaG\)-orbits, with orbit-size profile
 \[
  51^5,\qquad102^{70},\qquad204^{440}.
 \]
 The selected three-space versus four-space incidence map
 \[
- W_{3,4}:\QQ[\cB_i]\longrightarrow\QQ[\operatorname{Gr}_2(8,3)]
+ W_{3,4}:\QQ[\cB_i]\longrightarrow
+ \QQ[\operatorname{Gr}_2(8,3)]
 \]
-has column rank \(66\,929\), so it is injective on the entire block
-module and, in particular, on every \(K_i\).  It gives a lossless rational
-sensor system for the relations.
+has column rank \(66\,929\).  It is therefore injective on the entire
+block module and, in particular, on every \(K_i\), giving a lossless
+rational sensor system for the relations.
 
-This statement is not used in
-\cref{thm:full-kernel,thm:rho137,thm:theta137,thm:theta219097,thm:theta3288036131,thm:global-rho}.
-The temporary selected-row rank losses at \(137\), \(219\,097\), and
-\(3\,288\,036\,131\) were
-presentation phenomena, not tomography failures and not integral quotient
-classes.  Conversely, no tomography statement is used in the exact
-cyclotomic or Fitting argument of \cref{thm:global-rho}.  The broader
-comparison of sensor families,
-minimal sensor sets, and reconstruction belongs to the planned P42
-tomography paper.  The synchronized interface is:
+This sensing statement is not used in
+\cref{thm:full-kernel,thm:theta137,thm:theta219097,%
+thm:theta3288036131,thm:global-rho}; conversely, no tomography statement
+is used in the integral component certificates.  Systematic comparison
+of sensor families, minimal sensor sets, and reconstruction belongs to
+the planned P42 tomography paper.  The synchronized interface is
 \[
 \begin{array}{c|c}
 \text{P39}&\text{P42}\\
@@ -84,63 +75,53 @@ tomography paper.  The synchronized interface is:
 \text{one lossless \(W_{3,4}\) check}
 &\text{systematic sensor comparison}\\
 \text{integral component audit}
-&\text{distinguish sensing loss from lifting loss}.
+&\text{sensing loss versus lifting loss}.
 \end{array}
 \]
 
 \subsection{Remaining global integral gates}
 
 At \(137\), \(219\,097\), and \(3\,288\,036\,131\), all six large maps
-are classified and
-\cref{thm:theta137,thm:theta219097,thm:theta3288036131} gives complete
-three-design vanishing.  These were exactly the good-prime signals found
-by the frozen selected-row search.  Their disappearance under complete-map
-audits shows that the candidate list was not a support theorem.
-
-\Cref{thm:global-rho} goes beyond that finite list for one map: every
-prime ideal outside \(2,3,17\) is excluded from the complete
-\(\rh/\cB_1\) cokernel.  The remaining integral tasks are therefore:
+have structural rank, giving complete three-design vanishing by
+\cref{thm:theta137,thm:theta219097,thm:theta3288036131}.
+\Cref{thm:global-rho} goes beyond that finite list for one map.  The
+remaining integral tasks are:
 \begin{itemize}
-  \item compute an exact localized maximal-minor ideal certificate for each
-  of the other five large component maps;
-  \item combine those results with \cref{prop:small-components} to prove or
-  refute \(\operatorname{Supp}(\Theta_i)\subseteq\{2,3,17\}\);
+  \item compute an exact localized order-maximal determinantal-ideal
+  certificate for each of the other five large component maps;
+  \item combine those results with \cref{prop:small-components} to prove
+  or refute \(\operatorname{Supp}(\Theta_i)\subseteq\{2,3,17\}\);
   \item compute the exact global Smith invariant factors, including the
   remaining \(2\)-, \(3\)-, and \(17\)-primary structure.
 \end{itemize}
-A further finite-prime search cannot close these questions.  The successful
-\(\rh/\cB_1\) route shows the required form of a certificate: one common
-integral cyclotomic basis, exact characteristic-zero determinants from
-genuinely different row bases, and their ideal sum rather than a rational
-norm gcd.  The failure of closely related same-row minors in
-\cref{rem:minor-artifact} is the reason row-basis diversity matters.
-The five repetitions are deliberately deferred; none is needed for the
-rational, cubic, selected-prime, or one-component global theorems proved
-here.
+A further finite-prime search cannot close these questions.  The
+\(\rh/\cB_1\) result shows the required certificate shape: a common
+integral cyclotomic basis, exact characteristic-zero minors of the
+complete equation matrix, and their ideal sum.  The five repetitions are
+deliberately deferred; none is needed for the rational, cubic,
+selected-prime, or one-component global theorems proved here.
+
 \subsection{Geometric and family questions}
 
 Krotov's bound gives support \(30\) and leg volume \(15\) for
-\(T_2(2,4,8)\), but the \(t=1\) uniqueness theorem used in this paper does
-not classify that case.  An exact next question is a two-colour census:
-one leg in \(\cB_i\), the other in \(\cB_j\).  The canonical construction
-can be searched orbitally, but exhaustiveness requires a separate
-classification theorem.
+\(T_2(2,4,8)\), but the \(t=1\) uniqueness theorem used here does not
+classify that case.  An exact next question is a two-colour census: one
+leg in \(\cB_i\), the other in \(\cB_j\).  Exhaustiveness requires a
+separate classification theorem.
 
 A second direction is to replace the locked finite triple by a general
-selected \(q\)-subspace configuration.  The missing theorem is not the
-minimum-trade bound; it is nonzero projection of the selected minimum
-trades to every null-design constituent.  The component-rank criterion in
-\cref{lem:component-rank} isolates exactly what such a theorem would have
-to prove.
+selected \(q\)-subspace configuration.  The missing theorem is nonzero
+projection of the selected minimum trades to every null-design
+constituent.  The component-rank criterion in
+\cref{lem:component-rank} isolates what such a theorem must prove.
 
-Finally, the higher-degree parts of \(I_i\) remain open.  Cubic
+Finally, higher-degree parts of \(I_i\) remain open.  Cubic
 indispensability neither implies cubic generation nor determines the
-complete Markov or Graver basis.  The P39 and P42 programs meet naturally
-at the sequence
+complete Markov or Graver basis.  The P39 and P42 programs meet at
 \[
  \QQ\text{-generation}\longrightarrow
  \ZZ\text{-lifting}\longrightarrow
  \text{Markov connectivity},
 \]
-but the three arrows should remain separate until their respective
-integral and higher-degree obstructions are classified.
+but these stages should remain separate until their integral and
+higher-degree obstructions are classified.

@@ -299,9 +299,10 @@ def main() -> int:
             "localized_unit": False,
         },
         "conclusion": (
-            "The two displayed maximal-minor ideals generate the unit "
-            "ideal after inverting 2, 3 and 17. Therefore the rho/D1 "
-            "residual Fitting gate is closed away from S."
+            "The two displayed order-1312 minors belong to the complete "
+            "equation matrix determinantal ideal and generate the unit "
+            "ideal after inverting 17. Therefore that complete equation "
+            "matrix has structural rank 1312 away from S."
         ),
         "claim_boundary": (
             "This closes rho/D1 only. It does not close the other five "

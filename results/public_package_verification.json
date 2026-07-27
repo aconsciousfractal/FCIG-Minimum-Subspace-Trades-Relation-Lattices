@@ -1,5 +1,5 @@
 {
-  "manifest_sha256": "B9CC4DBC648A476F7E955235C87357C425C93A8F68832C32AE82C245705A69EE",
+  "manifest_sha256": "B4D3919EB85FC112B6D4B6DC79FC2D085B8A0C2E9869CB74A8ACE1D708D8F053",
   "replays": [
     {
       "receipt": "results/s449c_g1r_replacement_minor_verification.json",
@@ -14,15 +14,15 @@
     {
       "receipt": "results/s449f_reverse_row_determinant_verification.json",
       "script": "s449f_verify_reverse_row_determinant.py",
-      "sha256": "B7F420235A9947C12E28CD5A887EF883BD7F8D0F37836864B18C6365416BDE88"
+      "sha256": "E2CE27333088A61FD696FBDFFFC502B85E5C3671FB9349A07F5C603507B06D17"
     },
     {
       "receipt": "results/s449f_rho_d1_global_gate_verification.json",
       "script": "s449f_verify_rho_d1_global_gate.py",
-      "sha256": "511CD53641E7426650FAA3799BA7D7F3B514F51CA98B69766ADB5E00AE33EBDD"
+      "sha256": "B960ADA66A473AA3211EECC59727A7DD480DF10A1B37FDFDAFC8146CA2B18CC8"
     }
   ],
-  "schema": "P39-EXT04-PUBLIC-PACKAGE-VERIFICATION-v1",
+  "schema": "P39-EXT04-PUBLIC-PACKAGE-VERIFICATION-v2",
   "scope_boundary": {
     "global_maps_deferred": [
       "rho*omega/B1",
@@ -38,12 +38,11 @@
   },
   "status": "PASS",
   "theorem": {
-    "codomain_rank": 1312,
     "coefficient_ring": "Z[zeta_17]",
+    "complete_equation_columns": 1317,
     "component": "rho/B1",
-    "domain_rank": 1317,
+    "determinantal_ideal": "I_1312(E_full) is the unit ideal after inverting 17",
     "ideal_index": 69091933913008732880827217,
-    "localized_cokernel": "0 over Z[zeta_17,1/(2*3*17)]",
     "smith_diagonal": [
       17,
       17,
@@ -61,6 +60,7 @@
       289,
       289,
       289
-    ]
+    ],
+    "structural_rank": 1312
   }
 }

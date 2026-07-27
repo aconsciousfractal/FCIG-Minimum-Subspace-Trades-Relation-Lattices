@@ -1,0 +1,44 @@
+name: verify
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: python -m pip install --upgrade pip
+      - run: python -m pip install -r requirements.txt
+      - run: python scripts/check_manifest.py --closed-tree
+      - run: python scripts/verify_all.py
+      - run: python -O scripts/verify_all.py
+      - run: python scripts/verify_manifest_only.py
+      - run: python scripts/check_release_attestation.py
+
+  paper-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y texlive-latex-base texlive-latex-extra
+      - name: Build title-named PDF
+        working-directory: paper
+        run: |
+          job=Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs
+          pdflatex -interaction=nonstopmode -halt-on-error -jobname="$job" main.tex
+          pdflatex -interaction=nonstopmode -halt-on-error -jobname="$job" main.tex
+          pdflatex -interaction=nonstopmode -halt-on-error -jobname="$job" main.tex
+          test -s "$job.pdf"

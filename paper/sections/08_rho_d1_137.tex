@@ -1,9 +1,8 @@
-\section{Complete saturation at the three screened good primes}
-\label{sec:137}
+\section{Complete saturation at three selected good primes}
+\label{sec:selected-primes}
 
-We first record the exact passage from component equations to the integral
-quotient.  The distinction between the complete equation space and a
-control-prime-selected row set is essential in this section.
+We first record the exact passage from complete component equations to the
+integral quotient.
 
 \begin{lemma}[Good-prime component detection]
 \label{lem:good-prime}
@@ -12,10 +11,14 @@ let \(k/\FF_p\) split \(\GammaG\).  Put
 \[
  Q_i=(K_i^{\ZZ}/L_i)\otimes k.
 \]
-For every absolutely irreducible \(k\GammaG\)-module \(V\), the cokernel
-of the \emph{complete} component equation map is dual to
-\(\Hom_{k\GammaG}(Q_i,V)\).  Consequently, if every complete component
-map has its structural target rank, then
+For every absolutely irreducible \(k\GammaG\)-module \(V\), the
+structural rank deficiency of the complete component equation map satisfies
+\[
+ \bigl(m_{B_i}(V)-m_P(V)\bigr)-\rank E_{i,V}
+ =\dim_k\Hom_{k\GammaG}(Q_i,V).
+\]
+Consequently, if every complete component map has its structural target rank,
+then
 \(\Theta_i\otimes\FF_p=0\), and hence \(\Theta_i[p^\infty]=0\).
 \end{lemma}
 
@@ -27,90 +30,48 @@ Reduction gives an exact sequence
  \longrightarrow k[\cP]\longrightarrow0.
 \]
 Maschke's theorem makes \(k\GammaG\) semisimple.  Applying
-\(\Hom_{k\GammaG}(-,V)\) identifies the indicated cokernel with the dual
-of \(\Hom_{k\GammaG}(Q_i,V)\).  The word ``complete'' is necessary:
-replacing all minimum-circuit equations by a row subset selected at a
-different prime need not preserve rank after reduction modulo \(p\).
-If every absolute type vanishes after a splitting extension, faithful
-scalar extension gives \(Q_i=0\).  Finally, finiteness of \(\Theta_i\)
-and Nakayama's lemma give \(\Theta_i[p^\infty]=0\).
+\(\Hom_{k\GammaG}(-,V)\) gives
+\[
+ 0\longrightarrow\Hom_{k\GammaG}(k[\cP],V)
+ \longrightarrow\ker E_{i,V}
+ \longrightarrow\Hom_{k\GammaG}(Q_i,V)
+ \longrightarrow0.
+\]
+Taking dimensions gives the displayed deficiency formula.  If every absolute
+type vanishes after a splitting extension, faithful scalar extension gives
+\(Q_i=0\).
+Finiteness of \(\Theta_i\) and Nakayama's lemma then give
+\(\Theta_i[p^\infty]=0\).
 \end{proof}
 
-At \(p=137\), the hypotheses hold: \(137\nmid204\), every projector
-denominator is a unit, and the incidence Smith form has no \(137\)-factor.
+\subsection{The prime \(137\)}
 
-\subsection{Why the selected-row obstruction is not a quotient class}
-
-For \(\rh/\cB_1\), a \(1\,312\)-row presentation selected for full rank
-at the control prime \(409\) has rank \(1\,311\) at
+Here \(137\nmid204\), every projector denominator is a unit, and the
+incidence Smith form has no \(137\)-factor.  For \(\rh/\cB_1\), the block
+multiplicity space has dimension \(1317\), while the point-induced
+subspace has dimension \(5\), so the structural equation rank is
 \[
- \mathfrak p=(137,\zeta_{17}-122).
+ 1317-5=1312.
 \]
-Its certified residual has rank \(256\) rather than \(257\), and its
-local selected-presentation cokernel has length one.  Those calculations
-are exact, including the Hensel lift modulo \(137^2\), but they concern
-the selected presentation only.
-
-They do not prove a class in \(\Theta_1\): additional minimum-circuit
-equations, absent from the \(409\)-selected set, may restore the
-structural target rank at \(137\).  This is what happens.
-
-\subsection{The full-circuit restoration}
-
-There are \(11\,274\) \(\GammaG\)-orbits of internal minimum circuits in
-\(\cB_1\).  One seed per orbit suffices by equivariance.  At
-\(\zeta_{17}=122\), the absolute \(\rh\)-representation has dimension
-\(4\); the block multiplicity space has dimension \(1\,317\), while the
-point-induced kernel has dimension \(5\).  Hence the maximum circuit
-rank is
+The complete circuit-equation matrix has a certified
+\(1312\times1312\) minor with
 \[
- 1\,317-5=1\,312.
+ \det=56\pmod {137}
+ \qquad\text{at }\zeta_{17}=122.
 \]
-
-Deterministic sparse elimination over \(\FF_{137}\), in lexicographic
-orbit and coordinate order, gives
-\[
-\begin{array}{c|r}
-\text{processed circuit orbits}&\text{rank}\\
-\midrule
-500&1260\\
-1000&1309\\
-2000&1311\\
-2864&1312.
-\end{array}
-\]
-The restoring source row is coordinate \(0\) of orbit \(2864\)
-(zero-based identifier \((2863,0)\)).  An independent reconstruction
-forms the selected \(1\,312\times1\,312\) minor and obtains
-\[
- \det=56\pmod {137}.
-\]
-Removing the restoring row leaves rank \(1\,311\), and duplicating a
-pivot column makes the determinant zero.
-
 \begin{theorem}[Complete \(\rh/\cB_1\) contribution above \(137\)]
 \label{thm:rho137}
-The complete minimum-circuit component map for \(\rh/\cB_1\) is full at
-every prime above \(137\).  In particular,
-\[
- \coker(F_{\rh,1}^{\mathrm{full}})[137^\infty]=0.
-\]
-The length-one cokernel at \((137,\zeta_{17}-122)\) belongs only to the
-control-prime-selected presentation and is not a quotient of
-\(\Theta_1\).
+The complete \(\rh/\cB_1\) equation matrix has structural rank \(1312\)
+at every prime above \(137\).
 \end{theorem}
 
 \begin{proof}
-At fifteen of the sixteen split primes, the earlier selected row set
-already contains a nonzero maximal minor, so the complete map is full
-there.  At the remaining root \(122\), the full-circuit minor above has
-nonzero determinant.  Thus every localization above \(137\) is full.
+The displayed minor is nonzero at \(\zeta_{17}=122\); the exact
+certificates at the other fifteen roots likewise contain nonzero
+order-\(1312\) minors.
 \end{proof}
 
-\subsection{The other five large maps}
-
-For \(\rh\), the sixteen primes above \(137\) are the degree-one roots of
-\(\Phi_{17}\).  For \(\rh\om\), put
+For \(\rh\om\), put
 \[
  k_2=\FF_{137}[y]/(y^2+y+1).
 \]
@@ -122,14 +83,13 @@ If \(r\) runs over the sixteen order-\(17\) roots in \(\FF_{137}\), then
 \]
 has order \(51\), and the Frobenius pairs
 \(\{\alpha_r,\alpha_r^{137}\}\) represent the sixteen degree-two primes
-of \(\ZZ[\zeta_{51}]\) above \(137\).
-
-The exact original-column presentations give:
+of \(\ZZ[\zeta_{51}]\) above \(137\).  The six large-map certificates are
 \[
 \begin{array}{c|r|r|c|c}
-\text{map}&\text{rows}&\text{columns}&
- \text{residue degrees}&\text{full maximal minors}\\
+\text{map}&\text{target rank}&\text{columns}&
+ \text{residue degrees}&\text{nonzero minors}\\
 \midrule
+\rh/\cB_1&1312&1317&1^{16}&16/16\\
 \rh\om/\cB_1&1305&10480&2^{16}&16/16\\
 \rh/\cB_2&1314&5276&1^{16}&16/16\\
 \rh\om/\cB_2&1304&10472&2^{16}&16/16\\
@@ -137,17 +97,17 @@ The exact original-column presentations give:
 \rh\om/\cB_3&1306&10488&2^{16}&16/16.
 \end{array}
 \]
-For the quadratic rows, multiplication by \(a+by\) is expanded as
+For quadratic residues, multiplication by \(a+by\) is expanded as
 \[
  \begin{bmatrix}a&-b\\ b&a-b\end{bmatrix}.
 \]
-A second parser uses the Frobenius-conjugate root, transposes every
-matrix, reproduces all \(80\) determinant residues, and kills each
-determinant after duplicating one field column.
+An independent parser uses Frobenius-conjugate roots, transposes every
+selected square matrix, reproduces all \(80\) determinant residues for
+the last five maps, and obtains zero after duplicating a field column.
 
 \begin{theorem}[Complete \(137\)-primary quotients]
 \label{thm:theta137}
-For the three frozen configurations,
+For the three locked configurations,
 \[
  \Theta_1[137^\infty]
  =\Theta_2[137^\infty]
@@ -158,46 +118,29 @@ For the three frozen configurations,
 
 \begin{proof}
 \Cref{prop:small-components} excludes \(137\) from all eighteen small
-component cokernels.  \Cref{thm:rho137} closes the formerly exceptional
-\(\rh/\cB_1\) component, and the eighty nonzero maximal minors close the
-other five large maps.  The complete-component criterion in
-\cref{lem:good-prime} gives
-\(\Theta_i\otimes\FF_{137}=0\) for every \(i\); finiteness then excludes
-all \(137\)-primary torsion.
+component cokernels.  The table supplies structural rank for all six
+large maps at every localization.  Apply \cref{lem:good-prime}.
 \end{proof}
 
-\begin{remark}[Exact boundary]
-\label{rem:137-boundary}
-The theorem is complete at the rational prime \(137\).  It does not
-classify another rational prime or determine the global Smith invariant
-factors of the finite groups \(\Theta_i\).  In particular, singular
-minors selected at \(409\) above other candidate primes must first be
-audited against the complete circuit equation space.
-\end{remark}
+\subsection{The prime \(219\,097\)}
 
-\subsection{A second complete prime envelope}
-
-The next selected-presentation signal occurs at \(p=219\,097\).  Since
+Since
 \[
  219\,097-1=2^3\cdot3^2\cdot17\cdot179,
  \qquad 219\,097\equiv1\pmod {51},
 \]
-both cyclotomic orders split completely.  Thus a \(\rh\)-map has sixteen
-degree-one localizations and a \(\rh\om\)-map has thirty-two.
-
-For \(\rh/\cB_1\), the complete circuit map restores rank \(1\,312\) at
-the historical root \(91085\), again at source row \((2863,0)\).  The
-independent maximal minor has determinant
+both cyclotomic orders split completely.  The complete
+\(\rh/\cB_1\) equation matrix has a certified full-rank minor with
 \[
- 213269\pmod {219097},
+ \det=213269\pmod {219097}
+ \qquad\text{at }\zeta_{17}=91085.
 \]
-and the prefix without the restoring row has rank \(1\,311\).
-
-For the other five maps, exact original-column maximal minors give
+The complete large-map screen is
 \[
 \begin{array}{c|r|r|c}
 \text{map}&\text{target rank}&\text{localizations}&\text{nonzero minors}\\
 \midrule
+\rh/\cB_1&1312&16&16\\
 \rh\om/\cB_1&1305&32&32\\
 \rh/\cB_2&1314&16&16\\
 \rh\om/\cB_2&1304&32&32\\
@@ -205,14 +148,14 @@ For the other five maps, exact original-column maximal minors give
 \rh\om/\cB_3&1306&32&32.
 \end{array}
 \]
-An independent parser enumerates the roots from a primitive generator,
-reconstructs the transpose of every selected matrix, reproduces all
-\(128\) determinants, and obtains determinant zero in all \(128\)
-duplicate-column controls.
+For the last five maps, an independent parser enumerates the roots from a
+primitive generator, reconstructs the transpose of every selected square
+matrix, reproduces all \(128\) determinants, and obtains zero in all
+\(128\) duplicate-column controls.
 
 \begin{theorem}[Complete \(219\,097\)-primary quotients]
 \label{thm:theta219097}
-For the three frozen configurations,
+For the three locked configurations,
 \[
  \Theta_1[219097^\infty]
  =\Theta_2[219097^\infty]
@@ -222,51 +165,36 @@ For the three frozen configurations,
 \end{theorem}
 
 \begin{proof}
-\Cref{prop:small-components} excludes \(219\,097\) from all eighteen small
-component cokernels.  The full-circuit determinant closes
-\(\rh/\cB_1\), and the \(128\) nonzero maximal minors close the other five
-large maps.  The good-prime complete-component criterion
-\cref{lem:good-prime} gives \(\Theta_i\otimes\FF_{219097}=0\) for all
-three designs; finiteness excludes \(219\,097\)-primary torsion.
+\Cref{prop:small-components} excludes \(219\,097\) from all eighteen
+small components, and the complete large-map screen supplies structural
+rank for the remaining six.  Apply \cref{lem:good-prime}.
 \end{proof}
 
-\begin{remark}[Remaining integral boundary]
-The theorem removes \(219\,097\) completely from the possible support.  It
-does not classify another rational prime or the global Smith invariant
-factors.
-\end{remark}
+\subsection{The prime \(3\,288\,036\,131\)}
 
-\subsection{A third complete prime envelope}
-
-The last selected-presentation signal is
-\(p=3\,288\,036\,131\).  Here
+Put \(p=3\,288\,036\,131\).  Then
 \[
  p-1=2\cdot5\cdot17\cdot2243\cdot8623,
  \qquad p\equiv1\pmod {17},\qquad p\equiv2\pmod3.
 \]
-Thus \(\Phi_{17}\) has sixteen linear factors, while \(\Phi_{51}\)
-has sixteen irreducible quadratic factors.
-
-For \(\rh/\cB_1\), the complete circuit map restores rank \(1\,312\) at
-the historical root \(1\,120\,906\,769\), again at source row
-\((2863,0)\).  The independently reconstructed maximal minor has
+Thus \(\Phi_{17}\) has sixteen linear factors and \(\Phi_{51}\) has
+sixteen irreducible quadratic factors.  The complete
+\(\rh/\cB_1\) equation matrix has a certified full-rank minor with
 \[
- \det=1\,471\,654\,912\pmod {3\,288\,036\,131},
+ \det=1\,471\,654\,912\pmod p
+ \qquad\text{at }\zeta_{17}=1\,120\,906\,769.
 \]
-and the prefix without the restoring row has rank \(1\,311\).
-
 For the \(\rh\om\)-maps, use
 \[
  k_2=\FF_p[y]/(y^2+y+1),\qquad \alpha_r=r^6y^2,
 \]
-where \(r\) runs through the order-\(17\) roots.  Then
-\(\alpha_r^3=r\), \(\alpha_r^{17}=y\), and the Frobenius pairs give the
-sixteen quadratic primes.  The five remaining maps have the exact screen
+where \(r\) runs through the order-\(17\) roots.  The complete screen is
 \[
 \begin{array}{c|r|r|c|c}
 \text{map}&\text{target rank}&\text{residue degree}&
  \text{localizations}&\text{nonzero minors}\\
 \midrule
+\rh/\cB_1&1312&1&16&16\\
 \rh\om/\cB_1&1305&2&16&16\\
 \rh/\cB_2&1314&1&16&16\\
 \rh\om/\cB_2&1304&2&16&16\\
@@ -275,36 +203,28 @@ sixteen quadratic primes.  The five remaining maps have the exact screen
 \end{array}
 \]
 The independent route finds the least primitive generator \(2\), uses
-the Frobenius-conjugate quadratic representatives, transposes every
-matrix, reproduces all \(80\) determinant residues, and obtains determinant
-zero in all \(80\) duplicate-field-column controls.
+Frobenius-conjugate quadratic representatives, transposes every selected
+square matrix, reproduces all \(80\) determinant residues for the last
+five maps, and obtains zero in all \(80\) duplicate-column controls.
 
 \begin{theorem}[Complete \(3\,288\,036\,131\)-primary quotients]
 \label{thm:theta3288036131}
-For the three frozen configurations,
+For the three locked configurations,
 \[
- \Theta_1[3288036131^\infty]
- =\Theta_2[3288036131^\infty]
- =\Theta_3[3288036131^\infty]
- =0.
+ \Theta_1[p^\infty]=\Theta_2[p^\infty]=\Theta_3[p^\infty]=0.
 \]
 \end{theorem}
 
 \begin{proof}
-\Cref{prop:small-components} excludes \(3\,288\,036\,131\) from all
-eighteen small component cokernels.  The full-circuit determinant closes
-\(\rh/\cB_1\), and the \(80\) nonzero maximal minors close the other five
-large maps.  The complete-component criterion in
-\cref{lem:good-prime} gives \(\Theta_i\otimes\FF_p=0\); finiteness excludes
-all \(p\)-primary torsion.
+\Cref{prop:small-components} excludes \(p\) from all eighteen small
+components, and the complete large-map screen supplies structural rank
+for the remaining six.  Apply \cref{lem:good-prime}.
 \end{proof}
 
-\begin{remark}[Selected signals versus global support]
-All three selected good-prime rank losses, at \(137\), \(219\,097\), and
-\(3\,288\,036\,131\), disappear for the complete maps.  This finite list
-alone does not prove that no untested rational prime divides a global Smith
-factor.  The next section supplies that global exclusion away from
-\(2,3,17\) for the single complete \(\rh/\cB_1\) component.  The other
-five large maps, the support of the complete \(\Theta_i\), and their global
-invariant factors remain open.
+\begin{remark}[Exact boundary]
+The three theorems classify the complete primary quotients only at the
+displayed rational primes.  A finite list of local screens does not
+determine the support or Smith factors of the global groups
+\(\Theta_i\).  The next section gives a global determinantal-ideal
+certificate for the single \(\rh/\cB_1\) equation module.
 \end{remark}

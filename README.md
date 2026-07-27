@@ -5,93 +5,96 @@ Companion package for the paper
 > **Minimum Subspace Trades and Relation Lattices in Three Binary Designs**
 > Oleksiy Babanskyy, 2026.
 
-PDF:
-[`paper/Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs.pdf`](paper/Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs.pdf)
-(title-named, built from `paper/main.tex` + `paper/sections/`; see
-[`REPRODUCE.md`](REPRODUCE.md)).
+PDF: [paper/Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs.pdf](paper/Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs.pdf).
 
 ## What the paper proves
 
 For three fixed group-invariant collections of four-dimensional subspaces of
-`F_2^8`, the paper determines the minimum six-block opposite-regulus trades,
-their exact censuses, rational generation, and the complete cubic layer of the
-incidence toric ideals.
+<code>F_2^8</code>, the paper determines the minimum six-block opposite-regulus
+trades, their exact censuses, rational generation, and the complete cubic layer
+of the incidence toric ideals. It proves integral saturation at 2, 3, 17, 137,
+219097, and 3288036131.
 
-The extension completed here adds an exact characteristic-zero result for one
-large component map. If
+For the large <code>rho/B1</code> component, let <code>E_full</code> be the
+complete matrix of all minimum-circuit equations over
+<code>Z[zeta_17]</code>. It has 1317 columns and structural rank at most 1312.
+Two exact order-1312 minors of <code>E_full</code>, obtained from different row
+and column selections, generate an ideal of index
 
-```text
-A = F_{rho,1}^{full}: Z[zeta_17]^1317 -> Z[zeta_17]^1312,
-```
+~~~text
+17^21 = 69091933913008732880827217.
+~~~
 
-then two exact maximal minors generate an ideal of index
+Therefore
 
-```text
-17^21 = 69091933913008732880827217,
-```
+~~~text
+I_1312(E_full) Z[zeta_17, 1/(2*3*17)] = Z[zeta_17, 1/(2*3*17)],
+~~~
 
-and therefore
-
-```text
-coker(A) tensor Z[zeta_17, 1/(2*3*17)] = 0.
-```
-
-This is a global theorem for the complete `rho/B1` map, not merely another
-finite-prime screen.
+so the complete equation module has structural rank 1312 at every prime of the
+localized ring. This is a determinantal-ideal theorem about the complete
+equation matrix, not a surjectivity claim for one fixed 1312-by-1317
+presentation.
 
 ## What is and is not claimed
 
-The package does **not** assert the analogous global theorem for
+The analogous global gate remains open for
 
-```text
+~~~text
 rho*omega/B1, rho/B2, rho*omega/B2, rho/B3, rho*omega/B3.
-```
+~~~
 
-Those five maps are intentionally deferred. The global Smith groups also
-remain open. The finite-prime results proved in the paper are not promoted into
-an unsupported global support statement.
+The global Smith groups also remain open. Finite-prime screens are not promoted
+to an unsupported global support statement.
 
-## What can be replayed here
+## Evidence boundary
 
-- `scripts/verify_all.py` deeply replays the two exact `1312 x 1312` minors,
-  their CRT reconstruction and norm checks, and the final `16 x 32`
-  multiplication-lattice Smith calculation.
-- `certificates/legacy/` freezes the receipts and compact manifests underlying
+- The two sparse binaries are parsed independently and their displayed modular
+  determinants are recomputed directly at (103,8) and (137,122).
+- The frozen CRT transcript is audited for prime validity, every coefficient
+  congruence, rigorous reconstruction bounds, uniqueness, exact norms, Smith
+  form, and mutation controls. The package does not regenerate all 189 CRT
+  determinants from the binaries.
+- <code>certificates/legacy/</code> contains compact, hash-bound receipts for
   the earlier census, rational-generation, local-saturation, and selected-prime
-  claims.
-- The very large historical raw matrix/circuit workspace is deliberately not
-  duplicated. It remains in the source-locked P39 research archive. This
-  boundary is documented in `README_REVIEWER.md` and
-  `docs/PUBLIC_CLAIM_BOUNDARY.md`.
+  claims. The large raw research workspace remains in the source-locked P39
+  archive.
 
 ## Quick start
 
-```bash
+~~~bash
 python -m pip install -r requirements.txt
+python scripts/check_manifest.py --closed-tree
 python scripts/verify_all.py
 python -O scripts/verify_all.py
-python scripts/check_manifest.py
-```
+python scripts/verify_manifest_only.py
+~~~
 
-Expected final line:
+Expected aggregate final line:
 
-```text
+~~~text
 PASS_P39_EXT04_PUBLIC_PACKAGE
-```
+~~~
 
-See `REPRODUCE.md` for the paper build and the exact expected hashes.
+See [REPRODUCE.md](REPRODUCE.md) and
+[README_REVIEWER.md](README_REVIEWER.md) for the exact scope.
+
+## Locked finite objects
+
+The three designs are pinned by canonical-key and point-mask SHA-256 hashes in
+[docs/SOURCE_LOCK.md](docs/SOURCE_LOCK.md). Their construction is tied to
+FCIG-Common-Marked-Lattice-Designs at commit
+<code>40b3e716834e5c02e907cdadc067b3081d7f3227</code>.
 
 ## Layout
 
-```text
-paper/         main.tex, macros.tex, sections/, <title>.pdf
-scripts/       independent exact verifiers and package gate
-results/       exact minor inputs, CRT records, and regenerated receipts
-certificates/  frozen receipts for the earlier theorem blocks
+~~~text
+paper/         manuscript sources and title-named PDF
+scripts/       exact verifiers, manifest gate, isolated replay
+results/       exact minor inputs, CRT records, regenerated receipts
+certificates/  compact frozen receipts for earlier theorem blocks
 docs/          claim, source, red-team, artifact, and release boundaries
-LICENSE (MIT), LICENSE_SCOPE.md, THIRD_PARTY_NOTICES.md, CITATION.cff,
-MANIFEST_SHA256.txt, requirements.txt
-```
+~~~
 
-All original content in this directory is covered by the MIT `LICENSE`; see
-`LICENSE_SCOPE.md` and `THIRD_PARTY_NOTICES.md`.
+Original content is covered by the MIT LICENSE; see LICENSE_SCOPE.md and
+THIRD_PARTY_NOTICES.md.

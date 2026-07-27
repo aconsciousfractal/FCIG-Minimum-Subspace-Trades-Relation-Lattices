@@ -1,6 +1,6 @@
 {
   "claim_boundary": "This closes rho/D1 only. It does not close the other five large maps, O-75/O-76, or any P42 tomography claim.",
-  "conclusion": "The two displayed maximal-minor ideals generate the unit ideal after inverting 2, 3 and 17. Therefore the rho/D1 residual Fitting gate is closed away from S.",
+  "conclusion": "The two displayed order-1312 minors belong to the complete equation matrix determinantal ideal and generate the unit ideal after inverting 17. Therefore that complete equation matrix has structural rank 1312 away from S.",
   "decisive_two_minor_ideal_sum": {
     "after_removing_2_3_17": "1",
     "after_removing_2_3_17_bits": 1,
@@ -52,11 +52,11 @@
     },
     "source_ideal_sum": {
       "path": "results\\s449f_rho_d1_g1_reverse_row_ideal_sum.json",
-      "sha256": "5cb3d78d948e53f3a38b4e85dc9f9c6f9e195839d7b432c544750967b9eff078"
+      "sha256": "42f20ca142cf7eebf3901947124f1db3fa6b0f977f4a4d4cdf37cf2036fd82c1"
     },
     "verifier": {
       "path": "scripts\\s449f_verify_rho_d1_global_gate.py",
-      "sha256": "d910a6361f09b52d6df61e44b5ab2c6c55d11973e720315ac603c2bf2052fff2"
+      "sha256": "b601917d13ed67f70a4be2d278501bff4d43a2b26c554936394487d58d0f5096"
     }
   },
   "method": "Standalone cyclotomic multiplication, direct 16-conjugate norms, multiplication-lattice determinants and Smith form of the 16x32 concatenated generator matrix.",

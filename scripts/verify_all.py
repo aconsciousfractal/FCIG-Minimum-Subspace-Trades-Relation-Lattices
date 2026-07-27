@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = ROOT / "scripts"
 RESULTS = ROOT / "results"
 OUTPUT = RESULTS / "public_package_verification.json"
-SCHEMA = "P39-EXT04-PUBLIC-PACKAGE-VERIFICATION-v1"
+SCHEMA = "P39-EXT04-PUBLIC-PACKAGE-VERIFICATION-v2"
 
 REPLAYS = (
     (
@@ -31,12 +31,12 @@ REPLAYS = (
     (
         "s449f_verify_reverse_row_determinant.py",
         "s449f_reverse_row_determinant_verification.json",
-        "B7F420235A9947C12E28CD5A887EF883BD7F8D0F37836864B18C6365416BDE88",
+        "E2CE27333088A61FD696FBDFFFC502B85E5C3671FB9349A07F5C603507B06D17",
     ),
     (
         "s449f_verify_rho_d1_global_gate.py",
         "s449f_rho_d1_global_gate_verification.json",
-        "511CD53641E7426650FAA3799BA7D7F3B514F51CA98B69766ADB5E00AE33EBDD",
+        "B960ADA66A473AA3211EECC59727A7DD480DF10A1B37FDFDAFC8146CA2B18CC8",
     ),
 )
 
@@ -116,10 +116,12 @@ def main() -> None:
         "manifest_sha256": sha256_file(ROOT / "MANIFEST_SHA256.txt"),
         "theorem": {
             "component": "rho/B1",
-            "domain_rank": 1317,
-            "codomain_rank": 1312,
+            "complete_equation_columns": 1317,
+            "structural_rank": 1312,
             "coefficient_ring": "Z[zeta_17]",
-            "localized_cokernel": "0 over Z[zeta_17,1/(2*3*17)]",
+            "determinantal_ideal": (
+                "I_1312(E_full) is the unit ideal after inverting 17"
+            ),
             "ideal_index": 17**21,
             "smith_diagonal": [17] * 11 + [17**2] * 5,
         },

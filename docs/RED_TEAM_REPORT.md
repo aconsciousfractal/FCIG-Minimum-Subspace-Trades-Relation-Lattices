@@ -1,43 +1,53 @@
 # Red-team report
 
-Date: 2026-07-27
-Gate: S4.49J standalone-repository and title-named-PDF remediation audit.
+Date: 2026-07-28
+Gate: external global-gate audit, independent final red team, and public-package remediation.
 
-## Result
+## Verdict
 
-No unresolved claim-critical defect remains in the integrated manuscript.
+The critical external finding was confirmed independently. The two exact
+determinants use different equation-row bases and different 1312-column
+selections. They are therefore not maximal minors of one fixed 1312-by-1317
+presentation. They are, however, order-1312 minors of the same complete
+equation matrix.
 
-## Checks passed
+The manuscript and package now state the correct theorem:
 
-- the global statement is restricted to the complete `rho/B1` map;
-- the exact domain/codomain dimensions are `1317 -> 1312`;
-- both maximal minors are exact characteristic-zero objects;
-- finite-field reductions are diagnostics, not substitutes for the exact
-  determinant proof;
-- CRT modulus bounds exceed the certified coefficient bounds;
-- the `16 x 32` multiplication lattice is rebuilt independently;
-- the Smith diagonal and index imply unit ideal only after inverting
-  `2*3*17`;
-- the Fitting-ideal implication is stated with its module-theoretic scope;
-- the negative-control residual is
-  `47821880003927349029` (an earlier prose-only decimal was corrected);
-- the other five global maps and the global Smith groups remain open;
-- P39/P42 tomography is cross-referenced but not merged logically;
-- the manuscript has no novelty/priority assertion;
-- normal and `python -O` replays are byte-identical;
-- the complete PDF was compiled and visually inspected page by page;
-- the repository is a standalone clone directly under the local repository
-  root, with `origin` bound to the public GitHub repository;
-- the compiled PDF is title-named directly under `paper/`, matching both
-  earlier P39 companion repositories;
-- every PDF/build/path reference names that canonical title-named artifact;
-- JSON certificates remain byte-preserved because some receipts intentionally
-  use CRLF serialization, the sole documented exception to the two models'
-  text-normalized JSON convention.
+~~~text
+I_1312(E_full) R[1/(2*3*17)] = R[1/(2*3*17)].
+~~~
 
-## Release evidence boundary
+The two determinant ideals have lattice-sum index 17^21, so this conclusion is
+fully supported. The manuscript contains only the final theorem and direct
+certificates; it contains no narrative about a 137 error or its repair.
 
-The public repository adopts the reviewer-sized Tier A/Tier B boundary. The
-full historical raw archive may be deposited separately later, but it is not
-required for the autonomous replay of the global `rho/B1` theorem and is not
-presented as if it were included here.
+## Remediations completed in source
+
+- replaced the fixed-map cokernel/Fitting claim by the complete-equation
+  determinantal-ideal and structural-rank theorem;
+- distinguished the two row and column selections explicitly;
+- removed the error-and-repair narrative from the academic manuscript;
+- added direct binary recomputation of the reverse determinant at (137,122);
+- narrowed CRT replay language to the work actually performed;
+- disclosed the compact-receipt boundary for earlier results;
+- corrected the reverse binary hash;
+- pinned the companion design repository, commit, and object hashes;
+- hardened manifest checking against symlinks, realpath escape, and hidden
+  unmanifested dependencies;
+- added an isolated manifest-only replay and CI matrix;
+- pinned SymPy exactly;
+- added Maliakas–Stergiopoulou prior art and a preferred paper citation;
+- separated release attestation from the circular source manifest;
+- corrected the good-prime lemma from a cokernel claim to the exact structural-rank deficiency identity;
+- corrected the reverse-row receipt to name G1 plus reverse as the decisive pair and G0 plus reverse as the nonunit negative control;
+- made the six source-admitted design hashes and audit-time publication state explicit.
+
+## Remaining boundaries
+
+The other five large global gates and the complete Smith groups remain open.
+The public package does not regenerate all historical raw computations or all
+189 CRT determinants from the sparse binaries. These are disclosed evidence
+boundaries, not hidden assumptions.
+
+Final pass/fail hashes, PDF hash, visual QA, and command results belong in
+<code>RELEASE_ATTESTATION.json</code> after the complete rebuild.

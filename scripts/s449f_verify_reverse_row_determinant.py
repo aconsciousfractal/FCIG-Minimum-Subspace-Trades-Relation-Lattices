@@ -120,8 +120,79 @@ def evaluate(coefficients: tuple[int, ...], root: int, prime: int) -> int:
     return value
 
 
-def compatible_binary_bound() -> tuple[int, int, int]:
+def permutation_parity(sequence: list[int]) -> int:
+    require(len(sequence) == len(set(sequence)), "pivot columns must be unique")
+    visited = [False] * len(sequence)
+    cycles = 0
+    for start in range(len(sequence)):
+        if visited[start]:
+            continue
+        cycles += 1
+        current = start
+        while not visited[current]:
+            visited[current] = True
+            current = sequence[current]
+    return (len(sequence) - cycles) & 1
+
+
+def transpose(rows: list[dict[int, int]]) -> list[dict[int, int]]:
+    result: list[dict[int, int]] = [dict() for _ in range(ORDER)]
+    for row_index, row in enumerate(rows):
+        for column_index, value in row.items():
+            result[column_index][row_index] = value
+    return result
+
+
+def rank_and_determinant(
+    rows: list[dict[int, int]], prime: int
+) -> dict[str, Any]:
+    pivots: dict[int, dict[int, int]] = {}
+    pivot_order: list[int] = []
+    pivot_product = 1
+    for source_row in rows:
+        reduced = {
+            column: value % prime
+            for column, value in source_row.items()
+            if value % prime
+        }
+        for pivot_column in pivot_order:
+            factor = reduced.get(pivot_column, 0)
+            if not factor:
+                continue
+            for column, value in pivots[pivot_column].items():
+                updated = (reduced.get(column, 0) - factor * value) % prime
+                if updated:
+                    reduced[column] = updated
+                elif column in reduced:
+                    del reduced[column]
+        if not reduced:
+            continue
+        pivot_column = min(reduced)
+        pivot_value = reduced[pivot_column]
+        inverse = pow(pivot_value, -1, prime)
+        pivots[pivot_column] = {
+            column: value * inverse % prime
+            for column, value in reduced.items()
+        }
+        pivot_order.append(pivot_column)
+        pivot_product = pivot_product * pivot_value % prime
+
+    result: dict[str, Any] = {
+        "rank": len(pivot_order),
+        "pivot_order_sha256": canonical_hash(pivot_order),
+    }
+    if len(rows) == ORDER and len(pivot_order) == ORDER:
+        parity = permutation_parity(pivot_order)
+        result["pivot_parity"] = parity
+        result["determinant"] = (
+            pivot_product if parity == 0 else (-pivot_product) % prime
+        )
+    return result
+
+
+def compatible_binary_bound() -> tuple[int, int, int, dict[str, Any]]:
     row_energies = [0] * ORDER
+    finite_rows: list[dict[int, int]] = [dict() for _ in range(ORDER)]
     with COMPATIBLE_BINARY.open("rb") as handle:
         raw_header = handle.read(HEADER.size)
         require(len(raw_header) == HEADER.size, "binary header")
@@ -145,6 +216,9 @@ def compatible_binary_bound() -> tuple[int, int, int]:
             coefficient_l1 = sum(abs(value) for value in coefficients)
             require(coefficient_l1 > 0, "binary stored zero")
             row_energies[row] += coefficient_l1 * coefficient_l1
+            finite_value = evaluate(coefficients, 122, 137)
+            if finite_value:
+                finite_rows[row][column] = finite_value
         require(handle.read(1) == b"", "binary trailing data")
 
     require(all(value > 0 for value in row_energies), "binary zero row")
@@ -162,7 +236,10 @@ def compatible_binary_bound() -> tuple[int, int, int]:
         or (17 * (1 << (exponent - 1))) ** 2 <= right_side,
         "bound minimality",
     )
-    return product, exponent + 1, entry_count
+    direct = rank_and_determinant(transpose(finite_rows), 137)
+    require(direct["rank"] == ORDER, "direct binary diagnostic rank")
+    require(direct["determinant"] == 107, "direct binary diagnostic determinant")
+    return product, exponent + 1, entry_count, direct
 
 
 def strip_s(value: int) -> tuple[int, dict[str, int]]:
@@ -189,7 +266,9 @@ def main() -> int:
         "raw status",
     )
 
-    energy_product, signed_bound_bits, entry_count = compatible_binary_bound()
+    energy_product, signed_bound_bits, entry_count, direct_binary = (
+        compatible_binary_bound()
+    )
     bound = prepared["rigorous_bound"]
     require(str(energy_product) == bound["energy_product"], "energy product")
     require(
@@ -257,11 +336,23 @@ def main() -> int:
     for prime, root, expected in DIAGNOSTIC_REDUCTIONS:
         value = evaluate(coefficients, root, prime)
         require(value == expected, f"diagnostic determinant {prime}")
+        require(
+            direct_binary["determinant"] == value,
+            f"binary/coefficient diagnostic agreement {prime}",
+        )
         diagnostic_results.append(
             {
                 "prime": prime,
                 "root17": root,
-                "determinant": value,
+                "coefficient_determinant": value,
+                "direct_binary_transpose_rank": direct_binary["rank"],
+                "direct_binary_transpose_determinant": direct_binary[
+                    "determinant"
+                ],
+                "direct_binary_pivot_order_sha256": direct_binary[
+                    "pivot_order_sha256"
+                ],
+                "direct_binary_pivot_parity": direct_binary["pivot_parity"],
             }
         )
 
@@ -297,9 +388,10 @@ def main() -> int:
             else "PASS_REVERSE_ROW_DETERMINANT_RECONSTRUCTED"
         ),
         "method": (
-            "Standalone binary-bound replay, deterministic prime audit, "
-            "all CRT congruences, direct multiplication of 16 cyclotomic "
-            "conjugates, the p=103 diagnostic reduction and coefficient mutation."
+            "Standalone binary parser and direct determinant at (137,122), "
+            "binary-bound replay, deterministic prime audit, all frozen CRT "
+            "coefficient congruences, direct multiplication of 16 cyclotomic "
+            "conjugates, and coefficient mutation."
         ),
         "inputs": {
             "prepared_input": {
@@ -357,7 +449,8 @@ def main() -> int:
         "claim_boundary": (
             "This determines the principal ideal of the exact reverse-row "
             "minor. Global rho/D1 saturation requires the cumulative ideal sum "
-            "with the G0 determinant."
+            "with the G1 replacement determinant; G0 plus reverse is the "
+            "nonunit negative-control pair."
         ),
     }
     OUTPUT.write_bytes(

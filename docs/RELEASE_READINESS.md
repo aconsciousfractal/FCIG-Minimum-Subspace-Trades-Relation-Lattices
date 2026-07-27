@@ -1,34 +1,38 @@
-# Public release record
+# Release-candidate readiness record
 
-Release date: 2026-07-27
+Audit date: 2026-07-28
+Repository: https://github.com/aconsciousfractal/FCIG-Minimum-Subspace-Trades-Relation-Lattices
 
-Repository:
-`https://github.com/aconsciousfractal/FCIG-Minimum-Subspace-Trades-Relation-Lattices`
+## Candidate scope
 
-Visibility: public.
+The manuscript proves the unit-ideal statement for the order-1312
+determinantal ideal of the complete rho/B1 equation matrix. It does not claim
+that two determinants are maximal minors of one fixed rectangular map.
 
-## Release gate
+The academic paper presents only the final theorem and certificates. The
+research history concerning the 137 diagnostic is absent from the manuscript.
 
-- the global `rho/B1` theorem is integrated into the existing P39 manuscript;
-- normal and optimized mathematical replays are byte-identical;
-- the cross-platform manifest gate passes;
-- the LaTeX source builds in three passes;
-- the PDF is title-named directly under `paper/`, following the established
-  P39 companion-repository convention;
-- the compiled PDF has been rendered and visually inspected;
-- source, claim, prior-art, P39/P42, license, and evidence-tier boundaries are
-  explicit;
-- no secret, private path, oversized file, or unrelated internal workspace is
-  included.
+## Required local gates
 
-## Scope frozen by this release
+- exact dependency pin and CI workflow present;
+- normal and optimized arithmetic replays byte-identical;
+- direct binary determinant checks at (103,8) and (137,122);
+- symlink-safe closed-tree manifest gate;
+- isolated manifest-only replay;
+- title-named 25-page PDF built without layout or reference warnings;
+- all 25 pages rendered and visually inspected;
+- finite objects pinned by companion commit and six object hashes;
+- prior-art, evidence-tier, P39/P42, and open-problem boundaries explicit;
+- non-circular release attestation binds manifest, PDF, and final receipt.
 
-This repository closes the single complete `rho/B1` global gate. The other
-five global maps and the global Smith groups remain deferred. They are not
-publication defects and require a separate future extension.
+## Deferred scope
 
-## Actions not implied
+The other five large global gates and the global Smith groups remain deferred.
+They are separate future work, not defects in this manuscript.
 
-Public GitHub availability does not assert a DOI, arXiv deposit, journal
-submission, acceptance, novelty priority, or a release of the full historical
-raw workspace.
+## Publication authority
+
+The owner explicitly authorized the 2026-07-28 commit and push of this
+remediation candidate. That instruction does not create a tag or GitHub
+Release, assign a DOI, submit to arXiv or a journal, claim acceptance, or
+deposit the full historical raw workspace.

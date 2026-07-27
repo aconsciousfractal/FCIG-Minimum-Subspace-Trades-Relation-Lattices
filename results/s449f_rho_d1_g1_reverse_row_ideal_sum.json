@@ -1,6 +1,6 @@
 {
-  "claim_boundary": "A localized-unit result closes the residual Fitting gate for the verified displayed minors. A nonunit result requires more minors or a full determinantal-ideal computation before inferring failure of the original map.",
-  "conclusion": "The displayed determinant ideals generate O_S.",
+  "claim_boundary": "Both determinants are order-1312 minors of the same complete equation matrix, with different row and column selections. Their localized unit ideal proves that I_1312(E_full) is the unit ideal after inverting 17; it does not identify them as maximal minors of one fixed rectangular presentation.",
+  "conclusion": "(delta_G,delta_R)R[1/17]=R[1/17], hence I_1312(E_full)R[1/17]=R[1/17].",
   "determinants": [
     {
       "absolute_norm_bits": 4833,
@@ -28,11 +28,11 @@
   "norm_gcd": "3304106172827182202343960489655997143401722293",
   "norm_gcd_bits": 152,
   "s_valuations": {
-    "17": 21,
     "2": 0,
-    "3": 0
+    "3": 0,
+    "17": 21
   },
-  "schema": "P39-S447D-EXACT-DETERMINANT-IDEAL-SUM-v1",
+  "schema": "P39-S449F-EXACT-DETERMINANT-IDEAL-SUM-v2",
   "smith_diagonal": [
     "17",
     "17",

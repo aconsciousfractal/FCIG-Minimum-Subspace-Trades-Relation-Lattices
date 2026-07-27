@@ -1,9 +1,13 @@
 {
-  "claim_boundary": "This determines the principal ideal of the exact reverse-row minor. Global rho/D1 saturation requires the cumulative ideal sum with the G0 determinant.",
+  "claim_boundary": "This determines the principal ideal of the exact reverse-row minor. Global rho/D1 saturation requires the cumulative ideal sum with the G1 replacement determinant; G0 plus reverse is the nonunit negative-control pair.",
   "decision": "The exact reverse-row determinant is reconstructed. Compute the cumulative exact ideal sum; neither its norm nor a rational norm gcd can replace that gate.",
   "diagnostic_reductions": [
     {
-      "determinant": 107,
+      "coefficient_determinant": 107,
+      "direct_binary_pivot_order_sha256": "a783611b52ea642fc78de247009e7e7bbd98ed3a667bbe79b506c7cf48374a80",
+      "direct_binary_pivot_parity": 0,
+      "direct_binary_transpose_determinant": 107,
+      "direct_binary_transpose_rank": 1312,
       "prime": 137,
       "root17": 122
     }
@@ -23,10 +27,10 @@
     },
     "verifier": {
       "path": "scripts\\s449f_verify_reverse_row_determinant.py",
-      "sha256": "3a4e991081c46e47e0a27b4046038835268b0e7e8a20eb0898fad9d2441cf471"
+      "sha256": "41023a9b9c2e494f78feec80f3829cc2dce5c86418a2762bf7c6e7021bb2cc7c"
     }
   },
-  "method": "Standalone binary-bound replay, deterministic prime audit, all CRT congruences, direct multiplication of 16 cyclotomic conjugates, the p=103 diagnostic reduction and coefficient mutation.",
+  "method": "Standalone binary parser and direct determinant at (137,122), binary-bound replay, deterministic prime audit, all frozen CRT coefficient congruences, direct multiplication of 16 cyclotomic conjugates, and coefficient mutation.",
   "negative_control": {
     "diagnostic_mismatch_detected": true,
     "mutated_diagnostic_determinants": [

@@ -83,146 +83,103 @@ localized unit ideal.
 
 \subsection{The \(137\)-component}
 
-The historical selected-presentation contract for \(\rh/\cB_1\) retains:
-\begin{enumerate}
-  \item the exact \(1\,312\times5\,268\) wide component stream;
-  \item all \(1\,055\) pivots, their unit classes, and transition hashes;
-  \item the byte-bound \(257\times3\,373\) residual;
-  \item direct enumeration of the sixteen roots of \(\Phi_{17}\);
-  \item fifteen nonzero \(257\)-minors and the deficient \(256\)-minor;
-  \item the root-\(122\) residual left-kernel vector;
-  \item the Hensel lift and the \(256\)-block, Schur scalar, and
-  \(257\)-minor modulo \(137^2\);
-  \item the transported \(1\,312\)-coordinate covector and its pairing
-  with coordinate \(1\,281\);
-  \item duplicate-column, coordinate, root-label, and determinant
-  mutations that the verifier rejects.
-\end{enumerate}
-These receipts certify a length-one cokernel of that selected
-presentation, not of the complete circuit map.
-
-The complete-map correction additionally retains:
+The complete-equation contract for \(\rh/\cB_1\) retains:
 \begin{enumerate}
   \item the deterministic list of all \(11\,274\) minimum-circuit orbit
   representatives in \(\cB_1\);
   \item the dimension contract \(1317-5=1312\);
-  \item the first restoring row \((2863,0)\);
-  \item \(1\,312\) selected full-circuit rows and pivot columns;
+  \item a specified \(1312\)-row, \(1312\)-column submatrix of the
+  complete equation matrix at \(\zeta_{17}=122\);
   \item an independently reconstructed determinant \(56\bmod137\);
-  \item prefix-rank \(1311\), duplicate-column kill, root-order check,
-  and identical normal/optimized verifier receipts.
+  \item duplicate-column, root-order, and input-hash controls.
 \end{enumerate}
 
-For the remaining five large maps, the contract additionally retains:
+For the remaining five large maps, the contract retains:
 \begin{enumerate}
-  \item one full-row-rank \(409\) receipt and last-row kill per map;
   \item all primitive original columns and the entrywise exact-wide replay;
   \item sixteen order-\(17\) roots and, for \(\rh\om\), the sixteen
-  Frobenius orbits in
-  \(\FF_{137}[y]/(y^2+y+1)\);
-  \item eighty nonzero maximal-minor determinants in total;
+  Frobenius orbits in \(\FF_{137}[y]/(y^2+y+1)\);
+  \item eighty nonzero maximal-order determinant residues in total;
   \item an independent conjugate-root/transposed reconstruction;
   \item eighty duplicate-field-column determinant kills;
-  \item a deterministic closeout for these five maps, combined in the
-  corrected theorem with the eighteen small components and the
-  full-circuit \(\rh/\cB_1\) certificate.
+  \item the combination with the eighteen small-component certificates.
 \end{enumerate}
-No modulo-\(137^2\) receipt is required for these five maps because every
-localization already contains a unit maximal minor.
+Every localization contains a unit maximal-order minor, so no local-length
+calculation is required.
 
 \subsection{The \(219\,097\)-component}
 
-The complete-envelope contract at \(p=219\,097\) retains:
+The complete-equation contract at \(p=219\,097\) retains:
 \begin{enumerate}
-  \item the complete \(\rh/\cB_1\) circuit stream at the historical
-  root \(91\,085\), with first restoring row \((2863,0)\);
-  \item a selected full-circuit maximal minor with determinant
-  \(213\,269\bmod219\,097\), together with prefix rank \(1311\);
-  \item the target ranks and the localization counts
-  \(32,16,32,16,32\) for the other five large maps;
-  \item all \(128\) nonzero original-column determinant residues and root
-  labels, with the root sets regenerated from the least primitive generator
-  \(5\);
-  \item an independent exact-wide parser and transposed reconstruction of
-  every selected matrix;
-  \item all \(128\) duplicate-column determinant kills, root-label
-  mutation rejections, and byte-identical normal/optimized receipts;
-  \item the combination with the eighteen small-component gcd exclusions
-  used to obtain the complete primary triple.
+  \item a specified \(1312\)-square submatrix of the complete
+  \(\rh/\cB_1\) equation matrix at \(\zeta_{17}=91\,085\), with
+  determinant \(213\,269\bmod219\,097\);
+  \item target ranks and localization counts
+  \(16,32,16,32,16,32\) for the six large maps;
+  \item all determinant residues and root labels, with roots regenerated
+  from the least primitive generator \(5\);
+  \item independent exact-wide parsers and transposed reconstructions;
+  \item all duplicate-column determinant kills, root-label mutation
+  rejections, and input hashes;
+  \item the combination with the eighteen small-component exclusions.
 \end{enumerate}
-No modulo-\(219\,097^2\) receipt or local-length computation is required:
-every complete localization already contains a unit maximal minor.
+Every complete localization contains a unit maximal-order minor.
+
 \subsection{The \(3\,288\,036\,131\)-component}
 
-The complete-envelope contract at \(p=3\,288\,036\,131\) retains:
+The complete-equation contract at \(p=3\,288\,036\,131\) retains:
 \begin{enumerate}
-  \item the complete \(\rh/\cB_1\) circuit stream at root
-  \(1\,120\,906\,769\), with first restoring row \((2863,0)\);
-  \item a \(1\,312\)-square full-circuit minor with determinant
-  \(1\,471\,654\,912\bmod3\,288\,036\,131\), prefix rank \(1311\), and
-  duplicate-column kill;
+  \item a specified \(1312\)-square submatrix of the complete
+  \(\rh/\cB_1\) equation matrix at root \(1\,120\,906\,769\), with
+  determinant \(1\,471\,654\,912\bmod p\);
   \item sixteen degree-one \(\Phi_{17}\) primes and sixteen degree-two
-  \(\Phi_{51}\) primes in
-  \(\FF_p[y]/(y^2+y+1)\);
-  \item the target ranks and the sixteen localizations for each of the
-  other five large maps, eighty in total;
-  \item all eighty nonzero original-column determinant residues;
-  \item independent primitive-root enumeration, Frobenius-conjugate
-  evaluations, transposed scalar or doubled matrices, and eighty
-  duplicate-field-column kills;
-  \item scalar-root and quadratic-orbit mutation rejections, complete input
-  hashes, and byte-identical normal/optimized receipts;
-  \item the combination with the eighteen small-component gcd exclusions
-  used in \cref{thm:theta3288036131}.
+  \(\Phi_{51}\) primes in \(\FF_p[y]/(y^2+y+1)\);
+  \item target ranks and sixteen localizations for each of the six large
+  maps;
+  \item all determinant residues, independent primitive-root enumeration,
+  Frobenius-conjugate evaluations, transposed matrices, and duplicate-field-
+  column controls;
+  \item scalar-root and quadratic-orbit mutation rejections and complete
+  input hashes;
+  \item the combination with the eighteen small-component exclusions.
 \end{enumerate}
-No modulo-\(p^2\) or local-length receipt is required because every complete
-localization contains a unit maximal minor.
+Every complete localization contains a unit maximal-order minor.
 
-\subsection{Global \texorpdfstring{\(\rh/\cB_1\)}{rho/B1} saturation}
+\subsection{Global \texorpdfstring{\(\rh/\cB_1\)}{rho/B1} structural rank}
 
 The characteristic-zero contract for \cref{thm:global-rho} retains:
 \begin{enumerate}
   \item the common \(\ZZ[\zeta_{17}]\) exponent-basis lift of all
-  \(1\,317\) source columns and the entrywise finite-reduction replay;
-  \item the exact G1R replacement minor and manifest, with SHA--256
+  \(1317\) columns and the complete circuit-equation universe;
+  \item the exact G-selection binary and manifest, with SHA--256
   \begin{verbatim}
 007D34CA9EBAB7268CA1CB55A1E81BF3E83B7983EE5FB8DD4300BEB41E13B155
 B892C0A7BA9419A8C475FFACF05E63149E5A7F11AEBF443D0F01E96CCB0C96DF
   \end{verbatim}
-  together with the independently reconstructed determinant receipt;
-  \item the reverse-row selection order, its \(11\,069\)-orbit/
-  \(44\,276\)-row stopping point, and exact binary and manifest hashes
+  and a direct determinant check at \((103,8)\);
+  \item the independently selected reverse-row binary and manifest, with
+  SHA--256
   \begin{verbatim}
 C3F857FDEAE82E8680B3EFB0AA281B59661E04E1E3E7C6D689A28A3FF7F45439
 B2D696537A73C30E91D31A8FB3957CEF8F5826ACC8EED66E6881A38AB10EA82B
   \end{verbatim}
-  \item every split CRT prime and determinant residue, the exact row-energy
-  histograms, signed coefficient bounds, and modulus inequalities for both
-  determinants;
+  and a direct determinant check at \((137,122)\);
+  \item the distinct row and column selection hashes for the two
+  order-\(1312\) submatrices of the same complete equation matrix;
+  \item every frozen split CRT prime and coefficient residue, the exact
+  row-energy bounds, signed uniqueness inequalities, and explicit
+  source-admitted status of the CRT generation transcript;
   \item independent cyclotomic multiplication, all sixteen conjugates,
-  exact norms, diagnostic finite determinants, coefficient mutations,
-  prefix-rank loss, and duplicate-column kills;
-  \item the two \(16\times16\) multiplication matrices and the Smith form
-  of their \(16\times32\) concatenation, with diagonal
-  \(17^{11},289^5\) and index \(17^{21}\);
-  \item the G0/reverse-row negative pair, whose ideal-sum index retains the
-  verified non-\(S\) residual
-  \(47\,821\,880\,003\,927\,349\,029\);
-  \item byte-identical normal and optimized executions of the final
+  exact norms, coefficient mutations, and rank-loss controls;
+  \item the Smith form of the \(16\times32\) multiplication-lattice
+  matrix, with diagonal \(17^{11},289^5\) and index \(17^{21}\);
+  \item byte-identical normal and optimized executions of the aggregate
   fail-closed verifier.
 \end{enumerate}
 
-The decisive ideal-sum artifact is
-\begin{verbatim}
-results/s449f_rho_d1_g1_reverse_row_ideal_sum.json
-SHA-256 5CB3D78D948E53F3A38B4E85DC9F9C6F9E195839D7B432C544750967B9EFF078
-\end{verbatim}
-and the independent final receipt is
-\begin{verbatim}
-results/s449f_rho_d1_global_gate_verification.json
-SHA-256 511CD53641E7426650FAA3799BA7D7F3B514F51CA98B69766ADB5E00AE33EBDD
-\end{verbatim}
-with status
-\texttt{PASS\_RHO\_D1\_GLOBAL\_GATE\_AWAY\_FROM\_S}.
-These artifacts close one component only.  They do not certify any of the
-other five large maps or a complete \(\Theta_i\).
+The two determinants need not be minors of one fixed \(1312\times1317\)
+presentation.  Their common ambient object is the complete equation
+matrix, and each therefore belongs to \(I_{1312}(E)\).  Their ideal sum
+becomes the unit ideal after \(17\) is inverted.  This closes one
+component gate only; it does not certify the other five large maps or a
+complete \(\Theta_i\).
