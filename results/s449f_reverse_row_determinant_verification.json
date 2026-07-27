@@ -1,0 +1,63 @@
+{
+  "claim_boundary": "This determines the principal ideal of the exact reverse-row minor. Global rho/D1 saturation requires the cumulative ideal sum with the G0 determinant.",
+  "decision": "The exact reverse-row determinant is reconstructed. Compute the cumulative exact ideal sum; neither its norm nor a rational norm gcd can replace that gate.",
+  "diagnostic_reductions": [
+    {
+      "determinant": 107,
+      "prime": 137,
+      "root17": 122
+    }
+  ],
+  "inputs": {
+    "compatible_binary": {
+      "path": "results\\s449f_rho_d1_reverse_row_flint.bin",
+      "sha256": "c3f857fdeae82e8680b3efb0aa281b59661e04e1e3e7c6d689a28a3ff7f45439"
+    },
+    "prepared_input": {
+      "path": "results\\s449f_reverse_row_crt_input.json",
+      "sha256": "79424aac016ffec9f550b98cb8b8f71073a6b465a914c1447d0ca359f45d6e6e"
+    },
+    "raw_crt_result": {
+      "path": "results\\s449f_reverse_row_crt_raw.json",
+      "sha256": "e9dd26070f96a9e0dbdba3dd98466d067f87cb3dd628f36c09ac6a70914a391e"
+    },
+    "verifier": {
+      "path": "scripts\\s449f_verify_reverse_row_determinant.py",
+      "sha256": "3a4e991081c46e47e0a27b4046038835268b0e7e8a20eb0898fad9d2441cf471"
+    }
+  },
+  "method": "Standalone binary-bound replay, deterministic prime audit, all CRT congruences, direct multiplication of 16 cyclotomic conjugates, the p=103 diagnostic reduction and coefficient mutation.",
+  "negative_control": {
+    "diagnostic_mismatch_detected": true,
+    "mutated_diagnostic_determinants": [
+      108
+    ],
+    "mutation": "increase power-basis coefficient 0 by one",
+    "norm_mismatch_detected": true
+  },
+  "norm": {
+    "after_removing_2_3_17": "249637924557334894732530369360411502049210503952261030445246951761083931438188630358800981695009300057804279163933392864278153659370616930523738088735012350575357424653757959541332221393791931505281959367108520832852277835177591460818518578963969286799293940953166152485346339373089087037677089601260144195225883283391401077910677085889763169994825910232161171445040118443941400104590954442804017946816687799492788812370675356333650085981148268114158074374407075650708451105369947505681097338078311410835283060207544968814808839736033543",
+    "after_removing_2_3_17_bits": 1782,
+    "exact_norm": "652646863342852244685546619115327897813355057649993360743122295517459458251962907282406097370221935587917420676025847981364743724940927441251075204006744261958086972662883148532963522005361064987492929125348043494301315888559461853568247859304124840254046895271569471631401320430643862029922504304749206255885202109211442753552294289964864437420122574823750059965519914839741991601385129516358841829942154295751430570305175672310621436680130306987926482681776225521653885324102272139850255066609227401279855529666252501161434634249149278834187918184919119336460276184298226906368146971146224923147630336",
+    "exact_norm_bits": 2003,
+    "independently_recomputed": true,
+    "non_s_cofactor_is_nontrivial": true,
+    "s_valuations": {
+      "17": 21,
+      "2": 8,
+      "3": 80
+    }
+  },
+  "reconstruction": {
+    "actual_modulus_bits": 2874,
+    "all_crt_congruences_valid": true,
+    "all_split_primes_valid": true,
+    "coefficient_vector_sha256": "016d1bb9fe39f612f3306a16aaed487dc911e97f44c19bfe5ae5b38c434adb0c",
+    "crt_prime_count": 93,
+    "entry_count": 7819,
+    "max_actual_coefficient_bits": 128,
+    "signed_reconstruction_bound_bits": 2872
+  },
+  "schema": "P39-S449F-REVERSE-ROW-DETERMINANT-VERIFICATION-v1",
+  "status": "PASS_REVERSE_ROW_DETERMINANT_RECONSTRUCTED"
+}

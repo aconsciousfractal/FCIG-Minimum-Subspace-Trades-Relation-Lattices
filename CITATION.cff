@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite it as below."
+title: "Minimum Subspace Trades and Relation Lattices in Three Binary Designs"
+type: software
+authors:
+  - family-names: Babanskyy
+    given-names: Oleksiy
+    orcid: "https://orcid.org/0009-0001-6176-6208"
+version: "1.0.0"
+repository-code: "https://github.com/aconsciousfractal/FCIG-Minimum-Subspace-Trades-Relation-Lattices"
+date-released: "2026-07-27"
+license: MIT
+keywords:
+  - finite-incidence-geometry
+  - subspace-trades
+  - relation-lattices
+  - toric-ideals
+  - smith-normal-form
+  - cyclotomic-integers
+  - fitting-ideals
+  - reproducibility
+abstract: >-
+  Exact minimum-trade censuses, rational relation generation, cubic toric
+  relations, local saturation results, and a characteristic-zero localized
+  surjectivity theorem for the complete rho/B1 component map of three fixed
+  binary subspace configurations.

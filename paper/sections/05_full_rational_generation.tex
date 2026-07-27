@@ -1,0 +1,123 @@
+\section{Full rational generation}
+\label{sec:rational-generation}
+
+Let \(C_i\subseteq K_i\) be the rational span of all trades in
+\(\cC_i\).  We prove \(C_i=K_i\) by testing the quotient in every
+irreducible component.  This section states both the abstract argument
+and the exact finite certificate to which it is applied.
+
+\subsection{Component equation matrices}
+
+Let \(k\) be a splitting field for \(\GammaG\) whose characteristic does
+not divide \(204\), and let \(V\) be an absolutely irreducible
+\(k\GammaG\)-module.  Choose one representative in each block orbit and
+write its stabilizer as \(H_j\).  Frobenius reciprocity gives
+\[
+\Hom_{\GammaG}(k[\cB_i],V)
+ \cong \bigoplus_j V^{H_j}.
+\]
+The analogous point-orbit decomposition gives
+\(\Hom_{\GammaG}(k[\cP],V)\).  Put
+\[
+ m_{B_i}(V)=\dim_k\Hom_{\GammaG}(k[\cB_i],V),
+ \qquad
+ m_P(V)=\dim_k\Hom_{\GammaG}(k[\cP],V).
+\]
+
+Choose minimum-trade orbit seeds \(c_1,\ldots,c_s\).  Evaluation on these
+seeds defines the component equation map
+\[
+ E_{i,V}:\Hom_{\GammaG}(k[\cB_i],V)
+ \longrightarrow V^s,
+ \qquad
+ \phi\longmapsto
+ \bigl(\phi(c_1),\ldots,\phi(c_s)\bigr).
+\]
+Once bases of all fixed spaces have been frozen, this is an ordinary
+matrix over \(k\).  Killing one seed kills its entire \(\GammaG\)-orbit,
+because \(\phi(gc)=g\phi(c)\).
+
+Every map \(k[\cP]\to V\), pulled back along incidence, kills all
+circuits.  Since the incidence map is surjective, this pullback is
+injective.  Therefore
+\[
+ \rank E_{i,V}\le m_{B_i}(V)-m_P(V).
+\]
+
+\begin{lemma}[Component rank criterion]
+\label{lem:component-rank}
+If
+\[
+ \rank E_{i,V}=m_{B_i}(V)-m_P(V)
+\]
+for every absolutely irreducible \(V\), then \(C_i=K_i\).
+\end{lemma}
+
+\begin{proof}
+The kernel of \(E_{i,V}\) is
+\(\Hom_{\GammaG}(k[\cB_i]/C_i,V)\).  Equality in the rank bound says that
+this kernel has dimension \(m_P(V)\), exactly the dimension of the
+incidence pullback.  Hence
+\[
+\Hom_{\GammaG}(k[\cB_i]/C_i,V)
+ =\Hom_{\GammaG}(k[\cP],V)
+\]
+for every \(V\).  The induced incidence map
+\(k[\cB_i]/C_i\to k[\cP]\) is surjective.  Its source and target have the
+same semisimple multiplicities, so it is an isomorphism.  Its kernel is
+\((K_i/C_i)\otimes k\), which is therefore zero.  Characteristic-zero
+scalar extension gives \(K_i=C_i\).
+\end{proof}
+
+\subsection{The exact rank certificate}
+
+The primes \(409\) and \(613\) are congruent to \(1\) modulo \(204\).
+Thus both fields split \(\GammaG\).  For each of the three designs and
+each of the eight Galois-orbit representatives, the frozen component
+matrix has a square minor of order
+\[
+ m_{B_i}(V)-m_P(V)
+\]
+whose determinant is nonzero modulo \(409\).  These \(24\) minors prove
+the required characteristic-zero ranks.  Reconstructing the same
+\(24\) ranks modulo \(613\) is an independent robustness check rather
+than an additional premise.
+
+The seed stream is round-robin across all \(69\) two-space orbits.  This
+condition is structural: a lexicographic stream can omit invariant mass,
+whereas the frozen stream meets every orbit stratum.  The certificate
+stores the orbit/stabilizer input, fixed-space bases, selected row and
+column indices, determinant residue, and a negative control obtained by
+removing one essential row or column.
+
+\begin{theorem}[Minimum trades span the rational kernel]
+\label{thm:full-kernel}
+For \(i=1,2,3\),
+\[
+  C_i=K_i.
+\]
+Moreover, the \(\GammaG\)-spans of deterministic prefixes of respectively
+\[
+ 1\,143,\qquad 1\,170,\qquad 648
+\]
+minimum-trade seeds already equal \(K_1,K_2,K_3\).
+\end{theorem}
+
+\begin{proof}
+The nonzero minors modulo \(409\) attain the upper bound in
+\cref{lem:component-rank} for one absolute representative in every
+rational Galois orbit.  All circuit vectors are rational, so Galois
+conjugation transports each rank statement to the other absolute
+constituents in its orbit.  The criterion gives \(C_i=K_i\).
+
+For each design, take the largest prefix length used by any of its eight
+component certificates.  Every component has already attained its target
+rank at that common prefix, giving the three stated bounds.
+\end{proof}
+
+\begin{remark}
+The theorem is not a consequence of the census alone.  It depends on
+attaining the exact rank in every irreducible component.  Conversely, the
+minor at \(409\) is sufficient for the characteristic-zero transfer;
+the computation at \(613\) checks the frozen construction independently.
+\end{remark}

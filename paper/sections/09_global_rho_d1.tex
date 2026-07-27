@@ -1,0 +1,258 @@
+\section{A global localized theorem for the \texorpdfstring{\(\rh/\cB_1\)}{rho/B1} component}
+\label{sec:global-rho}
+
+The three finite-prime restorations in \cref{sec:137} show that the
+rank losses inherited from the control-prime presentation are not
+intrinsic at those primes.  They do not, by themselves, exclude all
+other primes.  We now replace that finite screen by an exact
+characteristic-zero certificate for the same complete component map.
+
+Put
+\[
+  R=\ZZ[\zeta],\qquad \zeta=\zeta_{17},\qquad
+  R_S=R\left[\frac1{2\cdot3\cdot17}\right].
+\]
+The power basis
+\[
+  1,\zeta,\ldots,\zeta^{15}
+\]
+is an integral basis of the cyclotomic ring \(R\)
+\cite{Washington1997}.  In the fixed bases used throughout the component
+audit, the complete minimum-circuit map is
+\[
+  A=F_{\rh,1}^{\mathrm{full}}:R^{1317}\longrightarrow R^{1312}.
+\]
+Thus its cokernel measures only the residual
+\(\rh/\cB_1\) component obstruction.  It is not the complete group
+\(\Theta_1\).
+
+\subsection{Exact lift and determinant reconstruction}
+
+\begin{lemma}[Common cyclotomic lift]
+\label{lem:common-cyclotomic-lift}
+The \(1\,317\) source columns and every complete minimum-circuit equation
+for \(A\) have one exact realization over \(R\) in the power basis above.
+Under a residue homomorphism sending \(\zeta\) to an element of order
+\(17\), this realization reduces entrywise to the corresponding complete
+finite component map.
+\end{lemma}
+
+\begin{proof}
+The fixed-space columns are first normalized as exponent vectors modulo
+\(17\).  Every representation entry is then a signed sum of those powers,
+reduced by
+\[
+  1+\zeta+\cdots+\zeta^{16}=0.
+\]
+Circuit rows are formed from the same six signed block columns before any
+specialization.  Consequently evaluation at a seventeenth root commutes
+with both column construction and row formation.  The independent replay
+checks all \(1\,317\) normalized columns and the entrywise reductions used
+at the three screened primes; no independently chosen finite-field basis
+is lifted back to characteristic zero.
+\end{proof}
+
+For completeness, we record why the determinant lifts below are exact
+rather than heuristic modular reconstructions.
+
+\begin{lemma}[Certified signed CRT reconstruction]
+\label{lem:certified-crt}
+Let \(B\) be either square matrix in \cref{prop:two-exact-minors}, and
+write
+\[
+  \det B=\sum_{j=0}^{15}c_j\zeta^j.
+\]
+For each complex embedding, Hadamard's inequality bounds the determinant
+by the square root of the product of the certified row energies.  Fourier
+inversion in the seventeenth cyclotomic basis then gives
+\[
+ \max_j |c_j|
+ \ \leq\ \frac{32}{17}
+ \max_{\sigma:R\hookrightarrow\CC}|\sigma(\det B)|.
+\]
+If the product \(M\) of the split CRT primes is larger than twice this
+coefficient bound, the sixteen signed coefficients \(c_j\) are uniquely
+determined by their residues modulo \(M\).
+\end{lemma}
+
+\begin{proof}
+Hadamard gives
+\(
+ |\det\sigma(B)|^2\leq\prod_r E_r
+\)
+from the row-energy bounds \(E_r\).  Applying the inverse
+seventeenth-root transform and eliminating the coefficient of
+\(\zeta^{16}\) with \(\Phi_{17}(\zeta)=0\) gives the displayed
+\(32/17\) bound.  Finally, two integers in the signed interval
+\((-M/2,M/2)\) with the same residue modulo \(M\) are equal.  Apply this
+coordinatewise.
+\end{proof}
+
+\begin{proposition}[Two exact maximal minors]
+\label{prop:two-exact-minors}
+The matrix \(A\) has two explicitly displayed
+\(1312\times1312\) minors with determinants
+\(\delta_{\mathrm G},\delta_{\mathrm R}\in R\).  Their independent exact
+reconstructions have the following certified data.
+\[
+\begin{array}{lrrrrrr}
+\toprule
+\text{minor}&\text{entries}&\text{check}&\text{CRT primes}&
+\text{bound bits}&\text{modulus bits}&\text{norm bits}\\
+\midrule
+\delta_{\mathrm G}&7830&89\bmod103&96&2937&2967&4833\\
+\delta_{\mathrm R}&7819&107\bmod137&93&2872&2874&2003\\
+\bottomrule
+\end{array}
+\]
+The largest reconstructed coefficient has respectively \(304\) and
+\(128\) bits.
+\end{proposition}
+
+\begin{proof}
+For \(\delta_{\mathrm G}\), the complete map at
+\((103,\zeta-8)\) has rank \(1312\).  Replacing the unique deficient
+column in the original selected minor gives determinant \(89\) and an
+exact sparse lift with \(7\,830\) nonzero entries.
+
+For \(\delta_{\mathrm R}\), scan the \(11\,274\) circuit orbits in reverse
+canonical order and, inside an orbit, scan the four representation
+coordinates in reverse order.  The first full row basis is reached after
+\(11\,069\) orbits and \(44\,276\) rows.  With canonical columns
+\(0,\ldots,1311\), its determinant is \(107\) at
+\((137,\zeta-122)\), and its exact lift has \(7\,819\) nonzero entries.
+
+In both cases an independent binary parser reconstructs the transpose,
+checks the finite determinant, and obtains rank \(1311\) after the
+designated deletion or duplication mutation.  The split-prime
+congruences, row-energy products, and inequalities in
+\cref{lem:certified-crt} are then replayed for every CRT prime.  Since the
+recorded moduli exceed twice the proved bounds, the lifted coefficient
+vectors, and hence their exact cyclotomic norms, are unique.
+\end{proof}
+
+\subsection{The two-minor ideal certificate}
+
+We use two standard consequences of Fitting ideals and integral Smith
+theory \cite{StacksProjectFitting,Cohen1993,Newman1972}.
+
+\begin{lemma}[Two-minor Fitting criterion]
+\label{lem:two-minor-fitting}
+Let \(T\) be a commutative ring and
+\(f:T^n\to T^m\), with \(n\geq m\).  If two maximal minors
+\(\alpha,\beta\) of \(f\) satisfy
+\((\alpha,\beta)T'=T'\) after a flat base change \(T\to T'\), then
+\[
+  \coker(f)\otimes_TT'=0.
+\]
+\end{lemma}
+
+\begin{proof}
+The zeroth Fitting ideal of \(\coker(f)\) is generated by all maximal
+minors of a presentation matrix and commutes with base change.  It
+therefore contains \((\alpha,\beta)T'=T'\).  Thus its localization at
+every prime of \(T'\) is the unit ideal.  Some maximal minor is a unit in
+each local ring, so the localized map is surjective.  The finitely
+generated cokernel has empty support and is zero.
+\end{proof}
+
+\begin{lemma}[Multiplication-lattice certificate]
+\label{lem:multiplication-lattice}
+For \(\alpha\in R\), let \(M(\alpha)\in\operatorname{Mat}_{16}(\ZZ)\)
+be multiplication by \(\alpha\) in the integral power basis.  Then
+\[
+ \im_{\ZZ}M(\alpha)=\alpha R.
+\]
+Consequently the columns of
+\[
+ \bigl[M(\alpha)\ M(\beta)\bigr]\in
+ \operatorname{Mat}_{16\times32}(\ZZ)
+\]
+span \(\alpha R+\beta R\), and the nonzero Smith entries of this
+integer matrix are the additive invariant factors of
+\(R/(\alpha R+\beta R)\).
+\end{lemma}
+
+\begin{proof}
+The columns of \(M(\alpha)\) are
+\(\alpha,\alpha\zeta,\ldots,\alpha\zeta^{15}\) in coordinates, hence
+span exactly the principal ideal \(\alpha R\).  Concatenating two such
+matrices adds their column lattices.  Smith normal form computes the
+quotient of the ambient free abelian group by that full-rank sublattice.
+\end{proof}
+
+\begin{theorem}[Global localized saturation of the
+\(\rh/\cB_1\) component]
+\label{thm:global-rho}
+For the complete minimum-circuit equation map
+\[
+ A=F_{\rh,1}^{\mathrm{full}}:R^{1317}\longrightarrow R^{1312},
+\]
+one has
+\[
+ \coker(A)\otimes_RR_S=0.
+\]
+Equivalently, \(A\otimes_RR_S\) is surjective.  Thus the complete
+\(\rh/\cB_1\) component cokernel has no prime-ideal support away from the
+rational primes \(2\), \(3\), and \(17\).
+\end{theorem}
+
+\begin{proof}
+Apply \cref{lem:multiplication-lattice} to the two determinants in
+\cref{prop:two-exact-minors}.  The independently replayed Smith form of
+\[
+ \bigl[M(\delta_{\mathrm G})\ M(\delta_{\mathrm R})\bigr]
+\]
+has diagonal
+\[
+ \underbrace{17,\ldots,17}_{11\ \mathrm{times}},
+ \qquad
+ \underbrace{289,\ldots,289}_{5\ \mathrm{times}}.
+\]
+Therefore
+\[
+ [R:\delta_{\mathrm G}R+\delta_{\mathrm R}R]
+ =17^{11}(17^2)^5
+ =17^{21}
+ =69\,091\,933\,913\,008\,732\,880\,827\,217.
+\]
+After inverting \(17\), and hence over \(R_S\), the two determinants
+generate the unit ideal.  Both are maximal minors of \(A\), so
+\cref{lem:two-minor-fitting} proves the assertion.
+\end{proof}
+
+\begin{remark}[Why a stable determinant factor is not support]
+\label{rem:minor-artifact}
+Neither displayed determinant is an \(S\)-unit by itself.  Moreover,
+several one-column replacements and a reverse-column basis built on the
+same frozen row set retain a large common non-\(S\) factor.  That
+persistence is a presentation artifact: the genuinely different
+reverse-row minor removes it from the ideal sum.
+
+As a negative control, replacing \(\delta_{\mathrm G}\) by the original
+G0 determinant leaves, after removal of \(2\), \(3\), and \(17\), the
+nonunit residual
+\[
+ 47\,821\,880\,003\,927\,349\,029.
+\]
+Thus neither a factor of one norm nor its survival across a closely
+related minor family can be promoted to support of the complete
+cokernel.
+\end{remark}
+
+\begin{remark}[Exact boundary]
+\label{rem:global-rho-boundary}
+\Cref{thm:global-rho} closes one of the six large component maps.  The
+global gates for
+\[
+ \rh\om/\cB_1,\quad
+ \rh/\cB_2,\quad
+ \rh\om/\cB_2,\quad
+ \rh/\cB_3,\quad
+ \rh\om/\cB_3
+\]
+remain open.  In particular, the theorem does not prove
+\(\operatorname{Supp}(\Theta_i)\subseteq\{2,3,17\}\), does not determine
+the global Smith groups, and is not a tomography or Markov-connectivity
+statement.
+\end{remark}

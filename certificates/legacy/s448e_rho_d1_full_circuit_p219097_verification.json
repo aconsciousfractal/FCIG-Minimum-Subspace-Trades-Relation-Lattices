@@ -1,0 +1,49 @@
+{
+  "certificate": {
+    "minor_determinant_mod_219097": 213269,
+    "minor_order": 1312,
+    "minor_rank": 1312,
+    "prefix_rank_without_restoring_row": 1311,
+    "restoring_row_id": [
+      2863,
+      0
+    ],
+    "selected_source_rows_sha256": "57ef3de8a6a8cfe4009032599bc78be81437b651f82dce2b984dbf4f90b54b6a"
+  },
+  "conclusion": {
+    "complete_rho_D1_rank_at_219097_root_91085": 1312,
+    "historical_selected_row_obstruction_is_complete_map_class": false,
+    "rho_D1_219097_primary_cokernel": "0",
+    "selected_row_rank_before_restoring_circuit": 1311
+  },
+  "inputs": {
+    "preregistration": {
+      "path": "docs\\S448E_RHO_D1_FULL_CIRCUIT_P219097_PREREGISTRATION.md",
+      "sha256": "c0972653c6f4b4b5dabe82ae09309dd0c0bc1c31877c68ba58dd98532ec4eedf"
+    },
+    "receipt": {
+      "path": "results\\s448e_rho_d1_full_circuit_p219097.json",
+      "sha256": "ea955438d5ed76ba2ea9686ea48d432129f200e10d1923639a3dad12d2b4b3a1"
+    },
+    "source_data": {
+      "path": "data/s410b_ls2_source_data.json",
+      "sha256": "194bd645340d12ba6d8abcad7005839d8b8004d503ca5327710b47d87bdc406a"
+    },
+    "verifier": {
+      "path": "scripts\\s448e_verify_rho_d1_full_circuit_p219097.py",
+      "sha256": "fac9770e9e2aa535be014bba2c2bc293a1280b09fb947d4090cd2dec1324d718"
+    }
+  },
+  "kill_tests": {
+    "duplicated_pivot_column_determinant_zero": true,
+    "non_order_17_root_mutation_rejected": true
+  },
+  "schema": "P39-S448E-RHO-D1-FULL-CIRCUIT-P219097-VERIFY-v1",
+  "status": "PASS_INDEPENDENT_FULL_RANK_RESTORED",
+  "structural_dimensions": {
+    "absolute_representation": 4,
+    "block_multiplicity": 1317,
+    "maximum_circuit_rank": 1312,
+    "point_multiplicity": 5
+  }
+}

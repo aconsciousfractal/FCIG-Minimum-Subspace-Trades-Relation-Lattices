@@ -1,0 +1,56 @@
+{
+  "certificate": {
+    "all_rows_kernel_replay_sha256": null,
+    "minor_determinant_mod_p": 1471654912,
+    "minor_order": 1312,
+    "minor_rank": 1312,
+    "point_induced_subspace_strict_by_dimension": null,
+    "prefix_rank_without_restoring_row": 1311,
+    "restoring_row_id": [
+      2863,
+      0
+    ],
+    "right_kernel_dimension": null,
+    "selected_source_rows_sha256": "4f40fa3d7ab164ba62ad4d7d55af27a7f754f5d4a828179c4d7a3c34dcd36077"
+  },
+  "conclusion": {
+    "complete_rho_D1_rank_at_3288036131_root_1120906769": 1312,
+    "historical_selected_row_obstruction_survives_complete_map": false,
+    "rho_D1_3288036131_primary_cokernel": "0"
+  },
+  "endpoint_verified": "FULL_RANK_RESTORED",
+  "inputs": {
+    "preregistration": {
+      "path": "docs\\S448I_RHO_D1_FULL_CIRCUIT_P3288036131_PREREGISTRATION.md",
+      "sha256": "564d3123bc9543fdafc4910df440b3e3a24d18d6739616da88841327767a0170"
+    },
+    "primary_generator": {
+      "path": "scripts\\s448i_rho_d1_full_circuit_p3288036131.py",
+      "sha256": "e3f86e01554283cceb202554248a1ee40352abe74271e5cd99b2fb4d69a933ee"
+    },
+    "receipt": {
+      "path": "results\\s448i_rho_d1_full_circuit_p3288036131.json",
+      "sha256": "138b890554fb982a692d306932fbb61d4e9e7515dacc3497947dc3f45d4506be"
+    },
+    "source_data": {
+      "path": "data/s410b_ls2_source_data.json",
+      "sha256": "194bd645340d12ba6d8abcad7005839d8b8004d503ca5327710b47d87bdc406a"
+    },
+    "verifier": {
+      "path": "scripts\\s448i_verify_rho_d1_full_circuit_p3288036131.py",
+      "sha256": "fd877c36192c3bfd8b5fe61b6942eaca70bf4a7b909332f08c5f0baf9b8feb0f"
+    }
+  },
+  "kill_tests": {
+    "duplicated_pivot_column_determinant_zero": true,
+    "non_order_17_root_mutation_rejected": true
+  },
+  "schema": "P39-S448I-RHO-D1-FULL-CIRCUIT-P3288036131-VERIFY-v1",
+  "status": "PASS_INDEPENDENT_FULL_RANK_RESTORED",
+  "structural_dimensions": {
+    "absolute_representation": 4,
+    "block_multiplicity": 1317,
+    "maximum_circuit_rank": 1312,
+    "point_multiplicity": 5
+  }
+}

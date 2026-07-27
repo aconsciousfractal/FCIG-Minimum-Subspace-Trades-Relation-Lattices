@@ -1,0 +1,214 @@
+\section{Integral relation lattices}
+\label{sec:integral}
+
+Let
+\[
+ L_i=\langle\,T:T\in\cC_i\,\rangle_{\ZZ}
+ \subseteq K_i^{\ZZ},
+ \qquad
+ \Theta_i=K_i^{\ZZ}/L_i.
+\]
+The rational theorem determines the rank but not the index of \(L_i\).
+This distinction is the source of the integral phenomenon below.
+
+\begin{lemma}[Finiteness and local saturation]
+\label{lem:local-saturation}
+The group \(\Theta_i\) is finite.  Let \(p\) be a prime.  If the image of
+\(L_i\otimes\ZZ_p\) spans
+\((K_i^{\ZZ}\otimes\ZZ_p)/p(K_i^{\ZZ}\otimes\ZZ_p)\), then
+\(\Theta_i[p^\infty]=0\).
+\end{lemma}
+
+\begin{proof}
+The lattice \(K_i^{\ZZ}\) is primitive in \(\ZZ[\cB_i]\): its quotient
+is the image of \(A_i\), a subgroup of the free group \(\ZZ[\cP]\).
+By \cref{thm:full-kernel}, \(L_i\) and \(K_i^{\ZZ}\) have the same
+rational span and hence the same rank.  Their quotient is finite.
+
+Put \(M=K_i^{\ZZ}\otimes\ZZ_p\) and
+\(N=L_i\otimes\ZZ_p\).  The spanning hypothesis is \(N+pM=M\).
+Nakayama's lemma gives \(N=M\), so the localized quotient vanishes.
+\end{proof}
+
+\subsection{The prime \(2\)}
+
+\begin{proposition}[Binary saturation]
+\label{prop:p2}
+For \(i=1,2,3\),
+\[
+  \Theta_i[2^\infty]=0.
+\]
+\end{proposition}
+
+\begin{proof}
+In each design, an explicit set of \(66\,674\) minimum trades is linearly
+independent in \(\FF_2[\cB_i]\).  Primitivity of \(K_i^{\ZZ}\) makes
+\(K_i^{\ZZ}/2K_i^{\ZZ}\) a \(66\,674\)-dimensional subspace of that
+ambient permutation module.  The selected trades lie in this subspace and
+already have its full dimension.  Apply \cref{lem:local-saturation}.
+\end{proof}
+
+This statement concerns liftable integral relations, not the complete
+modular null-design space.  The distinction is especially visible at the
+next prime and is consistent with the modular minimum-support setting of
+\cite{Krotov2020}.
+
+\subsection{The prime \(3\): the liftable kernel}
+
+Let \(\alpha:\ZZ[\cB_i]\to\ZZ\) be augmentation,
+\(\alpha(\sum n_BB)=\sum n_B\).  Summing all point coordinates of an
+integral incidence relation gives
+\[
+ 15\,\alpha(x)=0.
+\]
+Thus \(\alpha\) vanishes on \(K_i^{\ZZ}\), even though its reduction
+modulo \(3\) is not a consequence of the incidence equations.
+
+\begin{lemma}[Augmentation--Bockstein identification]
+\label{lem:p3-lift}
+For every \(i\),
+\[
+ K_i^{\ZZ}/3K_i^{\ZZ}
+ =
+ \ker_{\FF_3}
+ \begin{bmatrix}A_i\\ \alpha\end{bmatrix}.
+\]
+\end{lemma}
+
+\begin{proof}
+The locked Smith data have exactly one factor divisible by \(3\), namely
+\(120\), in the \(255\)-row incidence presentation.  In particular,
+\[
+ \rank_{\FF_3}A_i=254,\qquad
+ \rank_{\FF_3}\begin{bmatrix}A_i\\ \alpha\end{bmatrix}=255.
+\]
+The modular kernel of \(A_i\) therefore has dimension \(66\,675\), one
+larger than the reduction of the primitive rank-\(66\,674\) integral
+kernel.  The augmented kernel has dimension \(66\,674\) and contains that
+reduction by the preceding augmentation identity.  Equality follows.
+Equivalently, the missing modular direction is the one-dimensional
+\(\Tor_1\) contribution produced by the factor \(120\).
+\end{proof}
+
+Write \(\GammaG=F\times C_3\), where \(|F|=68\), and put
+\[
+ R_3=\FF_3[C_3]\cong\FF_3[u]/(u^3),
+ \qquad u=c-1.
+\]
+The ideal \((u)\) is the radical of \(\FF_3\GammaG\), while
+\(\FF_3F\) is semisimple.  Let \(M_i^{(3)}\) denote the liftable kernel in
+\cref{lem:p3-lift}, and let \(\overline M_i^{(3)}=M_i^{(3)}/uM_i^{(3)}\)
+be its semisimple top.
+
+The exact component certificates decompose this top into four Frobenius
+families, whose Wedderburn dimensions account for all \(68\) dimensions
+of \(\FF_3F\).  The images of minimum trades attain total top dimensions
+\[
+\begin{array}{c|rrr}
+ &\cB_1&\cB_2&\cB_3\\
+\midrule
+\dim_{\FF_3}\overline M_i^{(3)}
+ &22\,304&22\,338&22\,270.
+\end{array}
+\]
+Each component rank is accompanied by a maximal minor and a rank-loss
+control.
+
+\begin{proposition}[Ternary saturation]
+\label{prop:p3}
+For \(i=1,2,3\),
+\[
+  \Theta_i[3^\infty]=0.
+\]
+\end{proposition}
+
+\begin{proof}
+By \cref{lem:p3-lift}, the module tested by the certificates is exactly
+the reduction of the integral kernel, not the one-dimension-larger
+modular kernel.  The component ranks say that the minimum trades generate
+every simple summand of \(\overline M_i^{(3)}\).  Hence
+\[
+  M_i^{(3)}=L_i^{(3)}+uM_i^{(3)}.
+\]
+The ideal \((u)\) is nilpotent, so Nakayama's lemma gives
+\(M_i^{(3)}=L_i^{(3)}\).  Applying the local criterion to the integral
+lattices proves the assertion.
+\end{proof}
+
+\subsection{The prime \(17\): a free cyclic kernel}
+
+The normal subgroup \(C_{17}\) acts freely on points and blocks.  There
+are \(15\) point orbits and \(3\,937\) block orbits.  Put
+\[
+ R_{17}=\FF_{17}[C_{17}]
+       \cong\FF_{17}[u]/(u^{17}),\qquad u=a-1.
+\]
+The two permutation modules are free \(R_{17}\)-modules of ranks
+\(3\,937\) and \(15\).  The coinvariant incidence map is surjective.
+Nakayama therefore makes the full \(R_{17}\)-map surjective, and its
+kernel \(M_i^{(17)}\) is free of rank
+\[
+ 3\,937-15=3\,922.
+\]
+
+The quotient \(H=\GammaG/C_{17}\cong C_4\times C_3\) is semisimple in
+characteristic \(17\).  Its eight simple components have total Wedderburn
+mass \(12=|H|\).  In every component, exact fixed-space matrices show
+that the minimum trades span
+\[
+ M_i^{(17)}/uM_i^{(17)}.
+\]
+
+\begin{proposition}[Seventeen-adic saturation]
+\label{prop:p17}
+For \(i=1,2,3\),
+\[
+  \Theta_i[17^\infty]=0.
+\]
+\end{proposition}
+
+\begin{proof}
+The eight component ranks generate the complete semisimple top of the free
+\(R_{17}\)-kernel.  Thus
+\(M_i^{(17)}=L_i^{(17)}+uM_i^{(17)}\).  Nakayama over the local ring
+\(R_{17}\) gives equality, and \cref{lem:local-saturation} lifts the
+conclusion to the \(17\)-adic lattices.
+\end{proof}
+
+\subsection{What the small components exclude}
+
+Away from \(2\cdot3\cdot17\), the six rational types of dimensions at
+most four admit integral component models.  For each of the resulting
+\(18\) maps, two exact maximal minors have the gcd shown below.
+\[
+\begin{array}{c|rrr}
+V&\cB_1&\cB_2&\cB_3\\
+\midrule
+\mathbf1&24&6&24\\
+\eps&8&2&128\\
+\iot&1024&4096&128\\
+\om&4&216&8\\
+\eps\om&108&12&2\\
+\iot\om&33\,554\,432&16\,777\,216&49\,152
+\end{array}
+\]
+Every displayed number is supported on \(\{2,3,17\}\).  Bezout
+combination of the corresponding minors makes each maximal-minor ideal a
+unit after these primes are inverted.
+
+\begin{proposition}[Small-component exclusion]
+\label{prop:small-components}
+No prime outside \(\{2,3,17\}\) occurs in any of the \(18\) component
+cokernels belonging to
+\[
+\mathbf1,\eps,\iot,\om,\eps\om,\iot\om.
+\]
+\end{proposition}
+
+This is not a support theorem for \(\Theta_i\).  The six large maps
+\(\rh/\cB_i\) and \(\rh\om/\cB_i\) require separate complete-equation-map
+analysis.  A control-prime-selected presentation can display a good-prime
+rank defect that disappears when the full minimum-circuit space is imposed.
+\Cref{sec:137} resolves the selected primes \(137\), \(219\,097\), and
+\(3\,288\,036\,131\); \cref{sec:global-rho} then closes the single
+\(\rh/\cB_1\) component globally away from \(2\), \(3\), and \(17\).

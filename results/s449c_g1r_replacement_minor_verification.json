@@ -1,0 +1,47 @@
+{
+  "binary_header": {
+    "columns": 1312,
+    "degree": 16,
+    "entry_count": 7830,
+    "rows": 1312,
+    "version": 1
+  },
+  "claim_boundary": "This independently verifies the exact replacement artifact and its p=103 reduction. The determinant ideal and its ideal sum with the G0 determinant are not computed here.",
+  "diagnostic_reduction": {
+    "entrywise_reduction_sha256": "b78ca6403458ce9cafbaf19bbeb7c95fe0c749174271335d891d27775f53ae55",
+    "original_prefix_rank": 1311,
+    "prime": 103,
+    "root17": 8,
+    "transpose_determinant": 89,
+    "transpose_pivot_order_sha256": "9bd7c4b1e61933dba14c00056e0180e209945732ae027f0f93fcad94a8d82541",
+    "transpose_pivot_parity": 0,
+    "transpose_rank": 1312
+  },
+  "inputs": {
+    "binary": {
+      "path": "results\\s449c_g1r_replacement_minor.bin",
+      "sha256": "007d34ca9ebab7268ca1cb55a1e81bf3e83b7983ee5fb8dd4300beb41e13b155"
+    },
+    "source_manifest": {
+      "path": "results\\s449c_g1r_replacement_minor.json",
+      "sha256": "b892c0a7ba9419a8c475ffacf05e63149e5a7f11aebf443d0f01e96ccb0c96df"
+    },
+    "verifier": {
+      "path": "scripts\\s449c_verify_g1r_replacement_minor.py",
+      "sha256": "1b8f628d69259161fe2b8024fc3a5e292296fd8f8eab163e448b9bd642b5b7b6"
+    }
+  },
+  "method": {
+    "determinant": "sparse modular elimination on the transposed matrix",
+    "parser": "standalone binary parser; no import from the builder",
+    "prefix": "independent rank on the first 1311 original rows"
+  },
+  "negative_control": {
+    "expected": "rank < 1312",
+    "mutation": "replace the final transposed row by the first (duplicate an original column)",
+    "prime": 103,
+    "rank": 1311
+  },
+  "schema": "P39-S449C-G1R-REPLACEMENT-MINOR-VERIFICATION-v1",
+  "status": "PASS_INDEPENDENT_G1R_REPLACEMENT_VERIFICATION"
+}

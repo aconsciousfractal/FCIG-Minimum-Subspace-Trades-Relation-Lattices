@@ -1,0 +1,48 @@
+{
+  "certificate": {
+    "minor_determinant_mod_137": 56,
+    "minor_order": 1312,
+    "minor_rank": 1312,
+    "prefix_rank_without_restoring_row": 1311,
+    "restoring_row_id": [
+      2863,
+      0
+    ],
+    "selected_source_rows_sha256": "88bb72adbfb30785ab410b201679358861fc00b91336e8eeb8aaba92fa8fdffb"
+  },
+  "conclusion": {
+    "complete_rho_D1_rank_at_137_root_122": 1312,
+    "historical_selected_row_obstruction_is_complete_map_class": false,
+    "selected_row_rank_before_restoring_circuit": 1311
+  },
+  "inputs": {
+    "preregistration": {
+      "path": "docs\\S448C_RHO_D1_FULL_CIRCUIT_P137_PREREGISTRATION.md",
+      "sha256": "6f286865481a7afb17046545ccf5af78be09a7b7832fb59c84ca7fcb9419bc0a"
+    },
+    "receipt": {
+      "path": "results\\s448c_rho_d1_full_circuit_p137.json",
+      "sha256": "12148bd43180c7a7ebb8c83101b32e5d093f6f7418b1229b93b63190625fd3da"
+    },
+    "source_data": {
+      "path": "data/s410b_ls2_source_data.json",
+      "sha256": "194bd645340d12ba6d8abcad7005839d8b8004d503ca5327710b47d87bdc406a"
+    },
+    "verifier": {
+      "path": "scripts\\s448c_verify_rho_d1_full_circuit_p137.py",
+      "sha256": "9384537cc8f2cc32cfd1a5340643b65858c6641082a1b99e00d30b6a8734192a"
+    }
+  },
+  "kill_tests": {
+    "duplicated_pivot_column_determinant_zero": true,
+    "non_order_17_root_mutation_rejected": true
+  },
+  "schema": "P39-S448C-RHO-D1-FULL-CIRCUIT-P137-VERIFY-v1",
+  "status": "PASS_INDEPENDENT_FULL_RANK_RESTORED",
+  "structural_dimensions": {
+    "absolute_representation": 4,
+    "block_multiplicity": 1317,
+    "maximum_circuit_rank": 1312,
+    "point_multiplicity": 5
+  }
+}

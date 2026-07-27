@@ -1,0 +1,58 @@
+{
+  "artifact_hashes": {
+    "aggregate_verifier": "38897df686065f52c76d963898ebd05048f99ca1a171b8d7547763013c8525a3",
+    "certificate_p409": "702a974f26856be68836fd5fd11228d97657c6c076f0760a45d7fbf563d157d6",
+    "certificate_p613": "28b7e25d8c22cf0f357689ef32df2317c5038e372db0f030b2ff25b6ac9e85d6",
+    "generator": "0fd0bbff0f01c31fb88e0bac7c09084916a0341f371021311da91021ae4d4808",
+    "manifest": "008b862c8089bd11b5ac4472743b13ab5b51b6b987c311abab3ab71a53650b90",
+    "verification_p409": "9e06ccec9a1216251119566bc63ab27314a1f64ccc1b5b0d6b1a67834edd7d7a",
+    "verification_p613": "fe48dbfeda72341c85daa2b8bd939b8407b0a8ef14d56e87dad8f91f4411ab9b",
+    "verifier": "f5e3817056ed3bba1b98ba7db42d4106696b1f8eb7f15e0df88ab02be884694d"
+  },
+  "checks": [
+    {
+      "certificate_sha256": "702a974f26856be68836fd5fd11228d97657c6c076f0760a45d7fbf563d157d6",
+      "prime": 409,
+      "status": "PASS",
+      "verification_sha256": "9e06ccec9a1216251119566bc63ab27314a1f64ccc1b5b0d6b1a67834edd7d7a",
+      "verified_minors": 24
+    },
+    {
+      "certificate_sha256": "28b7e25d8c22cf0f357689ef32df2317c5038e372db0f030b2ff25b6ac9e85d6",
+      "prime": 613,
+      "status": "PASS",
+      "verification_sha256": "fe48dbfeda72341c85daa2b8bd939b8407b0a8ef14d56e87dad8f91f4411ab9b",
+      "verified_minors": 24
+    }
+  ],
+  "environment": {
+    "implementation": "CPython",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.6",
+    "python_flint": "0.9.0"
+  },
+  "full_replay_commands": [
+    "python scripts/s444b_full_kernel_certificate.py manifest --per-design 5000 --output data/s444b_ext04_minimum_circuit_manifest.json",
+    "python scripts/s444b_full_kernel_certificate.py certify --prime 409 --manifest data/s444b_ext04_minimum_circuit_manifest.json --output results/s444b_ext04_full_kernel_p409.json",
+    "python scripts/s444b_full_kernel_certificate.py certify --prime 613 --manifest data/s444b_ext04_minimum_circuit_manifest.json --output results/s444b_ext04_full_kernel_p613.json",
+    "python scripts/s444b_verify_full_kernel_certificate.py --manifest data/s444b_ext04_minimum_circuit_manifest.json --certificate results/s444b_ext04_full_kernel_p409.json --output results/s444b_ext04_full_kernel_verify_p409.json",
+    "python scripts/s444b_verify_full_kernel_certificate.py --manifest data/s444b_ext04_minimum_circuit_manifest.json --certificate results/s444b_ext04_full_kernel_p613.json --output results/s444b_ext04_full_kernel_verify_p613.json",
+    "python scripts/s444b_verify_all.py --output results/s444b_ext04_full_kernel_verification_receipt.json"
+  ],
+  "schema": "P39-S444B-FULL-KERNEL-REPLAY-RECEIPT-v1",
+  "scope": "fresh reconstruction of all equation-row hashes and direct python-flint determinants for 48 nonzero component/design minors",
+  "status": "PASS",
+  "summary": {
+    "components": 8,
+    "designs": 3,
+    "equation_matrices_verified": 48,
+    "nonzero_minors_verified": 48,
+    "p613_schema_repaired": true,
+    "rational_kernel_dimension_each": 66674,
+    "split_primes": [
+      409,
+      613
+    ],
+    "theorem_ext04_fk": true
+  }
+}

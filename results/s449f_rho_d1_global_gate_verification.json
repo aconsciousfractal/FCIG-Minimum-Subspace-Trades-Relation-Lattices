@@ -1,0 +1,81 @@
+{
+  "claim_boundary": "This closes rho/D1 only. It does not close the other five large maps, O-75/O-76, or any P42 tomography claim.",
+  "conclusion": "The two displayed maximal-minor ideals generate the unit ideal after inverting 2, 3 and 17. Therefore the rho/D1 residual Fitting gate is closed away from S.",
+  "decisive_two_minor_ideal_sum": {
+    "after_removing_2_3_17": "1",
+    "after_removing_2_3_17_bits": 1,
+    "exact_identity": "ideal_sum_index = 17^21",
+    "generator_matrix_shape": [
+      16,
+      32
+    ],
+    "ideal_sum_index": "69091933913008732880827217",
+    "ideal_sum_index_bits": 86,
+    "localized_ring": "Z[zeta_17,1/(2*3*17)]",
+    "localized_unit": true,
+    "norm_gcd": "3304106172827182202343960489655997143401722293",
+    "norm_gcd_bits": 152,
+    "s_valuations": {
+      "17": 21,
+      "2": 0,
+      "3": 0
+    },
+    "smith_diagonal": [
+      "17",
+      "17",
+      "17",
+      "17",
+      "17",
+      "17",
+      "17",
+      "17",
+      "17",
+      "17",
+      "17",
+      "289",
+      "289",
+      "289",
+      "289",
+      "289"
+    ]
+  },
+  "inputs": {
+    "g1_replacement_determinant": {
+      "coefficient_vector_sha256": "0987ade8dc9d5e5a726d1dad94a44930b1aa36969d41ed1d7f96cc4709f9f291",
+      "path": "results\\s449c_g1r_crt_raw.json",
+      "sha256": "049bba63f4dda30a5a2ab664e941f546c9dfcdbbe6f343633604d4019fd95424"
+    },
+    "reverse_row_determinant": {
+      "coefficient_vector_sha256": "016d1bb9fe39f612f3306a16aaed487dc911e97f44c19bfe5ae5b38c434adb0c",
+      "path": "results\\s449f_reverse_row_crt_raw.json",
+      "sha256": "e9dd26070f96a9e0dbdba3dd98466d067f87cb3dd628f36c09ac6a70914a391e"
+    },
+    "source_ideal_sum": {
+      "path": "results\\s449f_rho_d1_g1_reverse_row_ideal_sum.json",
+      "sha256": "5cb3d78d948e53f3a38b4e85dc9f9c6f9e195839d7b432c544750967b9eff078"
+    },
+    "verifier": {
+      "path": "scripts\\s449f_verify_rho_d1_global_gate.py",
+      "sha256": "d910a6361f09b52d6df61e44b5ab2c6c55d11973e720315ac603c2bf2052fff2"
+    }
+  },
+  "method": "Standalone cyclotomic multiplication, direct 16-conjugate norms, multiplication-lattice determinants and Smith form of the 16x32 concatenated generator matrix.",
+  "negative_control": {
+    "after_removing_2_3_17": "47821880003927349029",
+    "after_removing_2_3_17_bits": 66,
+    "ideal_sum_index_bits": 152,
+    "localized_unit": false,
+    "mutation": "replace the p=103 G1 column-replacement determinant by the original G0 determinant",
+    "pair": [
+      "results\\s449b_g05_crt_raw.json",
+      "results\\s449f_reverse_row_crt_raw.json"
+    ],
+    "s_valuations": {
+      "17": 21,
+      "2": 0,
+      "3": 0
+    }
+  },
+  "schema": "P39-S449F-RHO-D1-GLOBAL-GATE-VERIFICATION-v1",
+  "status": "PASS_RHO_D1_GLOBAL_GATE_AWAY_FROM_S"
+}

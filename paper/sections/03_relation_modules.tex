@@ -1,0 +1,64 @@
+\section{Rational relation modules}
+\label{sec:modules}
+
+Because \(A_i:M_i^\QQ\to P^\QQ\) is a surjective
+\(\QQ\GammaG\)-map, semisimplicity gives
+\[
+ [K_i]=[M_i^\QQ]-[P^\QQ]
+\]
+in the rational representation ring.  Exact character inner products
+therefore determine \(K_i\) from the block and point permutation
+characters.
+
+\begin{proposition}[Complete relation-module table]
+\label{prop:relation-table}
+The multiplicities of the eight rational types in \(K_1,K_2,K_3\) are as
+follows.
+\[
+\begin{array}{c|rrr|r}
+V&K_1&K_2&K_3&\dim_{\QQ}V\\
+\midrule
+\mathbf1 &343&354&355&1\\
+\eps     &341&352&351&1\\
+\iot     &314&304&302&2\\
+\om      &339&349&353&2\\
+\eps\om  &338&347&349&2\\
+\iot\om  &314&304&302&4\\
+\rh      &1312&1314&1310&16\\
+\rh\om   &1305&1304&1306&32\\
+\midrule
+\multicolumn{1}{r|}{\text{weighted total}}
+&66\,674&66\,674&66\,674&
+\end{array}
+\]
+In particular, \(K_1,K_2,K_3\) are pairwise nonisomorphic as
+\(\QQ\GammaG\)-modules.
+\end{proposition}
+
+\begin{proof}
+Subtract the point multiplicities in \cref{prop:point-module} from the
+three exact block permutation characters.  The resulting table is the
+one displayed.  For example, the two large-type contributions are
+\[
+ 16(1312,1314,1310)\quad\text{for }\rh,
+ \qquad
+ 32(1305,1304,1306)\quad\text{for }\rh\om.
+\]
+Summing every row with its rational dimension
+gives \(66\,674\) in each column, agreeing with the incidence rank.
+
+The three entries in every row are not all equal; more strongly, each
+pair of columns differs in at least one multiplicity, and inspection shows
+that the three configurations are separated in every rational type.
+Uniqueness of semisimple multiplicities proves pairwise
+nonisomorphism.
+\end{proof}
+
+\begin{remark}[What the table separates]
+The trivial multiplicities \(343,354,355\) are the dimensions of the
+invariant relation spaces and can also be recovered from block-orbit
+counts.  The structural conclusion is the simultaneous decomposition of
+the full \(66\,674\)-dimensional kernels.  It should not be confused with
+equality of incidence images: all three maps have the same full rational
+image \(P^\QQ\), while their kernels are inequivalent.
+\end{remark}

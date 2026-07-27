@@ -1,0 +1,66 @@
+{
+  "manifest_sha256": "6915057203023F159A974068F705395C9084AD9C4C1B2FE41FDB7EFFC511D9F0",
+  "replays": [
+    {
+      "receipt": "results/s449c_g1r_replacement_minor_verification.json",
+      "script": "s449c_verify_g1r_replacement_minor.py",
+      "sha256": "95D0D02E6D233DD25CEA69C07C33A3BCF2D850DE3708E2A1115AB6FEDFE56A15"
+    },
+    {
+      "receipt": "results/s449c_g1r_principal_determinant_verification.json",
+      "script": "s449c_verify_g1r_principal_determinant.py",
+      "sha256": "0077E7FCB73D61EF584E3E503CDA539743A118AA631261A0C2DD75BFC8F1DD84"
+    },
+    {
+      "receipt": "results/s449f_reverse_row_determinant_verification.json",
+      "script": "s449f_verify_reverse_row_determinant.py",
+      "sha256": "B7F420235A9947C12E28CD5A887EF883BD7F8D0F37836864B18C6365416BDE88"
+    },
+    {
+      "receipt": "results/s449f_rho_d1_global_gate_verification.json",
+      "script": "s449f_verify_rho_d1_global_gate.py",
+      "sha256": "511CD53641E7426650FAA3799BA7D7F3B514F51CA98B69766ADB5E00AE33EBDD"
+    }
+  ],
+  "schema": "P39-EXT04-PUBLIC-PACKAGE-VERIFICATION-v1",
+  "scope_boundary": {
+    "global_maps_deferred": [
+      "rho*omega/B1",
+      "rho/B2",
+      "rho*omega/B2",
+      "rho/B3",
+      "rho*omega/B3"
+    ],
+    "global_maps_proved": [
+      "rho/B1"
+    ],
+    "global_smith_groups": "OPEN"
+  },
+  "status": "PASS",
+  "theorem": {
+    "codomain_rank": 1312,
+    "coefficient_ring": "Z[zeta_17]",
+    "component": "rho/B1",
+    "domain_rank": 1317,
+    "ideal_index": 69091933913008732880827217,
+    "localized_cokernel": "0 over Z[zeta_17,1/(2*3*17)]",
+    "smith_diagonal": [
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      17,
+      289,
+      289,
+      289,
+      289,
+      289
+    ]
+  }
+}

@@ -1,0 +1,1048 @@
+{
+  "checks": {
+    "all_duplicate_field_column_kills_passed": true,
+    "all_primary_determinants_reproduced": true,
+    "complete_3288036131_primary_triple": [
+      "0",
+      "0",
+      "0"
+    ],
+    "duplicate_column_kills": 80,
+    "frobenius_conjugate_evaluations": true,
+    "independent_primitive_root_enumeration": true,
+    "quadratic_orbit_label_mutation_rejected": [
+      1,
+      2615277263
+    ],
+    "scalar_root_label_mutation_rejected": 32583835,
+    "transposed_matrix_layout": true,
+    "verified_localizations": 80
+  },
+  "claim_boundary": "This independently verifies 80 explicit nonzero maximal minors for the five named large maps at p=3288036131. Together with S4.48I and the 18 small-map exclusions, it supports only the complete 3288036131-primary zero triple, not a global Smith classification.",
+  "field": {
+    "least_primitive_root": 2,
+    "p_minus_1_prime_factors": [
+      2,
+      5,
+      17,
+      2243,
+      8623
+    ],
+    "prime": 3288036131,
+    "rho_omega_independent_conjugate_models": [
+      {
+        "evaluation": [
+          0,
+          2615277263
+        ],
+        "frobenius_conjugate": [
+          672758868,
+          672758868
+        ],
+        "root17": 32583834
+      },
+      {
+        "evaluation": [
+          0,
+          748713597
+        ],
+        "frobenius_conjugate": [
+          2539322534,
+          2539322534
+        ],
+        "root17": 260930411
+      },
+      {
+        "evaluation": [
+          0,
+          1120906769
+        ],
+        "frobenius_conjugate": [
+          2167129362,
+          2167129362
+        ],
+        "root17": 508146966
+      },
+      {
+        "evaluation": [
+          0,
+          260930411
+        ],
+        "frobenius_conjugate": [
+          3027105720,
+          3027105720
+        ],
+        "root17": 648117464
+      },
+      {
+        "evaluation": [
+          0,
+          2783791197
+        ],
+        "frobenius_conjugate": [
+          504244934,
+          504244934
+        ],
+        "root17": 701438215
+      },
+      {
+        "evaluation": [
+          0,
+          2419563300
+        ],
+        "frobenius_conjugate": [
+          868472831,
+          868472831
+        ],
+        "root17": 748713597
+      },
+      {
+        "evaluation": [
+          0,
+          1533157362
+        ],
+        "frobenius_conjugate": [
+          1754878769,
+          1754878769
+        ],
+        "root17": 1120906769
+      },
+      {
+        "evaluation": [
+          0,
+          648117464
+        ],
+        "frobenius_conjugate": [
+          2639918667,
+          2639918667
+        ],
+        "root17": 1311219588
+      },
+      {
+        "evaluation": [
+          0,
+          2613910691
+        ],
+        "frobenius_conjugate": [
+          674125440,
+          674125440
+        ],
+        "root17": 1435047642
+      },
+      {
+        "evaluation": [
+          0,
+          32583834
+        ],
+        "frobenius_conjugate": [
+          3255452297,
+          3255452297
+        ],
+        "root17": 1533157362
+      },
+      {
+        "evaluation": [
+          0,
+          508146966
+        ],
+        "frobenius_conjugate": [
+          2779889165,
+          2779889165
+        ],
+        "root17": 1623972830
+      },
+      {
+        "evaluation": [
+          0,
+          1623972830
+        ],
+        "frobenius_conjugate": [
+          1664063301,
+          1664063301
+        ],
+        "root17": 2419563300
+      },
+      {
+        "evaluation": [
+          0,
+          701438215
+        ],
+        "frobenius_conjugate": [
+          2586597916,
+          2586597916
+        ],
+        "root17": 2613910691
+      },
+      {
+        "evaluation": [
+          0,
+          2659475787
+        ],
+        "frobenius_conjugate": [
+          628560344,
+          628560344
+        ],
+        "root17": 2615277263
+      },
+      {
+        "evaluation": [
+          0,
+          1435047642
+        ],
+        "frobenius_conjugate": [
+          1852988489,
+          1852988489
+        ],
+        "root17": 2659475787
+      },
+      {
+        "evaluation": [
+          0,
+          1311219588
+        ],
+        "frobenius_conjugate": [
+          1976816543,
+          1976816543
+        ],
+        "root17": 2783791197
+      }
+    ],
+    "roots17": [
+      32583834,
+      260930411,
+      508146966,
+      648117464,
+      701438215,
+      748713597,
+      1120906769,
+      1311219588,
+      1435047642,
+      1533157362,
+      1623972830,
+      2419563300,
+      2613910691,
+      2615277263,
+      2659475787,
+      2783791197
+    ]
+  },
+  "maps": {
+    "rho/D2": {
+      "cyclotomic_order": 17,
+      "prime_count": 16,
+      "prime_receipts": [
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 738517379,
+          "independent_evaluation": 32583834,
+          "prime_index": 0,
+          "root17": 32583834
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 885068144,
+          "independent_evaluation": 260930411,
+          "prime_index": 1,
+          "root17": 260930411
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1323869471,
+          "independent_evaluation": 508146966,
+          "prime_index": 2,
+          "root17": 508146966
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1084417955,
+          "independent_evaluation": 648117464,
+          "prime_index": 3,
+          "root17": 648117464
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2082803258,
+          "independent_evaluation": 701438215,
+          "prime_index": 4,
+          "root17": 701438215
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1982227746,
+          "independent_evaluation": 748713597,
+          "prime_index": 5,
+          "root17": 748713597
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1321323352,
+          "independent_evaluation": 1120906769,
+          "prime_index": 6,
+          "root17": 1120906769
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 3215555855,
+          "independent_evaluation": 1311219588,
+          "prime_index": 7,
+          "root17": 1311219588
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1877829832,
+          "independent_evaluation": 1435047642,
+          "prime_index": 8,
+          "root17": 1435047642
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2348802384,
+          "independent_evaluation": 1533157362,
+          "prime_index": 9,
+          "root17": 1533157362
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 294884498,
+          "independent_evaluation": 1623972830,
+          "prime_index": 10,
+          "root17": 1623972830
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2142235700,
+          "independent_evaluation": 2419563300,
+          "prime_index": 11,
+          "root17": 2419563300
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 196153854,
+          "independent_evaluation": 2613910691,
+          "prime_index": 12,
+          "root17": 2613910691
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 429605924,
+          "independent_evaluation": 2615277263,
+          "prime_index": 13,
+          "root17": 2615277263
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2212012267,
+          "independent_evaluation": 2659475787,
+          "prime_index": 14,
+          "root17": 2659475787
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2630126092,
+          "independent_evaluation": 2783791197,
+          "prime_index": 15,
+          "root17": 2783791197
+        }
+      ],
+      "residue_degree": 1
+    },
+    "rho/D3": {
+      "cyclotomic_order": 17,
+      "prime_count": 16,
+      "prime_receipts": [
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 327080965,
+          "independent_evaluation": 32583834,
+          "prime_index": 0,
+          "root17": 32583834
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 828908883,
+          "independent_evaluation": 260930411,
+          "prime_index": 1,
+          "root17": 260930411
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 320910232,
+          "independent_evaluation": 508146966,
+          "prime_index": 2,
+          "root17": 508146966
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1143182811,
+          "independent_evaluation": 648117464,
+          "prime_index": 3,
+          "root17": 648117464
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2227021495,
+          "independent_evaluation": 701438215,
+          "prime_index": 4,
+          "root17": 701438215
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1983755430,
+          "independent_evaluation": 748713597,
+          "prime_index": 5,
+          "root17": 748713597
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2568381424,
+          "independent_evaluation": 1120906769,
+          "prime_index": 6,
+          "root17": 1120906769
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2183924135,
+          "independent_evaluation": 1311219588,
+          "prime_index": 7,
+          "root17": 1311219588
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 560716032,
+          "independent_evaluation": 1435047642,
+          "prime_index": 8,
+          "root17": 1435047642
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2353261308,
+          "independent_evaluation": 1533157362,
+          "prime_index": 9,
+          "root17": 1533157362
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 333774910,
+          "independent_evaluation": 1623972830,
+          "prime_index": 10,
+          "root17": 1623972830
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1634000246,
+          "independent_evaluation": 2419563300,
+          "prime_index": 11,
+          "root17": 2419563300
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2049683249,
+          "independent_evaluation": 2613910691,
+          "prime_index": 12,
+          "root17": 2613910691
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 550486119,
+          "independent_evaluation": 2615277263,
+          "prime_index": 13,
+          "root17": 2615277263
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 616382441,
+          "independent_evaluation": 2659475787,
+          "prime_index": 14,
+          "root17": 2659475787
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2518470156,
+          "independent_evaluation": 2783791197,
+          "prime_index": 15,
+          "root17": 2783791197
+        }
+      ],
+      "residue_degree": 1
+    },
+    "rho_omega/D1": {
+      "cyclotomic_order": 51,
+      "prime_count": 16,
+      "prime_receipts": [
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1864783653,
+          "independent_evaluation": [
+            0,
+            2615277263
+          ],
+          "prime_index": 0,
+          "root17": 32583834
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1472034888,
+          "independent_evaluation": [
+            0,
+            748713597
+          ],
+          "prime_index": 1,
+          "root17": 260930411
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 3124716488,
+          "independent_evaluation": [
+            0,
+            1120906769
+          ],
+          "prime_index": 2,
+          "root17": 508146966
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2098767202,
+          "independent_evaluation": [
+            0,
+            260930411
+          ],
+          "prime_index": 3,
+          "root17": 648117464
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1646931178,
+          "independent_evaluation": [
+            0,
+            2783791197
+          ],
+          "prime_index": 4,
+          "root17": 701438215
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1788157866,
+          "independent_evaluation": [
+            0,
+            2419563300
+          ],
+          "prime_index": 5,
+          "root17": 748713597
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2312585688,
+          "independent_evaluation": [
+            0,
+            1533157362
+          ],
+          "prime_index": 6,
+          "root17": 1120906769
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2012470385,
+          "independent_evaluation": [
+            0,
+            648117464
+          ],
+          "prime_index": 7,
+          "root17": 1311219588
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1935903889,
+          "independent_evaluation": [
+            0,
+            2613910691
+          ],
+          "prime_index": 8,
+          "root17": 1435047642
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2594456031,
+          "independent_evaluation": [
+            0,
+            32583834
+          ],
+          "prime_index": 9,
+          "root17": 1533157362
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2802128321,
+          "independent_evaluation": [
+            0,
+            508146966
+          ],
+          "prime_index": 10,
+          "root17": 1623972830
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1983407538,
+          "independent_evaluation": [
+            0,
+            1623972830
+          ],
+          "prime_index": 11,
+          "root17": 2419563300
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1450451301,
+          "independent_evaluation": [
+            0,
+            701438215
+          ],
+          "prime_index": 12,
+          "root17": 2613910691
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 548881734,
+          "independent_evaluation": [
+            0,
+            2659475787
+          ],
+          "prime_index": 13,
+          "root17": 2615277263
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 468035940,
+          "independent_evaluation": [
+            0,
+            1435047642
+          ],
+          "prime_index": 14,
+          "root17": 2659475787
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 50365236,
+          "independent_evaluation": [
+            0,
+            1311219588
+          ],
+          "prime_index": 15,
+          "root17": 2783791197
+        }
+      ],
+      "residue_degree": 2
+    },
+    "rho_omega/D2": {
+      "cyclotomic_order": 51,
+      "prime_count": 16,
+      "prime_receipts": [
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2077741589,
+          "independent_evaluation": [
+            0,
+            2615277263
+          ],
+          "prime_index": 0,
+          "root17": 32583834
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 247245346,
+          "independent_evaluation": [
+            0,
+            748713597
+          ],
+          "prime_index": 1,
+          "root17": 260930411
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2767287288,
+          "independent_evaluation": [
+            0,
+            1120906769
+          ],
+          "prime_index": 2,
+          "root17": 508146966
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2258497199,
+          "independent_evaluation": [
+            0,
+            260930411
+          ],
+          "prime_index": 3,
+          "root17": 648117464
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 505797958,
+          "independent_evaluation": [
+            0,
+            2783791197
+          ],
+          "prime_index": 4,
+          "root17": 701438215
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 84668875,
+          "independent_evaluation": [
+            0,
+            2419563300
+          ],
+          "prime_index": 5,
+          "root17": 748713597
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 3060125348,
+          "independent_evaluation": [
+            0,
+            1533157362
+          ],
+          "prime_index": 6,
+          "root17": 1120906769
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 433094893,
+          "independent_evaluation": [
+            0,
+            648117464
+          ],
+          "prime_index": 7,
+          "root17": 1311219588
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 317239708,
+          "independent_evaluation": [
+            0,
+            2613910691
+          ],
+          "prime_index": 8,
+          "root17": 1435047642
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1824075878,
+          "independent_evaluation": [
+            0,
+            32583834
+          ],
+          "prime_index": 9,
+          "root17": 1533157362
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1189381856,
+          "independent_evaluation": [
+            0,
+            508146966
+          ],
+          "prime_index": 10,
+          "root17": 1623972830
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 35763524,
+          "independent_evaluation": [
+            0,
+            1623972830
+          ],
+          "prime_index": 11,
+          "root17": 2419563300
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1436245379,
+          "independent_evaluation": [
+            0,
+            701438215
+          ],
+          "prime_index": 12,
+          "root17": 2613910691
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1094244244,
+          "independent_evaluation": [
+            0,
+            2659475787
+          ],
+          "prime_index": 13,
+          "root17": 2615277263
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2907749437,
+          "independent_evaluation": [
+            0,
+            1435047642
+          ],
+          "prime_index": 14,
+          "root17": 2659475787
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 769497303,
+          "independent_evaluation": [
+            0,
+            1311219588
+          ],
+          "prime_index": 15,
+          "root17": 2783791197
+        }
+      ],
+      "residue_degree": 2
+    },
+    "rho_omega/D3": {
+      "cyclotomic_order": 51,
+      "prime_count": 16,
+      "prime_receipts": [
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1800252974,
+          "independent_evaluation": [
+            0,
+            2615277263
+          ],
+          "prime_index": 0,
+          "root17": 32583834
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2802528392,
+          "independent_evaluation": [
+            0,
+            748713597
+          ],
+          "prime_index": 1,
+          "root17": 260930411
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 560385664,
+          "independent_evaluation": [
+            0,
+            1120906769
+          ],
+          "prime_index": 2,
+          "root17": 508146966
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 639477059,
+          "independent_evaluation": [
+            0,
+            260930411
+          ],
+          "prime_index": 3,
+          "root17": 648117464
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 467849094,
+          "independent_evaluation": [
+            0,
+            2783791197
+          ],
+          "prime_index": 4,
+          "root17": 701438215
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1095269952,
+          "independent_evaluation": [
+            0,
+            2419563300
+          ],
+          "prime_index": 5,
+          "root17": 748713597
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1708615216,
+          "independent_evaluation": [
+            0,
+            1533157362
+          ],
+          "prime_index": 6,
+          "root17": 1120906769
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2948069011,
+          "independent_evaluation": [
+            0,
+            648117464
+          ],
+          "prime_index": 7,
+          "root17": 1311219588
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1788651677,
+          "independent_evaluation": [
+            0,
+            2613910691
+          ],
+          "prime_index": 8,
+          "root17": 1435047642
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 579458252,
+          "independent_evaluation": [
+            0,
+            32583834
+          ],
+          "prime_index": 9,
+          "root17": 1533157362
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 280223677,
+          "independent_evaluation": [
+            0,
+            508146966
+          ],
+          "prime_index": 10,
+          "root17": 1623972830
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 26315102,
+          "independent_evaluation": [
+            0,
+            1623972830
+          ],
+          "prime_index": 11,
+          "root17": 2419563300
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2479935951,
+          "independent_evaluation": [
+            0,
+            701438215
+          ],
+          "prime_index": 12,
+          "root17": 2613910691
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2005832061,
+          "independent_evaluation": [
+            0,
+            2659475787
+          ],
+          "prime_index": 13,
+          "root17": 2615277263
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 1658078574,
+          "independent_evaluation": [
+            0,
+            1435047642
+          ],
+          "prime_index": 14,
+          "root17": 2659475787
+        },
+        {
+          "duplicate_field_column_determinant_mod_3288036131": 0,
+          "expanded_determinant_mod_3288036131": 2011688635,
+          "independent_evaluation": [
+            0,
+            1311219588
+          ],
+          "prime_index": 15,
+          "root17": 2783791197
+        }
+      ],
+      "residue_degree": 2
+    }
+  },
+  "schema": "P39-S448J-P3288036131-FIVE-LARGE-MAPS-VERIFY-v1",
+  "source_inputs": {
+    "preregistration": {
+      "path": "docs\\S448J_P3288036131_FIVE_LARGE_MAPS_PREREGISTRATION.md",
+      "sha256": "fb9109dc77aeee019ba4b2993e81409f40e1509d7177ff11abec5f7115df8cbb"
+    },
+    "primary": {
+      "path": "results\\s448j_p3288036131_five_large_maps_screen.json",
+      "sha256": "6363dc2702beca0e401517f3f1e42197cc0d1c8e4674b7ef9c20d744781f57b5"
+    },
+    "verified_artifacts": {
+      "rho/D2:columns": {
+        "path": "results\\s448a_rho_D2_columns_mod409.json",
+        "sha256": "907bc75064feb811efe999ed3fbd7e9509ff5bb45b69658e9914f130520d2fd5"
+      },
+      "rho/D2:exact_wide": {
+        "path": "results\\s448a_rho_D2_exact_wide.bin",
+        "sha256": "fac49e3f25c0f587c2ca5b220a13262ca34720132805723109e4f392bc841530"
+      },
+      "rho/D2:manifest": {
+        "path": "results\\s448a_rho_D2_exact_wide_manifest.json",
+        "sha256": "0f91a031bf5b5e986ab3b14b26f325671ea791895c538bafd49c1779a9118115"
+      },
+      "rho/D3:columns": {
+        "path": "results\\s448a_rho_D3_columns_mod409.json",
+        "sha256": "199e00394a2ce9f6fddaef767885ca66a9290a6894fc142bf151517de0573df0"
+      },
+      "rho/D3:exact_wide": {
+        "path": "results\\s448a_rho_D3_exact_wide.bin",
+        "sha256": "c630e5d1412143789bdb418d6dd766b9ae3fa9366e67db52ae2ad48a36e8aa52"
+      },
+      "rho/D3:manifest": {
+        "path": "results\\s448a_rho_D3_exact_wide_manifest.json",
+        "sha256": "292e9567749bff6983557fe7c97e1f933636be30bcff241993052193c8dabf48"
+      },
+      "rho_omega/D1:columns": {
+        "path": "results\\s448a_rho_omega_D1_columns_mod409.json",
+        "sha256": "d83dbdf78f388c1ab42e750ea802117516869bbbef9fe566b76891ec7c57df55"
+      },
+      "rho_omega/D1:exact_wide": {
+        "path": "results\\s448a_rho_omega_D1_exact_wide.bin",
+        "sha256": "5c8e7b2a1da3a35b52f6b5b04266c6389b094eb437c973cba8283adc8d684e37"
+      },
+      "rho_omega/D1:manifest": {
+        "path": "results\\s448a_rho_omega_D1_exact_wide_manifest.json",
+        "sha256": "1079460a6266b2bd23cf63428512a0ba4fc49865176d77963f5511ef4ac8df37"
+      },
+      "rho_omega/D2:columns": {
+        "path": "results\\s448a_rho_omega_D2_columns_mod409.json",
+        "sha256": "2c2bc4423dd8bc415fbd5050ec190a53cc1167beff4ea28576c2088ae4c95b5c"
+      },
+      "rho_omega/D2:exact_wide": {
+        "path": "results\\s448a_rho_omega_D2_exact_wide.bin",
+        "sha256": "94537750a2947d0936967d34ef492c49062bf9b72a2ea3e8e464997934cdc42d"
+      },
+      "rho_omega/D2:manifest": {
+        "path": "results\\s448a_rho_omega_D2_exact_wide_manifest.json",
+        "sha256": "64fa3b9e593db13a4aff410e383d698b37e781d874c3965431a5cc824cbb169e"
+      },
+      "rho_omega/D3:columns": {
+        "path": "results\\s448a_rho_omega_D3_columns_mod409.json",
+        "sha256": "e45ade8d99bc0550db7bfcffa20dfe7f2e36912a2cd991e9e78581b13e6a5005"
+      },
+      "rho_omega/D3:exact_wide": {
+        "path": "results\\s448a_rho_omega_D3_exact_wide.bin",
+        "sha256": "a9423b79050dbe82ce870b47f56af201bb8e0a27d379d2891c27aa474d3a2f17"
+      },
+      "rho_omega/D3:manifest": {
+        "path": "results\\s448a_rho_omega_D3_exact_wide_manifest.json",
+        "sha256": "4e1edbe46b328fd32f9f030004a9235ba40c699419b33b20440d6da49e6702b7"
+      }
+    },
+    "verifier": {
+      "path": "scripts\\s448j_verify_p3288036131_five_large_maps.py",
+      "sha256": "bfcc546b6e6fe2a2620ad76730f72dbece0698e1e71f77c25a86fdf0b5f1fc33"
+    }
+  },
+  "status": "PASS_INDEPENDENT_ALL_80_FULL_RANK"
+}

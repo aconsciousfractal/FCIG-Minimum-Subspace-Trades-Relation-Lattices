@@ -1,0 +1,213 @@
+{
+  "artifact_hashes": {
+    "results/s445a_integral_circuit_saturation.json": "5e8e828e00fde27f052fab6247c3205cf13cc6d93b53d5c9469de75bd242852a",
+    "results/s445c_fast_mod2_witness_d1.json": "e51e7de716b2a71e037dd6004d32634960684674ffed84cd8283bd2d22571e5d",
+    "results/s445c_fast_mod2_witness_d2.json": "f5349624344002f681a74f414f72c9d0d5f774b2d3328e6d55f6c1cddbc72bd2",
+    "results/s445c_fast_mod2_witness_d3.json": "0a507efbae95a3c9ee3d5f4fae703d2d86c00afe0cd24da94a3a469229ccb51b",
+    "results/s445c_mod2_witness_verification_receipt.json": "9edc8d2b2065d8a077cb5c085c81fe6b11d62ef5a837b2c1c2873a0201999b3c",
+    "results/s445h_compiled_unit_lu_d1_resource_stop.json": "13c15c107c9fdfb701494c9028b9a646ba3ec36844771c048440e9c5686ae629",
+    "results/s445i_wide_unit_lu_d1.json": "aaf061baf06d42373f9e7cef8289815ef03f57126fb61abba9448e6abe7eb669",
+    "results/s445j_valence_d1_resource_stop.json": "3ee3c26044ca282be91f3c99c6335dd2d7020feaa83f69c8d363b6d696c64a9a",
+    "results/s445k_modular_rank_d1_p3_resource_stop.json": "f9e08bb3ad0eb11f81b3b669ce2d3b5a2f35476b7ee3bcf953c43d4d8185ddcc"
+  },
+  "checks": [
+    {
+      "check": "sha256:results/s445a_integral_circuit_saturation.json",
+      "detail": "5e8e828e00fde27f052fab6247c3205cf13cc6d93b53d5c9469de75bd242852a",
+      "passed": true
+    },
+    {
+      "check": "sha256:results/s445c_fast_mod2_witness_d1.json",
+      "detail": "e51e7de716b2a71e037dd6004d32634960684674ffed84cd8283bd2d22571e5d",
+      "passed": true
+    },
+    {
+      "check": "sha256:results/s445c_fast_mod2_witness_d2.json",
+      "detail": "f5349624344002f681a74f414f72c9d0d5f774b2d3328e6d55f6c1cddbc72bd2",
+      "passed": true
+    },
+    {
+      "check": "sha256:results/s445c_fast_mod2_witness_d3.json",
+      "detail": "0a507efbae95a3c9ee3d5f4fae703d2d86c00afe0cd24da94a3a469229ccb51b",
+      "passed": true
+    },
+    {
+      "check": "sha256:results/s445c_mod2_witness_verification_receipt.json",
+      "detail": "9edc8d2b2065d8a077cb5c085c81fe6b11d62ef5a837b2c1c2873a0201999b3c",
+      "passed": true
+    },
+    {
+      "check": "sha256:results/s445h_compiled_unit_lu_d1_resource_stop.json",
+      "detail": "13c15c107c9fdfb701494c9028b9a646ba3ec36844771c048440e9c5686ae629",
+      "passed": true
+    },
+    {
+      "check": "sha256:results/s445i_wide_unit_lu_d1.json",
+      "detail": "aaf061baf06d42373f9e7cef8289815ef03f57126fb61abba9448e6abe7eb669",
+      "passed": true
+    },
+    {
+      "check": "sha256:results/s445j_valence_d1_resource_stop.json",
+      "detail": "3ee3c26044ca282be91f3c99c6335dd2d7020feaa83f69c8d363b6d696c64a9a",
+      "passed": true
+    },
+    {
+      "check": "sha256:results/s445k_modular_rank_d1_p3_resource_stop.json",
+      "detail": "f9e08bb3ad0eb11f81b3b669ce2d3b5a2f35476b7ee3bcf953c43d4d8185ddcc",
+      "passed": true
+    },
+    {
+      "check": "mod2_witness:D1",
+      "detail": {
+        "circuits_processed": 110524,
+        "design": "D1",
+        "prime": 2,
+        "rank": 66674,
+        "rank_deficit": 0,
+        "status": "PASS_FULL_RANK_MOD_2",
+        "target_rank": 66674,
+        "theta_mod_2_dimension": 0,
+        "witness_columns": 66674
+      },
+      "passed": true
+    },
+    {
+      "check": "mod2_witness:D2",
+      "detail": {
+        "circuits_processed": 143112,
+        "design": "D2",
+        "prime": 2,
+        "rank": 66674,
+        "rank_deficit": 0,
+        "status": "PASS_FULL_RANK_MOD_2",
+        "target_rank": 66674,
+        "theta_mod_2_dimension": 0,
+        "witness_columns": 66674
+      },
+      "passed": true
+    },
+    {
+      "check": "mod2_witness:D3",
+      "detail": {
+        "circuits_processed": 120245,
+        "design": "D3",
+        "prime": 2,
+        "rank": 66674,
+        "rank_deficit": 0,
+        "status": "PASS_FULL_RANK_MOD_2",
+        "target_rank": 66674,
+        "theta_mod_2_dimension": 0,
+        "witness_columns": 66674
+      },
+      "passed": true
+    },
+    {
+      "check": "independent_opposite_pivot_replay",
+      "detail": {
+        "D1": {
+          "balanced": true,
+          "columns": 66674,
+          "opposite_pivot_rank": 66674,
+          "source_hash_reproduced": true
+        },
+        "D2": {
+          "balanced": true,
+          "columns": 66674,
+          "opposite_pivot_rank": 66674,
+          "source_hash_reproduced": true
+        },
+        "D3": {
+          "balanced": true,
+          "columns": 66674,
+          "opposite_pivot_rank": 66674,
+          "source_hash_reproduced": true
+        },
+        "claim_boundary": "No odd-primary or exhaustive integral-saturation conclusion."
+      },
+      "passed": true
+    },
+    {
+      "check": "peeling_is_not_a_saturation_verdict",
+      "detail": "RESIDUAL_CORE_STOP",
+      "passed": true
+    },
+    {
+      "check": "resource_stop_boundary:results/s445h_compiled_unit_lu_d1_resource_stop.json",
+      "detail": {
+        "claim": "NO_EXACT_CLAIM",
+        "status": "RESOURCE_STOP",
+        "stop_reason": "EXTERNAL_MEMORY_STOP_DURING_NONDESTRUCTIVE_HEAP_REBUILD"
+      },
+      "passed": true
+    },
+    {
+      "check": "resource_stop_boundary:results/s445j_valence_d1_resource_stop.json",
+      "detail": {
+        "claim": "NO_EXACT_CLAIM",
+        "status": "RESOURCE_STOP",
+        "stop_reason": "SCALAR_WIEDEMANN_NO_COMPLETED_VALENCE_AT_DECISION_CHECKPOINT"
+      },
+      "passed": true
+    },
+    {
+      "check": "wide_unit_lu_is_incomplete",
+      "detail": {
+        "pivot_count": 50800,
+        "status": "RESOURCE_OR_CORE_STOP",
+        "stop_reason": "RSS_CAP",
+        "target_order": 66674
+      },
+      "passed": true
+    },
+    {
+      "check": "compiled_p3_is_not_a_rank_verdict",
+      "detail": {
+        "claim": "NO_EXACT_CLAIM",
+        "completed_rank": false,
+        "status": "RESOURCE_STOP"
+      },
+      "passed": true
+    },
+    {
+      "check": "documentation_boundary:PROOF_OBLIGATIONS.md",
+      "detail": {
+        "missing_phrases": []
+      },
+      "passed": true
+    },
+    {
+      "check": "documentation_boundary:CLAIM_LEDGER.md",
+      "detail": {
+        "missing_phrases": []
+      },
+      "passed": true
+    },
+    {
+      "check": "documentation_boundary:STATUS.md",
+      "detail": {
+        "missing_phrases": []
+      },
+      "passed": true
+    },
+    {
+      "check": "documentation_boundary:docs/S445_O75_INTEGRAL_SATURATION_REPORT.md",
+      "detail": {
+        "missing_phrases": []
+      },
+      "passed": true
+    }
+  ],
+  "checks_passed": 22,
+  "checks_total": 22,
+  "conclusion": {
+    "negative_evidence_boundary": "No resource stop, singular selected subset, or unfinished elimination is treated as evidence of odd torsion.",
+    "open": "Odd-primary saturation and the full assertion Theta_i=0 remain open.",
+    "proved": "Theta_i is finite and Theta_i[2^infinity]=0 for D1,D2,D3; hence every Theta_i has odd order."
+  },
+  "schema": "P39-S445-O75-CLOSEOUT-VERIFICATION-v1",
+  "status": "PASS",
+  "verifier": {
+    "path": "scripts/s445_closeout_verify.py",
+    "sha256": "88ba9dddafbfbcade2cfa50e76f3e581bfa55abff43eea39981e13ee85985cdc"
+  }
+}

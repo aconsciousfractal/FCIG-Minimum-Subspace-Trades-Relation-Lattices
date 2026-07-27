@@ -1,0 +1,228 @@
+\section{Exact certificate contracts}
+\label{app:certificates}
+
+The abstract arguments in the paper reduce the locked finite statements to
+exact character, rank, determinant, and enumeration inputs.  This appendix
+specifies what must be retained for those inputs to be independently
+checkable.
+
+\subsection{Characters and relation modules}
+
+The representation certificate contains:
+\begin{enumerate}
+  \item the \(24\) conjugacy-class representatives and class sizes;
+  \item the action convention for \(a,b,c\) and a check of the group laws;
+  \item fixed-point counts on \(\cP,\cB_1,\cB_2,\cB_3\);
+  \item the absolute character table, Galois grouping, and rational type
+  labels;
+  \item exact inner products giving the point, block, and kernel
+  multiplicities;
+  \item dimension and class-function reconstruction checks.
+\end{enumerate}
+Changing a class label, type ordering, or action convention must invalidate
+the reconstruction rather than silently permute a table.
+
+\subsection{Minimum-trade census}
+
+The census contract binds the digests and canonical orderings of the three
+block sets.  Every accepted trade records \(Z,U\), the two ordered reguli,
+the six lifted blocks, and the canonical unoriented sign convention.
+Verification checks:
+\begin{enumerate}
+  \item all six blocks belong to the selected constituent;
+  \item the \(255\) point coordinates balance;
+  \item the restricted rank, five-column deletions, and active Smith form;
+  \item canonical deduplication and complete \(\GammaG\)-orbit closure;
+  \item agreement of template, membership, and orbit-counting passes.
+\end{enumerate}
+Exhaustiveness is the combination of Krotov's \(t=1\) classification and
+complete enumeration of the corresponding \((Z,U)\)-templates.
+
+\subsection{Rational component ranks}
+
+For each pair \((i,V)\), the full-kernel certificate stores:
+\begin{enumerate}
+  \item block and point orbit representatives with stabilizers;
+  \item exact bases of \(V^H\) and the Frobenius-reciprocity coordinate
+  convention;
+  \item the round-robin seed stream across all \(69\) two-space orbits;
+  \item the dimensions \(m_{B_i}(V),m_P(V)\) and target rank;
+  \item row and column indices of a target-order square minor;
+  \item its nonzero determinant modulo \(409\);
+  \item an independent rank/minor reconstruction modulo \(613\);
+  \item a deletion or duplication control that loses the certified rank.
+\end{enumerate}
+There are \(3\cdot8\cdot2=48\) prime/component rank records.  The
+\(409\) records are the characteristic-zero witnesses; the \(613\)
+records test construction stability.
+
+\subsection{Local saturation}
+
+At \(2\), the witness lists \(66\,674\) explicit circuits per design.
+An independent replay reconstructs each point balance and obtains full
+rank with the opposite pivot convention.
+
+At \(3\), the contract first verifies the Smith/Bockstein interface:
+\[
+\rank A_i=254,\qquad
+\rank[A_i;\alpha]=255,
+\]
+together with the unique \(3\)-divisible Smith factor \(120\).  It then
+checks the \(F\)-representation laws, Wedderburn mass \(68\), all four
+component-family top ranks, and rank-loss mutations.
+
+At \(17\), verification includes free \(C_{17}\)-actions, orbit counts
+\(15\) and \(3\,937\), surjectivity on coinvariants, free kernel rank
+\(3\,922\), the eight \(C_4\times C_3\) tops, Wedderburn mass \(12\),
+and one rank-loss control per component.
+
+For the \(18\) small good-prime maps, the matrices and two selected maximal
+minors are reconstructed over the stated integral orders.  Exact
+determinants and a Bezout gcd supported on \(\{2,3,17\}\) certify the
+localized unit ideal.
+
+\subsection{The \(137\)-component}
+
+The historical selected-presentation contract for \(\rh/\cB_1\) retains:
+\begin{enumerate}
+  \item the exact \(1\,312\times5\,268\) wide component stream;
+  \item all \(1\,055\) pivots, their unit classes, and transition hashes;
+  \item the byte-bound \(257\times3\,373\) residual;
+  \item direct enumeration of the sixteen roots of \(\Phi_{17}\);
+  \item fifteen nonzero \(257\)-minors and the deficient \(256\)-minor;
+  \item the root-\(122\) residual left-kernel vector;
+  \item the Hensel lift and the \(256\)-block, Schur scalar, and
+  \(257\)-minor modulo \(137^2\);
+  \item the transported \(1\,312\)-coordinate covector and its pairing
+  with coordinate \(1\,281\);
+  \item duplicate-column, coordinate, root-label, and determinant
+  mutations that the verifier rejects.
+\end{enumerate}
+These receipts certify a length-one cokernel of that selected
+presentation, not of the complete circuit map.
+
+The complete-map correction additionally retains:
+\begin{enumerate}
+  \item the deterministic list of all \(11\,274\) minimum-circuit orbit
+  representatives in \(\cB_1\);
+  \item the dimension contract \(1317-5=1312\);
+  \item the first restoring row \((2863,0)\);
+  \item \(1\,312\) selected full-circuit rows and pivot columns;
+  \item an independently reconstructed determinant \(56\bmod137\);
+  \item prefix-rank \(1311\), duplicate-column kill, root-order check,
+  and identical normal/optimized verifier receipts.
+\end{enumerate}
+
+For the remaining five large maps, the contract additionally retains:
+\begin{enumerate}
+  \item one full-row-rank \(409\) receipt and last-row kill per map;
+  \item all primitive original columns and the entrywise exact-wide replay;
+  \item sixteen order-\(17\) roots and, for \(\rh\om\), the sixteen
+  Frobenius orbits in
+  \(\FF_{137}[y]/(y^2+y+1)\);
+  \item eighty nonzero maximal-minor determinants in total;
+  \item an independent conjugate-root/transposed reconstruction;
+  \item eighty duplicate-field-column determinant kills;
+  \item a deterministic closeout for these five maps, combined in the
+  corrected theorem with the eighteen small components and the
+  full-circuit \(\rh/\cB_1\) certificate.
+\end{enumerate}
+No modulo-\(137^2\) receipt is required for these five maps because every
+localization already contains a unit maximal minor.
+
+\subsection{The \(219\,097\)-component}
+
+The complete-envelope contract at \(p=219\,097\) retains:
+\begin{enumerate}
+  \item the complete \(\rh/\cB_1\) circuit stream at the historical
+  root \(91\,085\), with first restoring row \((2863,0)\);
+  \item a selected full-circuit maximal minor with determinant
+  \(213\,269\bmod219\,097\), together with prefix rank \(1311\);
+  \item the target ranks and the localization counts
+  \(32,16,32,16,32\) for the other five large maps;
+  \item all \(128\) nonzero original-column determinant residues and root
+  labels, with the root sets regenerated from the least primitive generator
+  \(5\);
+  \item an independent exact-wide parser and transposed reconstruction of
+  every selected matrix;
+  \item all \(128\) duplicate-column determinant kills, root-label
+  mutation rejections, and byte-identical normal/optimized receipts;
+  \item the combination with the eighteen small-component gcd exclusions
+  used to obtain the complete primary triple.
+\end{enumerate}
+No modulo-\(219\,097^2\) receipt or local-length computation is required:
+every complete localization already contains a unit maximal minor.
+\subsection{The \(3\,288\,036\,131\)-component}
+
+The complete-envelope contract at \(p=3\,288\,036\,131\) retains:
+\begin{enumerate}
+  \item the complete \(\rh/\cB_1\) circuit stream at root
+  \(1\,120\,906\,769\), with first restoring row \((2863,0)\);
+  \item a \(1\,312\)-square full-circuit minor with determinant
+  \(1\,471\,654\,912\bmod3\,288\,036\,131\), prefix rank \(1311\), and
+  duplicate-column kill;
+  \item sixteen degree-one \(\Phi_{17}\) primes and sixteen degree-two
+  \(\Phi_{51}\) primes in
+  \(\FF_p[y]/(y^2+y+1)\);
+  \item the target ranks and the sixteen localizations for each of the
+  other five large maps, eighty in total;
+  \item all eighty nonzero original-column determinant residues;
+  \item independent primitive-root enumeration, Frobenius-conjugate
+  evaluations, transposed scalar or doubled matrices, and eighty
+  duplicate-field-column kills;
+  \item scalar-root and quadratic-orbit mutation rejections, complete input
+  hashes, and byte-identical normal/optimized receipts;
+  \item the combination with the eighteen small-component gcd exclusions
+  used in \cref{thm:theta3288036131}.
+\end{enumerate}
+No modulo-\(p^2\) or local-length receipt is required because every complete
+localization contains a unit maximal minor.
+
+\subsection{Global \texorpdfstring{\(\rh/\cB_1\)}{rho/B1} saturation}
+
+The characteristic-zero contract for \cref{thm:global-rho} retains:
+\begin{enumerate}
+  \item the common \(\ZZ[\zeta_{17}]\) exponent-basis lift of all
+  \(1\,317\) source columns and the entrywise finite-reduction replay;
+  \item the exact G1R replacement minor and manifest, with SHA--256
+  \begin{verbatim}
+007D34CA9EBAB7268CA1CB55A1E81BF3E83B7983EE5FB8DD4300BEB41E13B155
+B892C0A7BA9419A8C475FFACF05E63149E5A7F11AEBF443D0F01E96CCB0C96DF
+  \end{verbatim}
+  together with the independently reconstructed determinant receipt;
+  \item the reverse-row selection order, its \(11\,069\)-orbit/
+  \(44\,276\)-row stopping point, and exact binary and manifest hashes
+  \begin{verbatim}
+C3F857FDEAE82E8680B3EFB0AA281B59661E04E1E3E7C6D689A28A3FF7F45439
+B2D696537A73C30E91D31A8FB3957CEF8F5826ACC8EED66E6881A38AB10EA82B
+  \end{verbatim}
+  \item every split CRT prime and determinant residue, the exact row-energy
+  histograms, signed coefficient bounds, and modulus inequalities for both
+  determinants;
+  \item independent cyclotomic multiplication, all sixteen conjugates,
+  exact norms, diagnostic finite determinants, coefficient mutations,
+  prefix-rank loss, and duplicate-column kills;
+  \item the two \(16\times16\) multiplication matrices and the Smith form
+  of their \(16\times32\) concatenation, with diagonal
+  \(17^{11},289^5\) and index \(17^{21}\);
+  \item the G0/reverse-row negative pair, whose ideal-sum index retains the
+  verified non-\(S\) residual
+  \(47\,821\,880\,003\,927\,349\,029\);
+  \item byte-identical normal and optimized executions of the final
+  fail-closed verifier.
+\end{enumerate}
+
+The decisive ideal-sum artifact is
+\begin{verbatim}
+results/s449f_rho_d1_g1_reverse_row_ideal_sum.json
+SHA-256 5CB3D78D948E53F3A38B4E85DC9F9C6F9E195839D7B432C544750967B9EFF078
+\end{verbatim}
+and the independent final receipt is
+\begin{verbatim}
+results/s449f_rho_d1_global_gate_verification.json
+SHA-256 511CD53641E7426650FAA3799BA7D7F3B514F51CA98B69766ADB5E00AE33EBDD
+\end{verbatim}
+with status
+\texttt{PASS\_RHO\_D1\_GLOBAL\_GATE\_AWAY\_FROM\_S}.
+These artifacts close one component only.  They do not certify any of the
+other five large maps or a complete \(\Theta_i\).

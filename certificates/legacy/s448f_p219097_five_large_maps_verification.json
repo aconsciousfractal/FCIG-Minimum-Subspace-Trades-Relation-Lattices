@@ -1,0 +1,894 @@
+{
+  "checks": {
+    "all_duplicate_column_kills_passed": true,
+    "all_primary_determinants_reproduced": true,
+    "complete_219097_primary_triple": [
+      "0",
+      "0",
+      "0"
+    ],
+    "duplicate_column_kills": 128,
+    "independent_primitive_root_enumeration": true,
+    "root_label_mutations_rejected": true,
+    "transposed_matrix_layout": true,
+    "verified_localizations": 128
+  },
+  "claim_boundary": "This independently verifies 128 explicit nonzero maximal minors for the five named large maps at p=219097. Together with S4.48E and the 18 small-map exclusions, it supports only the complete 219097-primary zero triple, not a global Smith classification.",
+  "field": {
+    "least_primitive_root": 5,
+    "prime": 219097,
+    "roots17": [
+      13912,
+      16111,
+      21442,
+      35363,
+      42314,
+      81093,
+      91085,
+      93858,
+      97291,
+      110087,
+      136569,
+      150223,
+      153473,
+      155190,
+      157841,
+      177826
+    ],
+    "roots51": [
+      1662,
+      4056,
+      14608,
+      18599,
+      18861,
+      31911,
+      39310,
+      43218,
+      46648,
+      48611,
+      50275,
+      68176,
+      72633,
+      116559,
+      119143,
+      121767,
+      123577,
+      133080,
+      135123,
+      142890,
+      168162,
+      171075,
+      183597,
+      187735,
+      198013,
+      201129,
+      204056,
+      206340,
+      212283,
+      212696,
+      214029,
+      214828
+    ]
+  },
+  "maps": {
+    "rho/D2": {
+      "cyclotomic_order": 17,
+      "prime_count": 16,
+      "prime_receipts": [
+        {
+          "cyclotomic_root": 13912,
+          "determinant_mod_219097": 154066,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 0
+        },
+        {
+          "cyclotomic_root": 16111,
+          "determinant_mod_219097": 175248,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 1
+        },
+        {
+          "cyclotomic_root": 21442,
+          "determinant_mod_219097": 170188,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 2
+        },
+        {
+          "cyclotomic_root": 35363,
+          "determinant_mod_219097": 29278,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 3
+        },
+        {
+          "cyclotomic_root": 42314,
+          "determinant_mod_219097": 174978,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 4
+        },
+        {
+          "cyclotomic_root": 81093,
+          "determinant_mod_219097": 126266,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 5
+        },
+        {
+          "cyclotomic_root": 91085,
+          "determinant_mod_219097": 19422,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 6
+        },
+        {
+          "cyclotomic_root": 93858,
+          "determinant_mod_219097": 74874,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 7
+        },
+        {
+          "cyclotomic_root": 97291,
+          "determinant_mod_219097": 105907,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 8
+        },
+        {
+          "cyclotomic_root": 110087,
+          "determinant_mod_219097": 214810,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 9
+        },
+        {
+          "cyclotomic_root": 136569,
+          "determinant_mod_219097": 19234,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 10
+        },
+        {
+          "cyclotomic_root": 150223,
+          "determinant_mod_219097": 65971,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 11
+        },
+        {
+          "cyclotomic_root": 153473,
+          "determinant_mod_219097": 166795,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 12
+        },
+        {
+          "cyclotomic_root": 155190,
+          "determinant_mod_219097": 161188,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 13
+        },
+        {
+          "cyclotomic_root": 157841,
+          "determinant_mod_219097": 145875,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 14
+        },
+        {
+          "cyclotomic_root": 177826,
+          "determinant_mod_219097": 135454,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 15
+        }
+      ],
+      "root_label_mutation_rejected": 13913
+    },
+    "rho/D3": {
+      "cyclotomic_order": 17,
+      "prime_count": 16,
+      "prime_receipts": [
+        {
+          "cyclotomic_root": 13912,
+          "determinant_mod_219097": 197234,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 0
+        },
+        {
+          "cyclotomic_root": 16111,
+          "determinant_mod_219097": 90331,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 1
+        },
+        {
+          "cyclotomic_root": 21442,
+          "determinant_mod_219097": 71773,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 2
+        },
+        {
+          "cyclotomic_root": 35363,
+          "determinant_mod_219097": 189859,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 3
+        },
+        {
+          "cyclotomic_root": 42314,
+          "determinant_mod_219097": 133285,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 4
+        },
+        {
+          "cyclotomic_root": 81093,
+          "determinant_mod_219097": 30161,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 5
+        },
+        {
+          "cyclotomic_root": 91085,
+          "determinant_mod_219097": 80334,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 6
+        },
+        {
+          "cyclotomic_root": 93858,
+          "determinant_mod_219097": 170,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 7
+        },
+        {
+          "cyclotomic_root": 97291,
+          "determinant_mod_219097": 5983,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 8
+        },
+        {
+          "cyclotomic_root": 110087,
+          "determinant_mod_219097": 26639,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 9
+        },
+        {
+          "cyclotomic_root": 136569,
+          "determinant_mod_219097": 187677,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 10
+        },
+        {
+          "cyclotomic_root": 150223,
+          "determinant_mod_219097": 28270,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 11
+        },
+        {
+          "cyclotomic_root": 153473,
+          "determinant_mod_219097": 82057,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 12
+        },
+        {
+          "cyclotomic_root": 155190,
+          "determinant_mod_219097": 143109,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 13
+        },
+        {
+          "cyclotomic_root": 157841,
+          "determinant_mod_219097": 169333,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 14
+        },
+        {
+          "cyclotomic_root": 177826,
+          "determinant_mod_219097": 15391,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 15
+        }
+      ],
+      "root_label_mutation_rejected": 13913
+    },
+    "rho_omega/D1": {
+      "cyclotomic_order": 51,
+      "prime_count": 32,
+      "prime_receipts": [
+        {
+          "cyclotomic_root": 1662,
+          "determinant_mod_219097": 126443,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 0
+        },
+        {
+          "cyclotomic_root": 4056,
+          "determinant_mod_219097": 140758,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 1
+        },
+        {
+          "cyclotomic_root": 14608,
+          "determinant_mod_219097": 116475,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 2
+        },
+        {
+          "cyclotomic_root": 18599,
+          "determinant_mod_219097": 114728,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 3
+        },
+        {
+          "cyclotomic_root": 18861,
+          "determinant_mod_219097": 43995,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 4
+        },
+        {
+          "cyclotomic_root": 31911,
+          "determinant_mod_219097": 124973,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 5
+        },
+        {
+          "cyclotomic_root": 39310,
+          "determinant_mod_219097": 118882,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 6
+        },
+        {
+          "cyclotomic_root": 43218,
+          "determinant_mod_219097": 57790,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 7
+        },
+        {
+          "cyclotomic_root": 46648,
+          "determinant_mod_219097": 172579,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 8
+        },
+        {
+          "cyclotomic_root": 48611,
+          "determinant_mod_219097": 52326,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 9
+        },
+        {
+          "cyclotomic_root": 50275,
+          "determinant_mod_219097": 31261,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 10
+        },
+        {
+          "cyclotomic_root": 68176,
+          "determinant_mod_219097": 32909,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 11
+        },
+        {
+          "cyclotomic_root": 72633,
+          "determinant_mod_219097": 161027,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 12
+        },
+        {
+          "cyclotomic_root": 116559,
+          "determinant_mod_219097": 199586,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 13
+        },
+        {
+          "cyclotomic_root": 119143,
+          "determinant_mod_219097": 212484,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 14
+        },
+        {
+          "cyclotomic_root": 121767,
+          "determinant_mod_219097": 62112,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 15
+        },
+        {
+          "cyclotomic_root": 123577,
+          "determinant_mod_219097": 163339,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 16
+        },
+        {
+          "cyclotomic_root": 133080,
+          "determinant_mod_219097": 29443,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 17
+        },
+        {
+          "cyclotomic_root": 135123,
+          "determinant_mod_219097": 152773,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 18
+        },
+        {
+          "cyclotomic_root": 142890,
+          "determinant_mod_219097": 29019,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 19
+        },
+        {
+          "cyclotomic_root": 168162,
+          "determinant_mod_219097": 94414,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 20
+        },
+        {
+          "cyclotomic_root": 171075,
+          "determinant_mod_219097": 26278,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 21
+        },
+        {
+          "cyclotomic_root": 183597,
+          "determinant_mod_219097": 176841,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 22
+        },
+        {
+          "cyclotomic_root": 187735,
+          "determinant_mod_219097": 202226,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 23
+        },
+        {
+          "cyclotomic_root": 198013,
+          "determinant_mod_219097": 50974,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 24
+        },
+        {
+          "cyclotomic_root": 201129,
+          "determinant_mod_219097": 29875,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 25
+        },
+        {
+          "cyclotomic_root": 204056,
+          "determinant_mod_219097": 180020,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 26
+        },
+        {
+          "cyclotomic_root": 206340,
+          "determinant_mod_219097": 206200,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 27
+        },
+        {
+          "cyclotomic_root": 212283,
+          "determinant_mod_219097": 4465,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 28
+        },
+        {
+          "cyclotomic_root": 212696,
+          "determinant_mod_219097": 98302,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 29
+        },
+        {
+          "cyclotomic_root": 214029,
+          "determinant_mod_219097": 95564,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 30
+        },
+        {
+          "cyclotomic_root": 214828,
+          "determinant_mod_219097": 170004,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 31
+        }
+      ],
+      "root_label_mutation_rejected": 1663
+    },
+    "rho_omega/D2": {
+      "cyclotomic_order": 51,
+      "prime_count": 32,
+      "prime_receipts": [
+        {
+          "cyclotomic_root": 1662,
+          "determinant_mod_219097": 72322,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 0
+        },
+        {
+          "cyclotomic_root": 4056,
+          "determinant_mod_219097": 55280,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 1
+        },
+        {
+          "cyclotomic_root": 14608,
+          "determinant_mod_219097": 111662,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 2
+        },
+        {
+          "cyclotomic_root": 18599,
+          "determinant_mod_219097": 20453,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 3
+        },
+        {
+          "cyclotomic_root": 18861,
+          "determinant_mod_219097": 80439,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 4
+        },
+        {
+          "cyclotomic_root": 31911,
+          "determinant_mod_219097": 205872,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 5
+        },
+        {
+          "cyclotomic_root": 39310,
+          "determinant_mod_219097": 118727,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 6
+        },
+        {
+          "cyclotomic_root": 43218,
+          "determinant_mod_219097": 197201,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 7
+        },
+        {
+          "cyclotomic_root": 46648,
+          "determinant_mod_219097": 58932,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 8
+        },
+        {
+          "cyclotomic_root": 48611,
+          "determinant_mod_219097": 3605,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 9
+        },
+        {
+          "cyclotomic_root": 50275,
+          "determinant_mod_219097": 153933,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 10
+        },
+        {
+          "cyclotomic_root": 68176,
+          "determinant_mod_219097": 21715,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 11
+        },
+        {
+          "cyclotomic_root": 72633,
+          "determinant_mod_219097": 137728,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 12
+        },
+        {
+          "cyclotomic_root": 116559,
+          "determinant_mod_219097": 142804,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 13
+        },
+        {
+          "cyclotomic_root": 119143,
+          "determinant_mod_219097": 32837,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 14
+        },
+        {
+          "cyclotomic_root": 121767,
+          "determinant_mod_219097": 191091,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 15
+        },
+        {
+          "cyclotomic_root": 123577,
+          "determinant_mod_219097": 42259,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 16
+        },
+        {
+          "cyclotomic_root": 133080,
+          "determinant_mod_219097": 122156,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 17
+        },
+        {
+          "cyclotomic_root": 135123,
+          "determinant_mod_219097": 163477,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 18
+        },
+        {
+          "cyclotomic_root": 142890,
+          "determinant_mod_219097": 3819,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 19
+        },
+        {
+          "cyclotomic_root": 168162,
+          "determinant_mod_219097": 194182,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 20
+        },
+        {
+          "cyclotomic_root": 171075,
+          "determinant_mod_219097": 135201,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 21
+        },
+        {
+          "cyclotomic_root": 183597,
+          "determinant_mod_219097": 49789,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 22
+        },
+        {
+          "cyclotomic_root": 187735,
+          "determinant_mod_219097": 167191,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 23
+        },
+        {
+          "cyclotomic_root": 198013,
+          "determinant_mod_219097": 1994,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 24
+        },
+        {
+          "cyclotomic_root": 201129,
+          "determinant_mod_219097": 187664,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 25
+        },
+        {
+          "cyclotomic_root": 204056,
+          "determinant_mod_219097": 174410,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 26
+        },
+        {
+          "cyclotomic_root": 206340,
+          "determinant_mod_219097": 218366,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 27
+        },
+        {
+          "cyclotomic_root": 212283,
+          "determinant_mod_219097": 180240,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 28
+        },
+        {
+          "cyclotomic_root": 212696,
+          "determinant_mod_219097": 44308,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 29
+        },
+        {
+          "cyclotomic_root": 214029,
+          "determinant_mod_219097": 157608,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 30
+        },
+        {
+          "cyclotomic_root": 214828,
+          "determinant_mod_219097": 72828,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 31
+        }
+      ],
+      "root_label_mutation_rejected": 1663
+    },
+    "rho_omega/D3": {
+      "cyclotomic_order": 51,
+      "prime_count": 32,
+      "prime_receipts": [
+        {
+          "cyclotomic_root": 1662,
+          "determinant_mod_219097": 171580,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 0
+        },
+        {
+          "cyclotomic_root": 4056,
+          "determinant_mod_219097": 90074,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 1
+        },
+        {
+          "cyclotomic_root": 14608,
+          "determinant_mod_219097": 46731,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 2
+        },
+        {
+          "cyclotomic_root": 18599,
+          "determinant_mod_219097": 113017,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 3
+        },
+        {
+          "cyclotomic_root": 18861,
+          "determinant_mod_219097": 217928,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 4
+        },
+        {
+          "cyclotomic_root": 31911,
+          "determinant_mod_219097": 141321,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 5
+        },
+        {
+          "cyclotomic_root": 39310,
+          "determinant_mod_219097": 181384,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 6
+        },
+        {
+          "cyclotomic_root": 43218,
+          "determinant_mod_219097": 177338,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 7
+        },
+        {
+          "cyclotomic_root": 46648,
+          "determinant_mod_219097": 89814,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 8
+        },
+        {
+          "cyclotomic_root": 48611,
+          "determinant_mod_219097": 67930,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 9
+        },
+        {
+          "cyclotomic_root": 50275,
+          "determinant_mod_219097": 22855,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 10
+        },
+        {
+          "cyclotomic_root": 68176,
+          "determinant_mod_219097": 20056,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 11
+        },
+        {
+          "cyclotomic_root": 72633,
+          "determinant_mod_219097": 39786,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 12
+        },
+        {
+          "cyclotomic_root": 116559,
+          "determinant_mod_219097": 200200,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 13
+        },
+        {
+          "cyclotomic_root": 119143,
+          "determinant_mod_219097": 134430,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 14
+        },
+        {
+          "cyclotomic_root": 121767,
+          "determinant_mod_219097": 148639,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 15
+        },
+        {
+          "cyclotomic_root": 123577,
+          "determinant_mod_219097": 17860,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 16
+        },
+        {
+          "cyclotomic_root": 133080,
+          "determinant_mod_219097": 13471,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 17
+        },
+        {
+          "cyclotomic_root": 135123,
+          "determinant_mod_219097": 75720,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 18
+        },
+        {
+          "cyclotomic_root": 142890,
+          "determinant_mod_219097": 77080,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 19
+        },
+        {
+          "cyclotomic_root": 168162,
+          "determinant_mod_219097": 184469,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 20
+        },
+        {
+          "cyclotomic_root": 171075,
+          "determinant_mod_219097": 151623,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 21
+        },
+        {
+          "cyclotomic_root": 183597,
+          "determinant_mod_219097": 131720,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 22
+        },
+        {
+          "cyclotomic_root": 187735,
+          "determinant_mod_219097": 217877,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 23
+        },
+        {
+          "cyclotomic_root": 198013,
+          "determinant_mod_219097": 185685,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 24
+        },
+        {
+          "cyclotomic_root": 201129,
+          "determinant_mod_219097": 95173,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 25
+        },
+        {
+          "cyclotomic_root": 204056,
+          "determinant_mod_219097": 184693,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 26
+        },
+        {
+          "cyclotomic_root": 206340,
+          "determinant_mod_219097": 32308,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 27
+        },
+        {
+          "cyclotomic_root": 212283,
+          "determinant_mod_219097": 138865,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 28
+        },
+        {
+          "cyclotomic_root": 212696,
+          "determinant_mod_219097": 105436,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 29
+        },
+        {
+          "cyclotomic_root": 214029,
+          "determinant_mod_219097": 191237,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 30
+        },
+        {
+          "cyclotomic_root": 214828,
+          "determinant_mod_219097": 79689,
+          "duplicate_column_determinant_mod_219097": 0,
+          "prime_index": 31
+        }
+      ],
+      "root_label_mutation_rejected": 1663
+    }
+  },
+  "schema": "P39-S448F-P219097-FIVE-LARGE-MAPS-VERIFY-v1",
+  "source_inputs": {
+    "preregistration": {
+      "path": "docs\\S448F_P219097_FIVE_LARGE_MAPS_PREREGISTRATION.md",
+      "sha256": "ebeb05bc29a41bf949437e00414cb2924adb32f7066ac9f85051deab041de242"
+    },
+    "primary": {
+      "path": "results\\s448f_p219097_five_large_maps_screen.json",
+      "sha256": "a37f3eab1667dde9fcc2f4c867763d39265f3ed6f662f8e18aabb954af98a57f"
+    },
+    "verifier": {
+      "path": "scripts\\s448f_verify_p219097_five_large_maps.py",
+      "sha256": "cd7a6ac00a11cf1d6636e09a9bd6d08b3d2d517ca49da3a0a0703ee803ef26ad"
+    }
+  },
+  "status": "PASS_INDEPENDENT_ALL_128_FULL_RANK"
+}

@@ -1,0 +1,55 @@
+{
+  "claim_boundary": "A localized-unit result closes the residual Fitting gate for the verified displayed minors. A nonunit result requires more minors or a full determinantal-ideal computation before inferring failure of the original map.",
+  "conclusion": "The displayed determinant ideals generate O_S.",
+  "determinants": [
+    {
+      "absolute_norm_bits": 4833,
+      "multiplication_matrix_determinant_matches_norm": true,
+      "path": "results/s449c_g1r_crt_raw.json",
+      "sha256": "049BBA63F4DDA30A5A2AB664E941F546C9DFCDBBE6F343633604D4019FD95424"
+    },
+    {
+      "absolute_norm_bits": 2003,
+      "multiplication_matrix_determinant_matches_norm": true,
+      "path": "results/s449f_reverse_row_crt_raw.json",
+      "sha256": "E9DD26070F96A9E0DBDBA3DD98466D067F87CB3DD628F36C09AC6A70914A391E"
+    }
+  ],
+  "generator_matrix_shape": [
+    16,
+    32
+  ],
+  "ideal_sum_index": "69091933913008732880827217",
+  "ideal_sum_index_bits": 86,
+  "index_after_removing_2_3_17": "1",
+  "index_after_removing_2_3_17_bits": 1,
+  "index_divides_norm_gcd": true,
+  "method": "Each principal determinant ideal is represented by its exact 16x16 multiplication lattice in the integral power basis of Z[zeta_17]. The Smith form of the concatenated column generators computes the exact ideal sum as a Z-lattice.",
+  "norm_gcd": "3304106172827182202343960489655997143401722293",
+  "norm_gcd_bits": 152,
+  "s_valuations": {
+    "17": 21,
+    "2": 0,
+    "3": 0
+  },
+  "schema": "P39-S447D-EXACT-DETERMINANT-IDEAL-SUM-v1",
+  "smith_diagonal": [
+    "17",
+    "17",
+    "17",
+    "17",
+    "17",
+    "17",
+    "17",
+    "17",
+    "17",
+    "17",
+    "17",
+    "289",
+    "289",
+    "289",
+    "289",
+    "289"
+  ],
+  "status": "PASS_LOCALIZED_IDEAL_UNIT"
+}
