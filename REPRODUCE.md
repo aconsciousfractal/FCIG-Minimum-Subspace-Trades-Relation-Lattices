@@ -1,4 +1,4 @@
-# Reproducing the P39 EXT04 package
+# Reproducing the public package
 
 ## Requirements
 
@@ -54,7 +54,8 @@ regenerate all 189 CRT modular determinants from the sparse binaries.
 
 Earlier census, rational-generation, local-saturation, and selected-prime
 claims use compact hash-bound receipts under <code>certificates/legacy/</code>.
-Their large raw generation workspace remains in the internal P39 archive.
+The package audits those distributed receipts but does not claim to regenerate
+the earlier large matrices from an undistributed workspace.
 
 ## Manifest
 
@@ -78,4 +79,4 @@ pdflatex -interaction=nonstopmode -halt-on-error -jobname="$job" main.tex
 The bibliography is inline. The source suppresses volatile PDF dates and
 trailer IDs. PDF bytes may still depend on the TeX distribution, so the source
 manifest does not hash-pin the PDF; <code>RELEASE_ATTESTATION.json</code> binds
-the actual release-candidate PDF and final receipt.
+the actual public-release PDF and final receipt.

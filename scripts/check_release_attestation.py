@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify the non-circular release attestation for the checked candidate."""
+"""Verify the non-circular public-release attestation."""
 
 from __future__ import annotations
 
@@ -35,8 +35,12 @@ def sha256_file(path: Path) -> str:
 
 def main() -> None:
     document = json.loads(ATTESTATION.read_text(encoding="utf-8"))
-    require(document["schema"] == "P39-EXT04-RELEASE-ATTESTATION-v1", "schema")
-    require(document["status"] == "VERIFIED_LOCAL_CANDIDATE", "status")
+    require(
+        document["schema"] == "MINIMUM-SUBSPACE-TRADES-RELEASE-ATTESTATION-v1",
+        "schema",
+    )
+    require(document["status"] == "VERIFIED_PUBLIC_PACKAGE", "status")
+    require(document["release_version"] == "1.1.0", "release version")
     for key, expected_relative in EXPECTED_PATHS.items():
         record = document["artifacts"][key]
         require(record["path"] == expected_relative, f"{key} path")

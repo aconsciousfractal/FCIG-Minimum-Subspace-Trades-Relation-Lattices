@@ -1,9 +1,11 @@
-# Normalize shipped prose and source exactly as in the companion P39 repos.
+# Normalize shipped prose and source consistently across platforms.
 *.py    text eol=lf
 *.md    text eol=lf
 *.tex   text eol=lf
 *.cff   text eol=lf
 *.txt   text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
 LICENSE text eol=lf
 .gitignore text eol=lf
 .gitattributes text eol=lf

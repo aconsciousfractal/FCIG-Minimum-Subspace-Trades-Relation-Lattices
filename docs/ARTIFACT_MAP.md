@@ -16,4 +16,3 @@
 | Earlier theorem-block receipts | `certificates/legacy/*.json` |
 | Claims and exclusions | `docs/CLAIM_LEDGER.md`, `docs/PUBLIC_CLAIM_BOUNDARY.md` |
 | Prior art and source lock | `docs/SOURCE_LOCK.md` |
-| Adversarial audit | `docs/RED_TEAM_REPORT.md` |

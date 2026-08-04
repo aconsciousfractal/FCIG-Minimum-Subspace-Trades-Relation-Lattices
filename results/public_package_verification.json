@@ -1,5 +1,5 @@
 {
-  "manifest_sha256": "B4D3919EB85FC112B6D4B6DC79FC2D085B8A0C2E9869CB74A8ACE1D708D8F053",
+  "manifest_sha256": "AD3116A837EA5E84C84C95F1D188DBB6F50E7276C24A76BD93654B66A633F199",
   "replays": [
     {
       "receipt": "results/s449c_g1r_replacement_minor_verification.json",
@@ -22,7 +22,7 @@
       "sha256": "B960ADA66A473AA3211EECC59727A7DD480DF10A1B37FDFDAFC8146CA2B18CC8"
     }
   ],
-  "schema": "P39-EXT04-PUBLIC-PACKAGE-VERIFICATION-v2",
+  "schema": "MINIMUM-SUBSPACE-TRADES-PUBLIC-PACKAGE-VERIFICATION-v1",
   "scope_boundary": {
     "global_maps_deferred": [
       "rho*omega/B1",

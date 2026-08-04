@@ -15,18 +15,17 @@ Each design contains 66,929 blocks.
 | B2 | 773AAEE7A8E0C2D55936208020AED165A3A8744E82D0BFBBA2FA087FBBD8EFB5 | 01D777473A834448D6B627E190C3B07A9BA281F7481CD9AC603EB18B71651261 |
 | B3 | D2829B5A24A9B0B45518B19701173DDBF8301D75CCE22EC2272391238FB3F723 | 4838615087438D5CE96E9336130FC72E9CA28E255DB13D3460BC192BB956E46A |
 
-The six design-level digests are source-admitted identifiers from the locked
-P39 archive. The pinned companion checkout directly exposes and verifies the
-normalized source-data digest and the union digest below; it does not currently
-regenerate all six design-level digests through this public package.
+The six design-level digests are immutable identifiers recorded in the
+distributed legacy certificate set. The pinned companion checkout directly
+exposes and verifies the normalized source-data digest and the union digest
+below; this package does not claim to regenerate all six design-level digests.
 
 Union SHA-256:
 <code>1F09C96ED85DEFE926EF300BD3E63D77830BA91B88E1AA53F4F4439ED1DCCA4E</code>.
 
 ## Global-gate evidence
 
-The public package was assembled from canonical P39 state S4.49G and remediated
-under the 2026-07-27 external red-team audit. Decisive immutable inputs are:
+The decisive immutable inputs for the characteristic-zero certificate are:
 
 ~~~text
 G-selection binary

@@ -9,5 +9,5 @@ of their respective authors and publishers. They are listed in the paper
 bibliography and classified in `docs/SOURCE_LOCK.md`.
 
 The JSON and binary certificates in `results/` and `certificates/` were
-generated inside the P39 research program and are distributed as original
+generated for this project and are distributed as original
 reproducibility artifacts.

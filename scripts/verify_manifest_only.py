@@ -69,7 +69,7 @@ def main() -> None:
         require(sha256_file(source) == expected.upper(), relative)
         entries.append((expected.upper(), relative))
 
-    with tempfile.TemporaryDirectory(prefix="p39_manifest_replay_") as raw:
+    with tempfile.TemporaryDirectory(prefix="minimum_trades_manifest_replay_") as raw:
         isolated = Path(raw) / "package"
         isolated.mkdir()
         shutil.copy2(MANIFEST, isolated / MANIFEST.name)

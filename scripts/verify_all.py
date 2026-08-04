@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail-closed one-command verifier for the P39 EXT04 public package."""
+"""Fail-closed one-command verifier for the public package."""
 
 from __future__ import annotations
 
@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = ROOT / "scripts"
 RESULTS = ROOT / "results"
 OUTPUT = RESULTS / "public_package_verification.json"
-SCHEMA = "P39-EXT04-PUBLIC-PACKAGE-VERIFICATION-v2"
+SCHEMA = "MINIMUM-SUBSPACE-TRADES-PUBLIC-PACKAGE-VERIFICATION-v1"
 
 REPLAYS = (
     (
@@ -141,7 +141,7 @@ def main() -> None:
     OUTPUT.write_bytes(canonical_bytes(receipt))
     print(manifest_stdout)
     print(f"RECEIPT_SHA256={sha256_file(OUTPUT)}")
-    print("PASS_P39_EXT04_PUBLIC_PACKAGE")
+    print("PASS_MINIMUM_SUBSPACE_TRADES_PUBLIC_PACKAGE")
 
 
 if __name__ == "__main__":

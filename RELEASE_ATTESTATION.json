@@ -1,30 +1,30 @@
 {
-  "schema": "P39-EXT04-RELEASE-ATTESTATION-v1",
-  "status": "VERIFIED_LOCAL_CANDIDATE",
-  "audit_date": "2026-07-28",
-  "source_base_commit": "e3757870551898aa137928773a5a9146b6405c1a",
+  "schema": "MINIMUM-SUBSPACE-TRADES-RELEASE-ATTESTATION-v1",
+  "status": "VERIFIED_PUBLIC_PACKAGE",
+  "release_version": "1.1.0",
+  "verification_date": "2026-08-04",
   "artifacts": {
     "source_manifest": {
       "path": "MANIFEST_SHA256.txt",
-      "sha256": "B4D3919EB85FC112B6D4B6DC79FC2D085B8A0C2E9869CB74A8ACE1D708D8F053",
-      "entries": 70
+      "sha256": "AD3116A837EA5E84C84C95F1D188DBB6F50E7276C24A76BD93654B66A633F199",
+      "entries": 64
     },
     "paper_pdf": {
       "path": "paper/Minimum_Subspace_Trades_and_Relation_Lattices_in_Three_Binary_Designs.pdf",
-      "sha256": "1EDF1C140598008C2130B2062B69879D47E5B615099ADB2A7048BAB42BA36E00",
-      "pages": 25,
-      "bytes": 183376
+      "sha256": "8D36C59E7276BE6C55983291B9B98BA3AF316BC20F8D0B8C9A35CF2496657571",
+      "pages": 24,
+      "bytes": 401191
     },
     "aggregate_receipt": {
       "path": "results/public_package_verification.json",
-      "sha256": "91642364E7D14CCD77B04F896E3159C03A08DFD47A62FCC3618A638595940959"
+      "sha256": "956959A54373DABB770A36CDD7B43418B8C44CB3B914A46D96666CFACED707DF"
     }
   },
   "toolchain": {
     "python": "3.14.6",
     "sympy": "1.14.0",
-    "tectonic": "0.16.9",
-    "pdf_renderer": "Poppler pdftoppm bundled runtime"
+    "latex": "MiKTeX pdfTeX",
+    "pdf_renderer": "Poppler pdftoppm"
   },
   "gates": {
     "arithmetic_normal": true,
@@ -33,20 +33,10 @@
     "manifest_closed_tree": true,
     "manifest_only_replay": true,
     "latex_build_no_layout_or_reference_warnings": true,
-    "pdf_rendered_25_pages": true,
-    "visual_qa_25_pages": true,
-    "academic_error_repair_narrative_absent": true,
-    "superseded_claim_scan_clean": true
-  },
-  "publication_actions_at_audit_time": {
-    "committed": false,
-    "pushed": false,
-    "tagged": false,
-    "released": false
+    "pdf_rendered_and_visually_checked": true
   },
   "notes": [
     "The source manifest excludes this attestation, the title-named PDF, and the regenerated aggregate receipt to avoid circular hashes.",
-    "The PDF was rendered to 25 PNG pages; all pages and full-resolution key pages were inspected locally.",
-    "The independent final red team found two correctable wording/contract defects; both were remediated before this attestation. Its visual pass was incomplete, so the final 25-page visual QA was repeated by the integrating agent."
+    "The public verifier audits the distributed exact artifacts and compact legacy receipts within their stated evidence tiers; it does not claim independent external reproduction."
   ]
 }

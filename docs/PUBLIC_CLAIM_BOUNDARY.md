@@ -27,7 +27,6 @@ structural rank 1312 away from 2, 3, and 17.
 - that all CRT determinants are regenerated from the binaries;
 - that all six maps are globally closed;
 - that the global Smith groups or full support are known;
-- that P42 tomography proves a P39 theorem;
 - any novelty, priority, or firstness claim based on the bounded search.
 
 ## Deferred work

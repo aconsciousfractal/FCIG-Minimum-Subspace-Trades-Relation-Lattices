@@ -15,5 +15,5 @@ Copyright (c) 2026 Oleksiy Babanskyy.
 
 The mathematical literature used by the paper is incorporated by citation,
 not by copying third-party source or data. The MIT grant covers only the
-original code, prose, and P39-generated certificates in this package. See
+original code, prose, and project-generated certificates in this package. See
 `THIRD_PARTY_NOTICES.md` and `docs/SOURCE_LOCK.md`.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail-closed SHA-256 and closed-tree checker for the P39 package."""
+"""Fail-closed integrity and reader-surface checker for the public package."""
 
 from __future__ import annotations
 
@@ -24,6 +24,29 @@ EXCLUDED = {
     ),
 }
 BUILD_SUFFIXES = {".aux", ".log", ".out", ".toc", ".fls", ".fdb_latexmk"}
+IGNORED_TOP_LEVEL = {".git", "tmp"}
+RETIRED_PATHS = {
+    "docs/EXTERNAL_RED_TEAM_ADJUDICATION.md",
+    "docs/FINAL_RED_TEAM_2026-07-28.md",
+    "docs/GATE_HISTORY.md",
+    "docs/P39_P42_BOUNDARY.md",
+    "docs/RED_TEAM_REPORT.md",
+    "docs/RELEASE_READINESS.md",
+}
+FORBIDDEN_READER_PATTERNS = {
+    "internal project label P39": re.compile(r"\bP39\b", re.IGNORECASE),
+    "internal project label P42": re.compile(r"\bP42\b", re.IGNORECASE),
+    "internal route label EXT04": re.compile(r"\bEXT04\b", re.IGNORECASE),
+    "release-candidate wording": re.compile(
+        r"\brelease[- ]candidate\b", re.IGNORECASE
+    ),
+    "internal archive dependency": re.compile(
+        r"\b(?:internal|source-locked)\b.{0,80}\barchive\b", re.IGNORECASE
+    ),
+    "red-team workflow": re.compile(r"\bred[- ]team\b", re.IGNORECASE),
+    "sub-agent workflow": re.compile(r"\bsub-agent\b", re.IGNORECASE),
+    "internal stage label": re.compile(r"\bS4\.\d+[A-Z]?\b"),
+}
 
 
 def require(condition: bool, message: str) -> None:
@@ -68,7 +91,7 @@ def is_build_artifact(relative: str) -> bool:
     )
 
 
-def closed_tree_check(seen: set[str]) -> None:
+def source_inventory() -> set[str]:
     actual: set[str] = set()
     for directory, directories, files in os.walk(ROOT, followlinks=False):
         base = Path(directory)
@@ -76,7 +99,7 @@ def closed_tree_check(seen: set[str]) -> None:
         for name in directories:
             child = base / name
             relative = child.relative_to(ROOT).as_posix()
-            if name == ".git":
+            if len(child.relative_to(ROOT).parts) == 1 and name in IGNORED_TOP_LEVEL:
                 continue
             require(not child.is_symlink(), f"symlink directory: {relative}")
             kept.append(name)
@@ -93,11 +116,51 @@ def closed_tree_check(seen: set[str]) -> None:
             if relative in EXCLUDED or is_build_artifact(relative):
                 continue
             actual.add(relative)
+    return actual
+
+
+def closed_tree_check(seen: set[str]) -> None:
+    actual = source_inventory()
     unmanifested = sorted(actual - seen)
     require(
         not unmanifested,
         "unmanifested package files: " + ", ".join(unmanifested),
     )
+
+
+def reader_surface_files() -> list[Path]:
+    files = [
+        ROOT / "README.md",
+        ROOT / "README_REVIEWER.md",
+        ROOT / "REPRODUCE.md",
+        ROOT / "LICENSE_SCOPE.md",
+        ROOT / "THIRD_PARTY_NOTICES.md",
+        ROOT / "CITATION.cff",
+    ]
+    files.extend(sorted((ROOT / "docs").glob("*.md")))
+    files.extend(sorted((ROOT / "paper").rglob("*.tex")))
+    return files
+
+
+def check_reader_surface() -> None:
+    for relative in RETIRED_PATHS:
+        require(not (ROOT / relative).exists(), f"retired reader path: {relative}")
+    for path in reader_surface_files():
+        require(path.is_file(), f"missing reader file: {path.relative_to(ROOT)}")
+        text = path.read_text(encoding="utf-8")
+        for label, pattern in FORBIDDEN_READER_PATTERNS.items():
+            require(
+                pattern.search(text) is None,
+                f"{label} in {path.relative_to(ROOT).as_posix()}",
+            )
+
+
+def write_manifest() -> None:
+    lines = [
+        f"{sha256_file(ROOT / relative)}  {relative}"
+        for relative in sorted(source_inventory())
+    ]
+    MANIFEST.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 def main() -> None:
@@ -107,8 +170,15 @@ def main() -> None:
         action="store_true",
         help="reject every non-build file not listed in the manifest",
     )
+    parser.add_argument(
+        "--write-manifest",
+        action="store_true",
+        help="regenerate the exact source manifest before checking it",
+    )
     args = parser.parse_args()
 
+    if args.write_manifest:
+        write_manifest()
     require(MANIFEST.is_file(), "missing MANIFEST_SHA256.txt")
     checked = 0
     seen: set[str] = set()
@@ -130,6 +200,7 @@ def main() -> None:
         )
         checked += 1
     require(checked > 0, "empty manifest")
+    check_reader_surface()
     if args.closed_tree:
         closed_tree_check(seen)
     suffix = "_CLOSED_TREE" if args.closed_tree else ""

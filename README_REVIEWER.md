@@ -16,7 +16,7 @@
    ~~~
 
 4. Confirm that both aggregate runs end in
-   <code>PASS_P39_EXT04_PUBLIC_PACKAGE</code> and produce the same final
+   <code>PASS_MINIMUM_SUBSPACE_TRADES_PUBLIC_PACKAGE</code> and produce the same final
    receipt bytes.
 
 ## What the included replay establishes
@@ -45,9 +45,10 @@ the public verifier audits their arithmetic consequences fail-closed.
 | B | compact frozen receipts and circuit manifest | hash-bound audit of earlier paper claims |
 | C | cited mathematical literature | imported theorems, not re-proved here |
 
-Tier B is not a clean-room replay of the full archived research workspace. An
-archival data deposit could strengthen reproducibility without changing the
-stated theorem.
+Tier B is a hash-bound audit of the distributed receipts, not a clean-room
+regeneration of the earlier large matrices. Those matrices are not a hidden
+dependency of the included replay and are not claimed as independently
+reproduced here.
 
 ## Claims deliberately absent
 
@@ -55,7 +56,6 @@ stated theorem.
 - no complete global Smith group;
 - no global support statement for all components;
 - no novelty, priority, or firstness claim;
-- no theorem imported from the separate P42 tomography project.
 
 ## Finite-object lock
 
@@ -66,5 +66,6 @@ is pinned at commit
 
 ## Repository status
 
-This is a reviewer-sized companion package. GitHub availability does not assert
-a DOI, journal submission, acceptance, or deposit of the full raw archive.
+This is the public reviewer-sized companion package for release v1.1.0. The
+release does not assert a DOI, journal submission, acceptance, or independent
+external reproduction.
